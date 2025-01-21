@@ -40,7 +40,7 @@
             <option value="Dark">Dark</option>
             <option value="Steel">Steel</option>
             <option value="Fairy">Fairy</option>
-            <option value="Stellar">Stellar</option>
+            <option value="Stellar">Stellar</option> <!-- Added Stellar option -->
         </select><br><br>
 
         <button type="submit">Filter</button>
@@ -48,41 +48,6 @@
 
     <h2>Results:</h2>
     <ul id="results"></ul>
-
-    <script>
-        fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
-            .then(response => response.json())
-            .then(data => {
-                const form = document.getElementById('filterForm');
-                form.addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    const species = document.getElementById('species').value.toLowerCase();
-                    const shiny = document.getElementById('shiny').value;
-                    const teraType = document.getElementById('tera_type').value;
-
-                    const filteredResults = data.filter(pokemon => {
-                        return (
-                            (!species || pokemon.name.toLowerCase().includes(species)) &&
-                            (!shiny || pokemon.shiny === shiny) &&
-                            (!teraType || pokemon.tera_type === teraType)
-                        );
-                    });
-
-                    const resultsList = document.getElementById('results');
-                    resultsList.innerHTML = '';
-                    filteredResults.forEach(pokemon => {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = `${pokemon.name} - Seed: ${pokemon.seed}`;
-                        resultsList.appendChild(listItem);
-                    });
-
-                    if (filteredResults.length === 0) {
-                        resultsList.innerHTML = '<li>No results found.</li>';
-                    }
-                });
-            })
-            .catch(error => console.error('Error loading the JSON:', error));
-    </script>
 
     <script src="script.js"></script>
 </body>
