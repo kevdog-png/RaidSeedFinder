@@ -74,7 +74,7 @@ function displayResults(seeds) {
                 <strong>Item Drops:</strong> ${formatItemDrops(seed.rewards)}
             </div>
             <div class="pokemon-sprite">
-                <img src="${getPokemonSprite(seed.species)}" alt="${seed.species} sprite">
+                <img src="${getPokemonSprite(seed.species)}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
             </div>
         `;
         resultsContainer.appendChild(seedDiv);
