@@ -1,3 +1,4 @@
+// Function to handle form submission
 document.getElementById('filterForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
 
@@ -5,28 +6,45 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
 
-    // Fetch data from GitHub
-    fetch('https://kevdog-png.github.io/RaidSeedFinder/scarlet6iv5star.json')
+    // Fetch data from the GitHub JSON file
+    fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
         .then(response => response.json())
         .then(data => {
-            console.log(data);  // Log the data to check its structure
-            
-            if (Array.isArray(data)) {
-                const filteredResults = data.filter(pokemon => {
-                    return (
-                        (species === '' || pokemon.species.toLowerCase().includes(species)) &&
-                        (shiny === '' || pokemon.shiny === shiny) &&
-                        (teraType === '' || pokemon.tera_type.toLowerCase().includes(teraType))
-                    );
-                });
-                displayResults(filteredResults);
-            } else {
+            if (!Array.isArray(data.seeds)) {
                 console.error('Data is not in expected array format:', data);
+                return;
             }
+
+            const seeds = data.seeds;
+            const filteredSeeds = seeds.filter(seed => {
+                return (
+                    (species === '' || seed.species.toLowerCase().includes(species)) &&
+                    (shiny === '' || seed.shiny === shiny) &&
+                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
+                );
+            });
+
+            displayResults(filteredSeeds);
         })
         .catch(error => console.error('Error fetching seed data:', error));
 });
 
+// Function to format item drops as a single line
+const formatItemDrops = (items) => {
+    const itemCount = {};
+
+    // Count the occurrences of each item
+    items.forEach(item => {
+        itemCount[item.name] = (itemCount[item.name] || 0) + item.count;
+    });
+
+    // Format the item count into a string
+    return Object.entries(itemCount)
+        .map(([item, count]) => `${count}x ${item}`)
+        .join(', ');
+};
+
+// Function to display the filtered seeds in the UI
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = ''; // Clear previous results
@@ -44,10 +62,7 @@ function displayResults(seeds) {
             <strong>Tera Type:</strong> ${seed.tera_type} <br>
             <strong>Shiny:</strong> ${seed.shiny} <br>
             <strong>Seed:</strong> ${seed.seed} <br> <!-- Added raid seed here -->
-            <strong>Item Drops:</strong>
-            <ul>
-                ${seed.rewards.map(reward => `<li>${reward.count} x ${reward.name}</li>`).join('')}
-            </ul>
+            <strong>Item Drops:</strong> ${formatItemDrops(seed.rewards)} 
         `;
         resultsContainer.appendChild(seedDiv);
     });
