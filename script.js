@@ -6,11 +6,11 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
 
-    // Fetch data from the GitHub repository
+    // Fetch data from GitHub URL directly
     fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
         .then(response => response.json())
         .then(data => {
-            const filteredSeeds = data.filter(seed => {
+            const filteredSeeds = data.seeds.filter(seed => {
                 return (
                     (species === '' || seed.species.toLowerCase().includes(species)) &&
                     (shiny === '' || seed.shiny === shiny) &&
