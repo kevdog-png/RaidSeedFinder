@@ -6,8 +6,8 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
 
-    // Fetch data from the server
-    fetch('/api/seeds')
+    // Fetch data from the GitHub repository
+    fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
         .then(response => response.json())
         .then(data => {
             const filteredSeeds = data.filter(seed => {
