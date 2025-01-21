@@ -69,7 +69,7 @@ button:active {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 #results li {
@@ -78,10 +78,10 @@ button:active {
     border-radius: 6px;
     padding: 8px;
     font-size: 0.85rem;
-    flex: 1 1 calc(12% - 16px); /* Adjusted the width */
     margin: 8px;
-    display: flex;
-    flex-direction: column;
+    display: block;  /* Change to block for a more compact display */
+    width: 100%;
+    max-width: 250px; /* Adjust max-width for compactness */
 }
 
 #results li:hover {
@@ -109,22 +109,4 @@ button:active {
     margin-top: 50px;
     background-color: #f1f1f1;
     color: black;
-}
-
-@media (max-width: 600px) {
-    form {
-        padding: 15px;
-    }
-
-    input, select, button {
-        padding: 8px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    #results li {
-        flex: 1 1 calc(24% - 16px);
-    }
 }
