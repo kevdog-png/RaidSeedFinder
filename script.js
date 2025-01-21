@@ -50,6 +50,7 @@ function displayResults(seeds) {
         seedDiv.classList.add('seed');
 
         const spriteURL = getPokemonSprite(seed.species);
+        const raidCommand = `.ra ${seed.seed} 5 6`; // Default: 5-star raid with progress level 6
 
         // Add item drops display using <ul> and <li>
         const itemDrops = seed.rewards && seed.rewards.length > 0 
@@ -60,10 +61,34 @@ function displayResults(seeds) {
             <strong>Species:</strong> ${seed.species} <br>
             <strong>Tera Type:</strong> ${seed.tera_type} <br>
             <strong>Shiny:</strong> ${seed.shiny} <br>
-            <strong>Seed:</strong> ${seed.seed} <br> <!-- Added raid seed here -->
+            <strong>Seed:</strong> ${seed.seed} <br>
             ${itemDrops}
             <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+            <div class="command-container">
+                <button class="show-command">Show Command</button>
+                <div class="command-box hidden">
+                    <input type="text" value="${raidCommand}" readonly>
+                    <button class="copy-command">Copy</button>
+                </div>
+            </div>
         `;
+
         resultsContainer.appendChild(seedDiv);
+
+        // Add event listeners for command functionality
+        const showCommandButton = seedDiv.querySelector('.show-command');
+        const commandBox = seedDiv.querySelector('.command-box');
+        const copyButton = seedDiv.querySelector('.copy-command');
+        const commandInput = seedDiv.querySelector('input');
+
+        showCommandButton.addEventListener('click', () => {
+            commandBox.classList.toggle('hidden');
+        });
+
+        copyButton.addEventListener('click', () => {
+            commandInput.select();
+            document.execCommand('copy');
+            alert('Command copied to clipboard!');
+        });
     });
 }
