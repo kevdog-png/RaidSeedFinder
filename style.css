@@ -77,9 +77,9 @@ button:active {
     background-color: #333;
     border: 1px solid #444;
     border-radius: 8px;
-    padding: 15px;
-    font-size: 1rem;
-    flex: 1 1 calc(33% - 20px);
+    padding: 10px;
+    font-size: 0.9rem;
+    flex: 1 1 calc(25% - 20px);
     transition: background-color 0.3s ease;
 }
 
@@ -107,23 +107,11 @@ button:active {
     font-size: 16px;
     margin-top: 50px;
     background-color: #f1f1f1;
-    color: black; /* Black text */
+    color: black;
 }
 
 @media (max-width: 600px) {
-    form {
-        padding: 15px;
-    }
-
-    input, select, button {
-        padding: 8px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
     #results li {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 calc(50% - 20px);  /* 2 items per row for small screens */
     }
 }
