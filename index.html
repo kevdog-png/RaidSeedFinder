@@ -11,9 +11,6 @@
     <title>Raid Seed Filter</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        /* Add your previous styles here */
-    </style>
 </head>
 <body>
     <div id="discord-bar">
@@ -107,7 +104,7 @@
                 seedDiv.classList.add('seed');
 
                 // Add Pokémon sprite URL (using the species name to format the image URL)
-                const pokemonImageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${seed.species.toLowerCase().replace(/\s+/g, '')}.png`;
+                const pokemonImageUrl = `https://raw.githubusercontent.com/remokon/gen-9-sprites/main/sprites/pokemon/${seed.species.toLowerCase().replace(/\s+/g, '')}.png`;
 
                 // Aggregate item rewards
                 const itemCounts = seed.rewards.reduce((acc, reward) => {
