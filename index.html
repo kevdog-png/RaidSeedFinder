@@ -171,33 +171,47 @@
             margin-bottom: 5px;
         }
 
-        /* Command box styling */
+        /* Command Box Styling */
         .command-container {
+            margin-top: 15px;
             text-align: center;
-            margin-top: 20px;
         }
 
-        .command-box.hidden {
-            display: none;
-        }
-
-        .command-box input {
-            width: 80%;
+        .show-command {
+            background-color: #008CBA;
+            color: white;
+            border: none;
             padding: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 6px;
             margin-bottom: 10px;
         }
 
+        .command-box {
+            display: none;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 6px;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
         .copy-command {
-            padding: 10px 20px;
-            cursor: pointer;
             background-color: #4CAF50;
             color: white;
             border: none;
-            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 6px;
+            margin-top: 10px;
         }
 
-        .copy-command:hover {
-            background-color: #45a049;
+        .hidden {
+            display: none;
         }
     </style>
 </head>
@@ -247,15 +261,6 @@
 
     <h2>Results:</h2>
     <ul id="results"></ul>
-
-    <!-- Command Section -->
-    <div class="command-container">
-        <button class="show-command" id="showCommandBtn">Show Command</button>
-        <div class="command-box hidden" id="commandBox">
-            <input type="text" id="commandInput" readonly>
-            <button class="copy-command" id="copyCommandBtn">Copy</button>
-        </div>
-    </div>
 
     <div id="footer">
         Special thanks to MewTracker for the raid seeds!
@@ -334,23 +339,30 @@
                     <ul class="rewards">
                         ${mergedRewards.map(reward => `<li>${reward.count}x ${reward.name}</li>`).join('')}
                     </ul>
+                    <div class="command-container">
+                        <button class="show-command" onclick="toggleCommandBox('${seed.seed}')">Show Command</button>
+                        <div class="command-box hidden" id="commandBox_${seed.seed}">
+                            <input type="text" id="commandInput_${seed.seed}" value="/raid ${seed.seed}" readonly>
+                            <button class="copy-command" onclick="copyCommand('${seed.seed}')">Copy</button>
+                        </div>
+                    </div>
                 `;
                 resultsContainer.appendChild(seedDiv);
             });
         }
 
-        // Show/hide the command box on button click
-        document.getElementById('showCommandBtn').addEventListener('click', function() {
-            const commandBox = document.getElementById('commandBox');
+        // Function to toggle visibility of the command box
+        function toggleCommandBox(seed) {
+            const commandBox = document.getElementById(`commandBox_${seed}`);
             commandBox.classList.toggle('hidden');
-        });
+        }
 
-        // Copy command to clipboard
-        document.getElementById('copyCommandBtn').addEventListener('click', function() {
-            const commandInput = document.getElementById('commandInput');
+        // Function to copy the command to the clipboard
+        function copyCommand(seed) {
+            const commandInput = document.getElementById(`commandInput_${seed}`);
             commandInput.select();
             document.execCommand('copy');
-        });
+        }
     </script>
 </body>
 </html>
