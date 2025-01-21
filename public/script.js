@@ -44,6 +44,12 @@ const formatItemDrops = (items) => {
         .join(', ');
 };
 
+// Function to get the sprite URL for the Pokémon species
+const getPokemonSprite = (species) => {
+    const formattedSpecies = species.toLowerCase().replace(" ", "");
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${formattedSpecies}.png`;
+};
+
 // Function to display the filtered seeds in the UI
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
@@ -58,11 +64,18 @@ function displayResults(seeds) {
         const seedDiv = document.createElement('li');
         seedDiv.classList.add('seed');
         seedDiv.innerHTML = `
-            <strong>Species:</strong> ${seed.species} <br>
-            <strong>Tera Type:</strong> ${seed.tera_type} <br>
-            <strong>Shiny:</strong> ${seed.shiny} <br>
-            <strong>Seed:</strong> ${seed.seed} <br> <!-- Added raid seed here -->
-            <strong>Item Drops:</strong> ${formatItemDrops(seed.rewards)} 
+            <div class="seed-header">
+                <strong>Species:</strong> ${seed.species} <br>
+                <strong>Tera Type:</strong> ${seed.tera_type} <br>
+                <strong>Shiny:</strong> ${seed.shiny} <br>
+                <strong>Seed:</strong> ${seed.seed}
+            </div>
+            <div class="item-drops">
+                <strong>Item Drops:</strong> ${formatItemDrops(seed.rewards)}
+            </div>
+            <div class="pokemon-sprite">
+                <img src="${getPokemonSprite(seed.species)}" alt="${seed.species} sprite">
+            </div>
         `;
         resultsContainer.appendChild(seedDiv);
     });
