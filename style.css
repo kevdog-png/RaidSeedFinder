@@ -69,7 +69,8 @@ button:active {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 20px;
+    justify-content: center;
 }
 
 #results li {
@@ -77,9 +78,8 @@ button:active {
     border: 1px solid #444;
     border-radius: 8px;
     padding: 15px;
-    margin-bottom: 10px;
     font-size: 1rem;
-    width: 250px; /* Adjust width as needed */
+    width: 220px;
     transition: background-color 0.3s ease;
     position: relative;
 }
@@ -88,18 +88,13 @@ button:active {
     background-color: #2a2a2a;
 }
 
-.pokemon-sprite {
+.pokemon-image {
     width: 80px;
     height: 80px;
     position: absolute;
     top: 10px;
     right: 10px;
     border-radius: 5px;
-}
-
-.item-drops {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {
@@ -116,6 +111,6 @@ button:active {
     }
 
     #results li {
-        width: 100%; /* Full width for smaller screens */
+        width: 100%;
     }
 }
