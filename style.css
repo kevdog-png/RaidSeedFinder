@@ -1,16 +1,52 @@
+/* Discord bar styling */
+#discord-bar {
+    background-color: #5865F2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#discord-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+#discord-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+#footer {
+    background-color: #2a2a2a;
+    color: #ddd;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #1c1c1c;
     color: #f0f0f0;
     margin: 0;
-    padding: 0;
+    padding: 50px 0 50px 0; /* Adjust for header and footer space */
 }
 
 h1 {
     text-align: center;
     color: #f9f9f9;
     font-size: 2.5rem;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 form {
@@ -95,29 +131,6 @@ button:active {
     top: 10px;
     right: 10px;
     border-radius: 5px;
-}
-
-#discord-bar {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-#footer {
-    background-color: #2a2a2a;
-    color: #f0f0f0;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 @media (max-width: 600px) {
