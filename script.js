@@ -51,7 +51,7 @@ function displayResults(seeds) {
 
         const spriteURL = getPokemonSprite(seed.species);
 
-        // Add item drops display from the rewards array
+        // Add item drops display from the rewards array (use `rewards` instead of `drops`)
         const itemDrops = seed.rewards && seed.rewards.length > 0 
             ? `<strong>Item Drops:</strong> ${seed.rewards.map(item => `${item.count}x ${item.name}`).join('<br>')} <br>` 
             : '<strong>Item Drops:</strong> No items <br>';
