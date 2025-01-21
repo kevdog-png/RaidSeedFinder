@@ -89,6 +89,22 @@
                 .catch(error => console.error('Error fetching seed data:', error));
         });
 
+        // Function to merge duplicate rewards
+        function mergeRewards(rewards) {
+            const mergedRewards = {};
+
+            rewards.forEach(reward => {
+                const key = reward.name;
+                if (mergedRewards[key]) {
+                    mergedRewards[key].count += reward.count;
+                } else {
+                    mergedRewards[key] = { name: reward.name, count: reward.count };
+                }
+            });
+
+            return Object.values(mergedRewards);
+        }
+
         // Function to get the sprite URL for the Pokémon species
         const getPokemonSprite = (species) => {
             const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
@@ -111,9 +127,9 @@
 
                 const spriteURL = getPokemonSprite(seed.species);
 
-                // Add item drops display if present
+                // Add merged item drops display if present
                 const itemDrops = seed.rewards && seed.rewards.length > 0 
-                    ? `<strong>Item Drops:</strong><ul>${seed.rewards.map(reward => `<li>${reward.count} x ${reward.name}</li>`).join('')}</ul>` 
+                    ? `<strong>Item Drops:</strong><ul>${mergeRewards(seed.rewards).map(reward => `<li>${reward.count} x ${reward.name}</li>`).join('')}</ul>` 
                     : '<strong>Item Drops:</strong> No items <br>';
 
                 seedDiv.innerHTML = `
