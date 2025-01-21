@@ -157,6 +157,18 @@ h2 {
     margin-bottom: 5px;
 }
 
+/* Make reward text more compact */
+.rewards {
+    margin-top: 10px;
+    font-size: 0.9rem; /* Smaller font for compactness */
+    color: #ddd;
+}
+
+.rewards li {
+    margin-bottom: 5px; /* Less space between items */
+    line-height: 1.5; /* Adjust line spacing for compact display */
+}
+
 /* Command Box Styling */
 .command-box {
     text-align: center; /* Center the content */
