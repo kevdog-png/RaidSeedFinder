@@ -88,13 +88,18 @@ button:active {
     background-color: #2a2a2a;
 }
 
-.pokemon-image {
+.pokemon-sprite {
     width: 80px;
     height: 80px;
     position: absolute;
     top: 10px;
     right: 10px;
     border-radius: 5px;
+}
+
+.item-drops {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {
