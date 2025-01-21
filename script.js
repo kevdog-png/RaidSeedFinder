@@ -51,11 +51,17 @@ function displayResults(seeds) {
 
         const spriteURL = getPokemonSprite(seed.species);
 
+        // Add item drops display if present
+        const itemDrops = seed.items && seed.items.length > 0 
+            ? `<strong>Item Drops:</strong> ${seed.items.join(', ')} <br>` 
+            : '<strong>Item Drops:</strong> No items <br>';
+
         seedDiv.innerHTML = `
             <strong>Species:</strong> ${seed.species} <br>
             <strong>Tera Type:</strong> ${seed.tera_type} <br>
             <strong>Shiny:</strong> ${seed.shiny} <br>
             <strong>Seed:</strong> ${seed.seed} <br>
+            ${itemDrops}
             <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
         `;
         resultsContainer.appendChild(seedDiv);
