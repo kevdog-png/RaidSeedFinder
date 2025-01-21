@@ -5,10 +5,9 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
     const species = document.getElementById('species').value.toLowerCase();
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
-    const jsonFile = 'scarlet6iv5star.json'; // Update the JSON file name here
 
     // Fetch data from the GitHub JSON file
-    fetch(`https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/${jsonFile}`)
+    fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
         .then(response => response.json())
         .then(data => {
             if (!Array.isArray(data.seeds)) {
@@ -25,7 +24,7 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
                 );
             });
 
-            displayResults(filteredSeeds, jsonFile); // Pass the jsonFile to displayResults
+            displayResults(filteredSeeds);
         })
         .catch(error => console.error('Error fetching seed data:', error));
 });
@@ -37,7 +36,7 @@ const getPokemonSprite = (species) => {
 };
 
 // Function to display the filtered seeds in the UI
-function displayResults(seeds, jsonFile) {
+function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = ''; // Clear previous results
 
@@ -51,13 +50,11 @@ function displayResults(seeds, jsonFile) {
         seedDiv.classList.add('seed');
 
         const spriteURL = getPokemonSprite(seed.species);
+        const raidCommand = `.ra ${seed.seed} 5 6`; // Default: 5-star raid with progress level 6
 
-        // Force the star count to 5 for all entries
-        const raidCommand = `.ra ${seed.seed} 5 6`; // Always set to 5-star
-
-        // Add item drops display using <ul> and <li>
+        // Add item drops display as plain text (each item on a new line)
         const itemDrops = seed.rewards && seed.rewards.length > 0 
-            ? `<strong>Item Drops:</strong><ul>${seed.rewards.map(reward => `<li>${reward.count} x ${reward.name}</li>`).join('')}</ul>` 
+            ? `<strong>Item Drops:</strong><br>${seed.rewards.map(reward => `${reward.count} x ${reward.name}`).join('<br>')}` 
             : '<strong>Item Drops:</strong> No items <br>';
 
         seedDiv.innerHTML = `
@@ -91,13 +88,7 @@ function displayResults(seeds, jsonFile) {
         copyButton.addEventListener('click', () => {
             commandInput.select();
             document.execCommand('copy');
-            const copyButtonText = copyButton.textContent;
-
-            // Change text to 'Copied!' and revert after 5 seconds
-            copyButton.textContent = 'Copied!';
-            setTimeout(() => {
-                copyButton.textContent = copyButtonText;
-            }, 5000); // Change back after 5 seconds
+            alert('Command copied to clipboard!');
         });
     });
 }
