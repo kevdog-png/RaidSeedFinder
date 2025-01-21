@@ -155,18 +155,8 @@ h2 {
     font-size: 0.9rem;
     color: #ddd;
     margin-bottom: 5px;
-}
-
-/* Make reward text more compact */
-.rewards {
-    margin-top: 10px;
-    font-size: 0.9rem; /* Smaller font for compactness */
-    color: #ddd;
-}
-
-.rewards li {
-    margin-bottom: 5px; /* Less space between items */
-    line-height: 1.5; /* Adjust line spacing for compact display */
+    list-style-type: none;
+    padding: 0;
 }
 
 /* Command Box Styling */
@@ -177,21 +167,15 @@ h2 {
 
 .command-message {
     position: absolute;
-    top: -30px; /* Moves the message to the top */
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #fff;
-    background-color: #4CAF50;
-    padding: 5px 0;
+    top: 0;
+    width: 100%;
     font-size: 1rem;
-    border-radius: 6px;
+    color: green;
+    font-weight: bold;
     display: none;
-    z-index: 2;
 }
 
 .copy-button {
     position: relative;
     z-index: 1;
-    width: 170px; /* Increased width to fit the text */
 }
