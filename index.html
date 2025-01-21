@@ -171,41 +171,23 @@
             margin-bottom: 5px;
         }
 
-        .command-container {
-            margin-top: 10px;
-        }
-
-        .command-box {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .command-box input {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-        }
-
-        .show-command, .copy-command {
+        .copy-button {
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
-            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
         }
 
-        .show-command:hover, .copy-command:hover {
+        .copy-button:hover {
             background-color: #45a049;
         }
 
-        .copy-command:active {
-            background-color: #3e8e41;
+        .copied-message {
+            color: green;
         }
 
-        .hidden {
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -322,6 +304,8 @@
                     count
                 }));
 
+                const commandButton = `<button class="copy-button" data-seed="${seed.seed}" data-star="5">Copy Command</button>`;
+                
                 seedDiv.innerHTML = `
                     <strong>Species:</strong> ${seed.species} <br>
                     <strong>Tera Type:</strong> ${seed.tera_type} <br>
@@ -332,35 +316,32 @@
                     <ul class="rewards">
                         ${mergedRewards.map(reward => `<li>${reward.count}x ${reward.name}</li>`).join('')}
                     </ul>
-                    <div class="command-container">
-                        <button class="show-command" onclick="toggleCommandBox('${seed.seed}')">Show Command</button>
-                        <div class="command-box hidden" id="commandBox_${seed.seed}">
-                            <input type="text" id="commandInput_${seed.seed}" value="/raid ${seed.seed} ${seed.stars} ${seed.stars}" readonly>
-                            <button class="copy-command" onclick="copyCommand('${seed.seed}', '${seed.stars}')">Copy</button>
-                        </div>
+                    <div class="command-box">
+                        ${commandButton}
+                        <span class="command-message"></span>
                     </div>
                 `;
                 resultsContainer.appendChild(seedDiv);
             });
-        }
 
-        // Function to toggle command box visibility
-        function toggleCommandBox(seed) {
-            const commandBox = document.getElementById(`commandBox_${seed}`);
-            commandBox.classList.toggle('hidden');
-        }
+            // Adding functionality to Copy Command button
+            const copyButtons = document.querySelectorAll('.copy-button');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const seed = this.getAttribute('data-seed');
+                    const starCount = this.getAttribute('data-star');
+                    const command = `.ra ${seed} ${starCount} 6`;
 
-        // Function to copy the command to the clipboard
-        function copyCommand(seed, stars) {
-            const commandInput = document.getElementById(`commandInput_${seed}`);
-            commandInput.select();
-            document.execCommand('copy');
-
-            const button = event.target;
-            button.textContent = "Copied!"; // Change button text
-            setTimeout(() => {
-                button.textContent = "Copy Command"; // Change back to "Copy Command" after 5 seconds
-            }, 5000);
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(command).then(() => {
+                        const messageSpan = this.nextElementSibling;
+                        messageSpan.textContent = "Copied!";
+                        setTimeout(() => {
+                            messageSpan.textContent = "";
+                        }, 2000);
+                    });
+                });
+            });
         }
     </script>
 </body>
