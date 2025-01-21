@@ -52,10 +52,8 @@ function displayResults(seeds, jsonFile) {
 
         const spriteURL = getPokemonSprite(seed.species);
 
-        // Check if JSON file is "scarlet6iv5star.json" and set the star count to 5
-        const raidCommand = jsonFile === 'scarlet6iv5star.json' 
-            ? `.ra ${seed.seed} 5 6` // Default: 5-star raid with progress level 6
-            : `.ra ${seed.seed} ${seed.star_count} 6`; // Use the provided star count for other JSON files
+        // Force the star count to 5 for all entries
+        const raidCommand = `.ra ${seed.seed} 5 6`; // Always set to 5-star
 
         // Add item drops display using <ul> and <li>
         const itemDrops = seed.rewards && seed.rewards.length > 0 
