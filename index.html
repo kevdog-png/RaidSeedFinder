@@ -171,23 +171,26 @@
             margin-bottom: 5px;
         }
 
-        .copy-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        /* Command Box Styling */
+        .command-box {
+            text-align: center; /* Center the content */
+            position: relative; /* Allow absolute positioning of the message */
         }
 
-        .copy-button:hover {
-            background-color: #45a049;
-        }
-
-        .copied-message {
+        .command-message {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            font-size: 1rem;
             color: green;
+            font-weight: bold;
+            display: none;
         }
 
+        .copy-button {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -304,8 +307,6 @@
                     count
                 }));
 
-                const commandButton = `<button class="copy-button" data-seed="${seed.seed}" data-star="5">Copy Command</button>`;
-                
                 seedDiv.innerHTML = `
                     <strong>Species:</strong> ${seed.species} <br>
                     <strong>Tera Type:</strong> ${seed.tera_type} <br>
@@ -316,17 +317,18 @@
                     <ul class="rewards">
                         ${mergedRewards.map(reward => `<li>${reward.count}x ${reward.name}</li>`).join('')}
                     </ul>
+
                     <div class="command-box">
-                        ${commandButton}
-                        <span class="command-message"></span>
+                        <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.star_count}">Copy Command</button>
+                        <span class="command-message">Copied!</span>
                     </div>
                 `;
                 resultsContainer.appendChild(seedDiv);
             });
 
-            // Adding functionality to Copy Command button
-            const copyButtons = document.querySelectorAll('.copy-button');
-            copyButtons.forEach(button => {
+            // Add event listeners for Copy Command buttons
+            const buttons = document.querySelectorAll('.copy-button');
+            buttons.forEach(button => {
                 button.addEventListener('click', function() {
                     const seed = this.getAttribute('data-seed');
                     const starCount = this.getAttribute('data-star');
@@ -335,9 +337,10 @@
                     // Copy to clipboard
                     navigator.clipboard.writeText(command).then(() => {
                         const messageSpan = this.nextElementSibling;
+                        messageSpan.style.display = "block"; // Show "Copied!"
                         messageSpan.textContent = "Copied!";
                         setTimeout(() => {
-                            messageSpan.textContent = "";
+                            messageSpan.style.display = "none"; // Hide after 2 seconds
                         }, 2000);
                     });
                 });
