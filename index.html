@@ -140,8 +140,8 @@
             width: 220px;
             transition: background-color 0.3s ease;
             position: relative;
-            text-align: left; /* Align content to the left */
-            overflow: hidden;
+            text-align: left;
+            overflow: hidden; /* Added to contain content */
         }
 
         #results li:hover {
@@ -151,11 +151,9 @@
         .pokemon-image {
             width: 80px;
             height: 80px;
-            position: relative;
+            position: absolute;
             top: 10px;
-            left: 10px;
-            float: left; /* Make the sprite float to the left */
-            margin-right: 10px; /* Add space between sprite and text */
+            right: 10px;
         }
 
         h2 {
@@ -297,7 +295,9 @@
                     <strong>Tera Type:</strong> ${seed.tera_type} <br>
                     <strong>Shiny:</strong> ${seed.shiny} <br>
                     <strong>Seed:</strong> ${seed.seed} <br>
-                    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+                    <div style="position:relative;">
+                        <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+                    </div>
                     <strong>Item Drops:</strong>
                     <ul class="rewards">
                         ${mergedRewards.map(reward => `<li>${reward.count}x ${reward.name}</li>`).join('')}
