@@ -97,6 +97,33 @@ button:active {
     border-radius: 5px;
 }
 
+#discord-bar {
+    background-color: #7289da;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#discord-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+#footer {
+    background-color: #333;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
 @media (max-width: 600px) {
     form {
         padding: 15px;
