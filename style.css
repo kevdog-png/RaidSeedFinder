@@ -106,6 +106,7 @@ button:active {
     background-color: #3e8e41;
 }
 
+/* Adjusted results container styling */
 #results {
     list-style-type: none;
     padding: 0;
@@ -123,13 +124,9 @@ button:active {
     padding: 15px;
     font-size: 1rem;
     width: 220px;
-    transition: background-color 0.3s ease;
     position: relative;
-    text-align: center;
-}
-
-#results li:hover {
-    background-color: #2a2a2a;
+    text-align: left;
+    overflow: hidden; /* Added to contain content */
 }
 
 .pokemon-image {
@@ -138,26 +135,45 @@ button:active {
     position: absolute;
     top: 10px;
     right: 10px;
-    border-radius: 5px;
+    z-index: 10;
 }
 
-@media (max-width: 600px) {
-    form {
-        padding: 15px;
-        flex-direction: column;
-        align-items: stretch;
-    }
+h2 {
+    text-align: center; /* Center the Results header */
+    color: #f9f9f9;
+    margin-top: 50px;
+}
 
-    input, select, button {
-        width: 100%;
-        max-width: 100%;
-    }
+/* Merged reward styling */
+.rewards {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
 
-    h1 {
-        font-size: 2rem;
-    }
+.rewards li {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-bottom: 5px;
+}
 
-    #results li {
-        width: 100%;
-    }
+/* Command Box Styling */
+.command-box {
+    text-align: center; /* Center the content */
+    position: relative; /* Allow absolute positioning of the message */
+}
+
+.command-message {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 1rem;
+    color: green;
+    font-weight: bold;
+    display: none;
+}
+
+.copy-button {
+    position: relative;
+    z-index: 1;
 }
