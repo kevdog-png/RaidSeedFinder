@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Seed Finder for Raids">
+    <meta property="og:description" content="Filter raid seeds by species, shiny status, and tera type in Pokémon Scarlet. Improvements coming soon.">
+    <meta property="og:image" content="https://kevdog-png.github.io/RaidSeedFinder/thumbnail.png">
+    <meta property="og:url" content="https://kevdog-png.github.io/RaidSeedFinder/">
+    <meta property="og:type" content="website">
     <title>Raid Seed Filter</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        #discord-bar {
+            background-color: #7289da;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #discord-bar a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
+    <div id="discord-bar">
+        <a href="https://discord.gg/plza" target="_blank">Join the Discord server!</a>
+    </div>
+
     <h1>Raid Seed Filter</h1>
     <form id="filterForm">
         <label for="species">Species:</label>
@@ -41,7 +64,7 @@
             <option value="Dark">Dark</option>
             <option value="Steel">Steel</option>
             <option value="Fairy">Fairy</option>
-            <option value="Stellar">Stellar</option> <!-- Added Stellar option -->
+            <option value="Stellar">Stellar</option>
         </select><br><br>
 
         <button type="submit">Filter</button>
