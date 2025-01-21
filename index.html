@@ -171,43 +171,36 @@
             margin-bottom: 5px;
         }
 
-        /* Command Box Styling */
         .command-container {
-            margin-top: 15px;
-            text-align: center;
-        }
-
-        .show-command {
-            background-color: #008CBA;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 6px;
-            margin-bottom: 10px;
+            margin-top: 10px;
         }
 
         .command-box {
             display: none;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 6px;
-            width: 100%;
-            max-width: 300px;
-            margin: 0 auto;
-            text-align: left;
+            margin-top: 10px;
         }
 
-        .copy-command {
+        .command-box input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        .show-command, .copy-command {
             background-color: #4CAF50;
             color: white;
+            padding: 10px 20px;
             border: none;
-            padding: 10px;
             cursor: pointer;
-            font-size: 1rem;
-            border-radius: 6px;
-            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .show-command:hover, .copy-command:hover {
+            background-color: #45a049;
+        }
+
+        .copy-command:active {
+            background-color: #3e8e41;
         }
 
         .hidden {
@@ -342,8 +335,8 @@
                     <div class="command-container">
                         <button class="show-command" onclick="toggleCommandBox('${seed.seed}')">Show Command</button>
                         <div class="command-box hidden" id="commandBox_${seed.seed}">
-                            <input type="text" id="commandInput_${seed.seed}" value="/raid ${seed.seed}" readonly>
-                            <button class="copy-command" onclick="copyCommand('${seed.seed}')">Copy</button>
+                            <input type="text" id="commandInput_${seed.seed}" value="/raid ${seed.seed} ${seed.stars} ${seed.stars}" readonly>
+                            <button class="copy-command" onclick="copyCommand('${seed.seed}', '${seed.stars}')">Copy</button>
                         </div>
                     </div>
                 `;
@@ -351,17 +344,23 @@
             });
         }
 
-        // Function to toggle visibility of the command box
+        // Function to toggle command box visibility
         function toggleCommandBox(seed) {
             const commandBox = document.getElementById(`commandBox_${seed}`);
             commandBox.classList.toggle('hidden');
         }
 
         // Function to copy the command to the clipboard
-        function copyCommand(seed) {
+        function copyCommand(seed, stars) {
             const commandInput = document.getElementById(`commandInput_${seed}`);
             commandInput.select();
             document.execCommand('copy');
+
+            const button = event.target;
+            button.textContent = "Copied!"; // Change button text
+            setTimeout(() => {
+                button.textContent = "Copy Command"; // Change back to "Copy Command" after 5 seconds
+            }, 5000);
         }
     </script>
 </body>
