@@ -1,4 +1,3 @@
-// Function to handle form submission
 document.getElementById('filterForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
 
@@ -6,24 +5,28 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
 
-    // Fetch data from GitHub URL directly
-    fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
+    // Fetch data from GitHub
+    fetch('https://kevdog-png.github.io/RaidSeedFinder/scarlet6iv5star.json')
         .then(response => response.json())
         .then(data => {
-            const filteredSeeds = data.seeds.filter(seed => {
-                return (
-                    (species === '' || seed.species.toLowerCase().includes(species)) &&
-                    (shiny === '' || seed.shiny === shiny) &&
-                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
-                );
-            });
-
-            displayResults(filteredSeeds);
+            console.log(data);  // Log the data to check its structure
+            
+            if (Array.isArray(data)) {
+                const filteredResults = data.filter(pokemon => {
+                    return (
+                        (species === '' || pokemon.species.toLowerCase().includes(species)) &&
+                        (shiny === '' || pokemon.shiny === shiny) &&
+                        (teraType === '' || pokemon.tera_type.toLowerCase().includes(teraType))
+                    );
+                });
+                displayResults(filteredResults);
+            } else {
+                console.error('Data is not in expected array format:', data);
+            }
         })
         .catch(error => console.error('Error fetching seed data:', error));
 });
 
-// Function to display the filtered seeds in the UI
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = ''; // Clear previous results
