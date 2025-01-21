@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Seed Finder for Raids">
-    <meta property="og:description" content="Filter raid seeds by species, shiny status, and tera type in Pokémon Scarlet. Improvements coming soon.">
+    <meta property="og:title" content="Raid Seed Finder">
+    <meta property="og:description" content="Filter raid seeds by species, shiny status, and tera type in Pokémon Scarlet.">
     <meta property="og:image" content="https://kevdog-png.github.io/RaidSeedFinder/thumbnail.png">
     <meta property="og:url" content="https://kevdog-png.github.io/RaidSeedFinder/">
     <meta property="og:type" content="website">
@@ -24,11 +24,18 @@
             color: white;
             text-decoration: none;
         }
+        #footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 50px;
+            background-color: #f1f1f1;
+        }
     </style>
 </head>
 <body>
     <div id="discord-bar">
-        <a href="https://discord.gg/plza" target="_blank">Join the Discord server!</a>
+        <a href="https://discord.gg/plza" target="_blank">Join our Discord server!</a>
     </div>
 
     <h1>Raid Seed Filter</h1>
@@ -72,6 +79,10 @@
 
     <h2>Results:</h2>
     <ul id="results"></ul>
+
+    <div id="footer">
+        Special thanks to MewTracker for the raid seeds!
+    </div>
 
     <script src="script.js"></script>
 </body>
