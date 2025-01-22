@@ -237,6 +237,13 @@
             <option value="Stellar">Stellar</option>
         </select><br><br>
 
+        <label for="seedList">Select Seed List:</label>
+        <select id="seedList">
+            <option value="scarlet6iv5star.json">Scarlet 6IV 5-Star</option>
+            <option value="scarlet5star.json">Scarlet 5-Star</option>
+            <!-- Add more JSON options as necessary -->
+        </select><br><br>
+
         <button type="submit">Filter</button>
     </form>
 
@@ -255,12 +262,19 @@
             const species = document.getElementById('species').value.toLowerCase();
             const shiny = document.getElementById('shiny').value;
             const teraType = document.getElementById('tera_type').value.toLowerCase();
+            const selectedFile = document.getElementById('seedList').value;
 
-            // Fetch data from the JSON file
-            fetch('scarlet6iv5star.json')
+            // Fetch data from the selected JSON file
+            fetch(selectedFile)
                 .then(response => response.json())
                 .then(data => {
-                    const filteredSeeds = data.seeds.filter(seed => {
+                    if (!Array.isArray(data.seeds)) {
+                        console.error('Data is not in expected array format:', data);
+                        return;
+                    }
+
+                    const seeds = data.seeds;
+                    const filteredSeeds = seeds.filter(seed => {
                         return (
                             (species === '' || seed.species.toLowerCase().includes(species)) &&
                             (shiny === '' || seed.shiny === shiny) &&
@@ -275,80 +289,42 @@
 
         // Function to get the sprite URL for the Pokémon species
         const getPokemonSprite = (species) => {
-            const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
-            return `https://raw.githubusercontent.com/remokon/gen-9-sprites/refs/heads/main/${formattedSpecies}.png`;
-        };
-
-        // Function to display the filtered seeds in the UI
-        function displayResults(seeds) {
-            const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = ''; // Clear previous results
-
-            if (seeds.length === 0) {
-                resultsContainer.innerHTML = '<li>No matching results found.</li>';
-                return;
-            }
-
-            seeds.forEach(seed => {
-                const seedDiv = document.createElement('li');
-                seedDiv.classList.add('seed');
-
-                const spriteURL = getPokemonSprite(seed.species);
-
-                const rewardsMap = new Map();
-                seed.rewards.forEach(reward => {
-                    const key = reward.name;
-                    if (rewardsMap.has(key)) {
-                        rewardsMap.set(key, rewardsMap.get(key) + reward.count);
-                    } else {
-                        rewardsMap.set(key, reward.count);
-                    }
-                });
-
-                const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
-                    name,
-                    count
-                }));
-
-                seedDiv.innerHTML = `
-                    <strong>Species:</strong> ${seed.species} <br>
-                    <strong>Tera Type:</strong> ${seed.tera_type} <br>
-                    <strong>Shiny:</strong> ${seed.shiny} <br>
-                    <strong>Seed:</strong> ${seed.seed} <br>
-                    <strong>Item Drops:</strong><br>
-                    ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-                    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
-                    <div class="command-box">
-                        <button class="copy-button" data-seed="${seed.seed}" data-star="5">Copy Command</button>
-                        <span class="command-message">Copied!</span>
-                    </div>
-                `;
-                resultsContainer.appendChild(seedDiv);
-            });
-
-            // Add event listeners for Copy Command buttons
-            const buttons = document.querySelectorAll('.copy-button');
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const seed = this.getAttribute('data-seed');
-                    const starCount = this.getAttribute('data-star');
-                    const command = `.ra ${seed} ${starCount} 6`;
-
-                    // Copy to clipboard
-                    navigator.clipboard.writeText(command);
-
-                    // Show "Copied!" message
-                    const messageElement = this.parentElement.querySelector('.command-message');
-                    messageElement.innerText = 'Copied!';
-                    messageElement.style.display = 'block';
-
-                    // Hide "Copied!" message after 2 seconds
-                    setTimeout(() => {
-                        messageElement.style.display = 'none';
-                    }, 2000);
-                });
-            });
+            const formattedSpecies = species.trim().toLowerCase().replace(/\s+/g, '-');
+            return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${formattedSpecies}.png`;
         }
+
+        // Function to display results
+        const displayResults = (filteredSeeds) => {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = '';
+
+            filteredSeeds.forEach(seed => {
+                const listItem = document.createElement('li');
+                const pokemonImage = document.createElement('img');
+                pokemonImage.src = getPokemonSprite(seed.species);
+                pokemonImage.alt = seed.species;
+                pokemonImage.classList.add('pokemon-image');
+
+                const rewardsList = document.createElement('ul');
+                rewardsList.classList.add('rewards');
+
+                seed.rewards.forEach(reward => {
+                    const rewardItem = document.createElement('li');
+                    rewardItem.textContent = reward;
+                    rewardsList.appendChild(rewardItem);
+                });
+
+                listItem.innerHTML = `
+                    <h3>${seed.species}</h3>
+                    <p>Tera Type: ${seed.tera_type}</p>
+                    <p>Shiny: ${seed.shiny}</p>
+                `;
+                listItem.appendChild(pokemonImage);
+                listItem.appendChild(rewardsList);
+
+                resultsContainer.appendChild(listItem);
+            });
+        };
     </script>
 </body>
 </html>
