@@ -7,11 +7,26 @@ window.addEventListener('load', function () {
         // Add more files as needed
     ];
 
-    const fetchPromises = jsonFiles.map(file => fetch(file).then(response => response.json()));
+    const fetchPromises = jsonFiles.map(file =>
+        fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .catch(error => {
+                console.error(`Error fetching ${file}:`, error);
+                return []; // Return empty array if an error occurs fetching a file
+            })
+    );
 
     Promise.all(fetchPromises)
         .then(results => {
             const allSeeds = results.flatMap(data => data.seeds); // Merge all seeds from all files
+            if (allSeeds.length === 0) {
+                console.warn('No seeds found in the fetched data.');
+            }
             displayResults(allSeeds);
         })
         .catch((error) => console.error('Error fetching seed data:', error));
@@ -27,13 +42,25 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 
     // Fetch data from the GitHub JSON files again for filtered results
     const jsonFiles = [
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star1.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star2.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
         // Add more files as needed
     ];
 
-    const fetchPromises = jsonFiles.map(file => fetch(file).then(response => response.json()));
+    const fetchPromises = jsonFiles.map(file =>
+        fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .catch(error => {
+                console.error(`Error fetching ${file}:`, error);
+                return []; // Return empty array if an error occurs fetching a file
+            })
+    );
 
     Promise.all(fetchPromises)
         .then(results => {
