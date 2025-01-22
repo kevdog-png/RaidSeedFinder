@@ -1,11 +1,10 @@
-// Function to handle form submission
-document.getElementById('filterForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+// Fetch and display data when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    fetchSeedData();
+});
 
-    const species = document.getElementById('species').value.toLowerCase();
-    const shiny = document.getElementById('shiny').value;
-    const teraType = document.getElementById('tera_type').value.toLowerCase();
-
+// Function to fetch and display the seeds
+function fetchSeedData() {
     // Fetch data from the GitHub JSON file
     fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
         .then(response => response.json())
@@ -16,18 +15,10 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
             }
 
             const seeds = data.seeds;
-            const filteredSeeds = seeds.filter(seed => {
-                return (
-                    (species === '' || seed.species.toLowerCase().includes(species)) &&
-                    (shiny === '' || seed.shiny === shiny) &&
-                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
-                );
-            });
-
-            displayResults(filteredSeeds);
+            displayResults(seeds); // Display all seeds immediately
         })
         .catch(error => console.error('Error fetching seed data:', error));
-});
+}
 
 // Function to get the sprite URL for the Pokémon species
 const getPokemonSprite = (species) => {
