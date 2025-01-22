@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Raid Seed Finder">
+    <meta property="og:description" content="Filter raid seeds by species, shiny status, and tera type in Pokémon Scarlet.">
+    <meta property="og:image" content="https://kevdog-png.github.io/RaidSeedFinder/thumbnail.png">
+    <meta property="og:url" content="https://kevdog-png.github.io/RaidSeedFinder/">
+    <meta property="og:type" content="website">
+    <title>Raid Seed Filter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Discord bar styling */
+        #discord-bar {
+            background-color: #5865F2;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        #discord-bar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #discord-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer styling */
+        #footer {
+            background-color: #2a2a2a;
+            color: #ddd;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 50px 0 50px 0; /* Adjust for header and footer space */
+        }
+
+        h1 {
+            text-align: center;
+            color: #f9f9f9;
+            font-size: 2.5rem;
+            margin-top: 70px;
+        }
+
+        /* Adjusted filter form styling */
+        form {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        input, select, button {
+            background-color: #333;
+            color: #f0f0f0;
+            border: 1px solid #444;
+            border-radius: 6px;
+            font-size: 1rem;
+            padding: 10px;
+            margin: 5px 0;
+            width: calc(33.33% - 10px);
+            max-width: 180px;
+            transition: background-color 0.3s ease, border 0.3s ease;
+        }
+
+        input:focus, select:focus, button:focus {
+            outline: none;
+            border-color: #7f7f7f;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+        }
+
+        /* Adjusted results container styling */
+        #results {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        #results li {
+            background-color: #333;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1rem;
+            width: 220px;
+            position: relative;
+            text-align: left;
+            overflow: hidden; /* Added to contain content */
+        }
+
+        .pokemon-image {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 10;
+        }
+
+        h2 {
+            text-align: center; /* Center the Results header */
+            color: #f9f9f9;
+            margin-top: 50px;
+        }
+
+        /* Merged reward styling */
+        .rewards {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .rewards li {
+            font-size: 0.9rem;
+            color: #ddd;
+            margin-bottom: 5px;
+        }
+
+        /* Command Box Styling */
+        .command-box {
+            text-align: center; /* Center the content */
+            position: relative; /* Allow absolute positioning of the message */
+        }
+
+        .command-message {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            font-size: 1rem;
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+
+        .copy-button {
+            position: relative;
+            z-index: 1;
+            width: 100%; /* Ensures button is the full width of the container */
+            padding: 12px; /* Increased padding */
+            font-size: 1.1rem; /* Slightly larger text */
+        }
+    </style>
+</head>
+<body>
+    <div id="discord-bar">
+        <a href="https://discord.gg/plza" target="_blank">Join our Discord server!</a>
+    </div>
+
+    <h1>Raid Seed Filter</h1>
+    <form id="filterForm">
+        <label for="species">Species:</label>
+        <input type="text" id="species" name="species" placeholder="e.g., Goodra"><br><br>
+
+        <label for="shiny">Shiny:</label>
+        <select id="shiny" name="shiny">
+            <option value="">Any</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="tera_type">Tera Type:</label>
+        <select id="tera_type" name="tera_type">
+            <option value="">Any</option>
+            <option value="Normal">Normal</option>
+            <option value="Fire">Fire</option>
+            <option value="Water">Water</option>
+            <option value="Electric">Electric</option>
+            <option value="Grass">Grass</option>
+            <option value="Ice">Ice</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Poison">Poison</option>
+            <option value="Ground">Ground</option>
+            <option value="Flying">Flying</option>
+            <option value="Psychic">Psychic</option>
+            <option value="Bug">Bug</option>
+            <option value="Rock">Rock</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Dark">Dark</option>
+            <option value="Steel">Steel</option>
+            <option value="Fairy">Fairy</option>
+            <option value="Stellar">Stellar</option>
+        </select><br><br>
+
+        <button type="submit">Filter</button>
+    </form>
+
+    <h2>Results:</h2>
+    <ul id="results"></ul>
+
+    <div id="footer">
+        Special thanks to MewTracker for the raid seeds!
+    </div>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById('filterForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const species = document.getElementById('species').value.toLowerCase();
+            const shiny = document.getElementById('shiny').value;
+            const teraType = document.getElementById('tera_type').value.toLowerCase();
+
+            // Fetch data from the JSON file
+            fetch('scarlet6iv5star.json')
+                .then(response => response.json())
+                .then(data => {
+                    const filteredSeeds = data.seeds.filter(seed => {
+                        return (
+                            (species === '' || seed.species.toLowerCase().includes(species)) &&
+                            (shiny === '' || seed.shiny === shiny) &&
+                            (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
+                        );
+                    });
+
+                    displayResults(filteredSeeds);
+                })
+                .catch(error => console.error('Error fetching seed data:', error));
+        });
+
+        // Function to get the sprite URL for the Pokémon species
+        const getPokemonSprite = (species) => {
+            const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
+            return `https://raw.githubusercontent.com/remokon/gen-9-sprites/refs/heads/main/${formattedSpecies}.png`;
+        };
+
+        // Function to display the filtered seeds in the UI
+        function displayResults(seeds) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ''; // Clear previous results
+
+            if (seeds.length === 0) {
+                resultsContainer.innerHTML = '<li>No matching results found.</li>';
+                return;
+            }
+
+            seeds.forEach(seed => {
+                const seedDiv = document.createElement('li');
+                seedDiv.classList.add('seed');
+
+                const spriteURL = getPokemonSprite(seed.species);
+
+                const rewardsMap = new Map();
+                seed.rewards.forEach(reward => {
+                    const key = reward.name;
+                    if (rewardsMap.has(key)) {
+                        rewardsMap.set(key, rewardsMap.get(key) + reward.count);
+                    } else {
+                        rewardsMap.set(key, reward.count);
+                    }
+                });
+
+                const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
+                    name,
+                    count
+                }));
+
+                seedDiv.innerHTML = `
+                    <strong>Species:</strong> ${seed.species} <br>
+                    <strong>Tera Type:</strong> ${seed.tera_type} <br>
+                    <strong>Shiny:</strong> ${seed.shiny} <br>
+                    <strong>Seed:</strong> ${seed.seed} <br>
+                    <strong>Item Drops:</strong><br>
+                    ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+                    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+                    <div class="command-box">
+                        <button class="copy-button" data-seed="${seed.seed}" data-star="5">Copy Command</button>
+                        <span class="command-message">Copied!</span>
+                    </div>
+                `;
+                resultsContainer.appendChild(seedDiv);
+            });
+
+            // Add event listeners for Copy Command buttons
+            const buttons = document.querySelectorAll('.copy-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const seed = this.getAttribute('data-seed');
+                    const starCount = this.getAttribute('data-star');
+                    const command = `.ra ${seed} ${starCount} 6`;
+
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(command);
+
+                    // Show "Copied!" message
+                    const messageElement = this.parentElement.querySelector('.command-message');
+                    messageElement.innerText = 'Copied!';
+                    messageElement.style.display = 'block';
+
+                    // Hide "Copied!" message after 2 seconds
+                    setTimeout(() => {
+                        messageElement.style.display = 'none';
+                    }, 2000);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
