@@ -1,6 +1,6 @@
 // Fetch and display data when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    fetchSeedData();
+    fetchSeedData(); // Automatically fetch and display the seeds
 });
 
 // Function to fetch and display the seeds
