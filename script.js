@@ -1,14 +1,18 @@
-// Fetch data from the GitHub JSON file and display results on page load
+// Fetch data from multiple GitHub JSON files and display results on page load
 window.addEventListener('load', function () {
-    fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
-        .then((response) => response.json())
-        .then((data) => {
-            if (!Array.isArray(data.seeds)) {
-                console.error('Data is not in expected array format:', data);
-                return;
-            }
-            // Display all results when the page loads
-            displayResults(data.seeds);
+    const jsonFiles = [
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star1.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star2.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
+        // Add more files as needed
+    ];
+
+    const fetchPromises = jsonFiles.map(file => fetch(file).then(response => response.json()));
+
+    Promise.all(fetchPromises)
+        .then(results => {
+            const allSeeds = results.flatMap(data => data.seeds); // Merge all seeds from all files
+            displayResults(allSeeds);
         })
         .catch((error) => console.error('Error fetching seed data:', error));
 });
@@ -21,17 +25,20 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
 
-    // Fetch data from the GitHub JSON file again for filtered results
-    fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
-        .then((response) => response.json())
-        .then((data) => {
-            if (!Array.isArray(data.seeds)) {
-                console.error('Data is not in expected array format:', data);
-                return;
-            }
+    // Fetch data from the GitHub JSON files again for filtered results
+    const jsonFiles = [
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star1.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star2.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
+        // Add more files as needed
+    ];
 
-            const seeds = data.seeds;
-            const filteredSeeds = seeds.filter((seed) => {
+    const fetchPromises = jsonFiles.map(file => fetch(file).then(response => response.json()));
+
+    Promise.all(fetchPromises)
+        .then(results => {
+            const allSeeds = results.flatMap(data => data.seeds); // Merge all seeds from all files
+            const filteredSeeds = allSeeds.filter((seed) => {
                 return (
                     (species === '' || seed.species.toLowerCase().includes(species)) &&
                     (shiny === '' || seed.shiny === shiny) &&
