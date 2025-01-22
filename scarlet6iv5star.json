@@ -26274,6 +26274,4550 @@
             "species": "Polteageist",
             "tera_type": "Fighting",
             "weight": 128
+        },
+        {
+            "ability": "Regenerator",
+            "atk": 31,
+            "def": 8,
+            "drops": 5,
+            "ec": "289875C7",
+            "gender": "Female",
+            "height": 147,
+            "hp": 31,
+            "nature": "Bold",
+            "pid": "EA711B0D",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 580,
+                    "name": "Balm Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 580,
+                    "name": "Balm Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 143,
+            "seed": "05FB0B6C",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 16,
+            "species": "Amoonguss",
+            "tera_type": "Ghost",
+            "weight": 123
+        },
+        {
+            "ability": "Unaware",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "2CE63FF9",
+            "gender": "Female",
+            "height": 146,
+            "hp": 28,
+            "nature": "Rash",
+            "pid": "365A855C",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 645,
+                    "name": "Ability Capsule"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                }
+            ],
+            "scale": 145,
+            "seed": "0A48D59E",
+            "shiny": "Yes",
+            "spa": 2,
+            "spd": 31,
+            "spe": 31,
+            "species": "Dondozo",
+            "tera_type": "Water",
+            "weight": 121
+        },
+        {
+            "ability": "Cursed Body",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "2D07A8C8",
+            "gender": "Female",
+            "height": 68,
+            "hp": 28,
+            "nature": "Calm",
+            "pid": "B02654E8",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                }
+            ],
+            "scale": 90,
+            "seed": "0A6A3E6D",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 8,
+            "spe": 31,
+            "species": "Gengar",
+            "tera_type": "Steel",
+            "weight": 73
+        },
+        {
+            "ability": "Sheer Force",
+            "atk": 9,
+            "def": 31,
+            "drops": 5,
+            "ec": "30E5B0DC",
+            "gender": "Male",
+            "height": 110,
+            "hp": 31,
+            "nature": "Lonely",
+            "pid": "3C9FB284",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                }
+            ],
+            "scale": 236,
+            "seed": "0E484681",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 10,
+            "spe": 31,
+            "species": "Cetitan",
+            "tera_type": "Ground",
+            "weight": 167
+        },
+        {
+            "ability": "Cursed Body",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "34E45C64",
+            "gender": "Male",
+            "height": 155,
+            "hp": 13,
+            "nature": "Modest",
+            "pid": "27F214D1",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 226,
+            "seed": "1246F209",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Gengar",
+            "tera_type": "Ground",
+            "weight": 186
+        },
+        {
+            "ability": "Regenerator",
+            "atk": 31,
+            "def": 7,
+            "drops": 5,
+            "ec": "35FAFE6D",
+            "gender": "Male",
+            "height": 126,
+            "hp": 5,
+            "nature": "Lonely",
+            "pid": "8B659663",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 580,
+                    "name": "Balm Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 159,
+            "seed": "135D9412",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Amoonguss",
+            "tera_type": "Psychic",
+            "weight": 139
+        },
+        {
+            "ability": "Unburden",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "3EF97468",
+            "gender": "Female",
+            "height": 177,
+            "hp": 26,
+            "nature": "Hasty",
+            "pid": "9BFEB2E2",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 221,
+            "seed": "1C5C0A0D",
+            "shiny": "Yes",
+            "spa": 8,
+            "spd": 31,
+            "spe": 31,
+            "species": "Drifblim",
+            "tera_type": "Steel",
+            "weight": 67
+        },
+        {
+            "ability": "Flare Boost",
+            "atk": 2,
+            "def": 4,
+            "drops": 5,
+            "ec": "403795D7",
+            "gender": "Male",
+            "height": 83,
+            "hp": 31,
+            "nature": "Brave",
+            "pid": "830BBABE",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                }
+            ],
+            "scale": 149,
+            "seed": "1D9A2B7C",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Drifblim",
+            "tera_type": "Ice",
+            "weight": 241
+        },
+        {
+            "ability": "Ice Body",
+            "atk": 28,
+            "def": 31,
+            "drops": 5,
+            "ec": "428B9A5E",
+            "gender": "Male",
+            "height": 85,
+            "hp": 31,
+            "nature": "Lonely",
+            "pid": "D116E163",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 795,
+                    "name": "Bottle Cap"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                }
+            ],
+            "scale": 133,
+            "seed": "1FEE3003",
+            "shiny": "Yes",
+            "spa": 19,
+            "spd": 31,
+            "spe": 31,
+            "species": "Glalie",
+            "tera_type": "Poison",
+            "weight": 196
+        },
+        {
+            "ability": "Serene Grace",
+            "atk": 4,
+            "def": 31,
+            "drops": 5,
+            "ec": "43B8E7DA",
+            "gender": "Female",
+            "height": 115,
+            "hp": 31,
+            "nature": "Modest",
+            "pid": "88CD72F4",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 9,
+            "seed": "211B7D7F",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Blissey",
+            "tera_type": "Ground",
+            "weight": 173
+        },
+        {
+            "ability": "Healer",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "444767DA",
+            "gender": "Female",
+            "height": 153,
+            "hp": 8,
+            "nature": "Rash",
+            "pid": "CF913536",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                }
+            ],
+            "scale": 215,
+            "seed": "21A9FD7F",
+            "shiny": "Yes",
+            "spa": 26,
+            "spd": 31,
+            "spe": 31,
+            "species": "Blissey",
+            "tera_type": "Ground",
+            "weight": 21
+        },
+        {
+            "ability": "Natural Cure",
+            "atk": 20,
+            "def": 31,
+            "drops": 5,
+            "ec": "45A3D14F",
+            "gender": "Female",
+            "height": 101,
+            "hp": 31,
+            "nature": "Impish",
+            "pid": "330345CE",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 50,
+                    "name": "Rare Candy"
+                }
+            ],
+            "scale": 178,
+            "seed": "230666F4",
+            "shiny": "Yes",
+            "spa": 27,
+            "spd": 31,
+            "spe": 31,
+            "species": "Blissey",
+            "tera_type": "Dragon",
+            "weight": 109
+        },
+        {
+            "ability": "Unaware",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "4762AADC",
+            "gender": "Female",
+            "height": 153,
+            "hp": 0,
+            "nature": "Lax",
+            "pid": "46631EC7",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 131,
+            "seed": "24C54081",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 14,
+            "species": "Dondozo",
+            "tera_type": "Ghost",
+            "weight": 186
+        },
+        {
+            "ability": "Levitate",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "486274E7",
+            "gender": "Male",
+            "height": 205,
+            "hp": 15,
+            "nature": "Rash",
+            "pid": "466AF6FB",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 50,
+                    "name": "Rare Candy"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                }
+            ],
+            "scale": 170,
+            "seed": "25C50A8C",
+            "shiny": "Yes",
+            "spa": 26,
+            "spd": 31,
+            "spe": 31,
+            "species": "Eelektross",
+            "tera_type": "Ghost",
+            "weight": 198
+        },
+        {
+            "ability": "Effect Spore",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "4A5F35C7",
+            "gender": "Male",
+            "height": 253,
+            "hp": 19,
+            "nature": "Gentle",
+            "pid": "3123E235",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 51,
+                    "name": "PP Up"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 225,
+            "seed": "27C1CB6C",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 27,
+            "species": "Amoonguss",
+            "tera_type": "Ghost",
+            "weight": 183
+        },
+        {
+            "ability": "Moody",
+            "atk": 31,
+            "def": 25,
+            "drops": 5,
+            "ec": "4FCF1B5A",
+            "gender": "Female",
+            "height": 185,
+            "hp": 31,
+            "nature": "Rash",
+            "pid": "FAA38DB9",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 50,
+                    "name": "Rare Candy"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 580,
+                    "name": "Balm Mushroom"
+                }
+            ],
+            "scale": 114,
+            "seed": "2D31B0FF",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Glalie",
+            "tera_type": "Rock",
+            "weight": 131
+        },
+        {
+            "ability": "Rocky Payload",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "5362AF60",
+            "gender": "Male",
+            "height": 170,
+            "hp": 19,
+            "nature": "Naughty",
+            "pid": "4FF19DA7",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 566,
+                    "name": "Muscle Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 91,
+                    "name": "Star Piece"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 3,
+                    "item_id": 170,
+                    "name": "Kelpsy Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1232,
+                    "name": "Adamant Mint"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 91,
+            "seed": "30C54505",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 18,
+            "spe": 31,
+            "species": "Bombirdier",
+            "tera_type": "Normal",
+            "weight": 238
+        },
+        {
+            "ability": "Cursed Body",
+            "atk": 23,
+            "def": 31,
+            "drops": 5,
+            "ec": "543DA863",
+            "gender": "Male",
+            "height": 117,
+            "hp": 18,
+            "nature": "Calm",
+            "pid": "BC8B9DB6",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 50,
+                    "name": "Rare Candy"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                }
+            ],
+            "scale": 169,
+            "seed": "31A03E08",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Gengar",
+            "tera_type": "Poison",
+            "weight": 35
+        },
+        {
+            "ability": "Zero to Hero",
+            "atk": 31,
+            "def": 18,
+            "drops": 5,
+            "ec": "59132B5F",
+            "gender": "Male",
+            "height": 100,
+            "hp": 31,
+            "nature": "Naive",
+            "pid": "13C6D9CA",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                }
+            ],
+            "scale": 133,
+            "seed": "3675C104",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 19,
+            "species": "Palafin",
+            "tera_type": "Fighting",
+            "weight": 29
+        },
+        {
+            "ability": "Slush Rush",
+            "atk": 20,
+            "def": 31,
+            "drops": 5,
+            "ec": "616CB0E0",
+            "gender": "Male",
+            "height": 73,
+            "hp": 31,
+            "nature": "Calm",
+            "pid": "7334215B",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 50,
+                    "name": "Rare Candy"
+                }
+            ],
+            "scale": 105,
+            "seed": "3ECF4685",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 12,
+            "species": "Cetitan",
+            "tera_type": "Normal",
+            "weight": 161
+        },
+        {
+            "ability": "Sheer Force",
+            "atk": 31,
+            "def": 0,
+            "drops": 5,
+            "ec": "627FCECD",
+            "gender": "Female",
+            "height": 128,
+            "hp": 21,
+            "nature": "Quiet",
+            "pid": "BDEB348A",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                }
+            ],
+            "scale": 99,
+            "seed": "3FE26472",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Cetitan",
+            "tera_type": "Psychic",
+            "weight": 224
+        },
+        {
+            "ability": "Zero to Hero",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "647050CF",
+            "gender": "Male",
+            "height": 227,
+            "hp": 13,
+            "nature": "Modest",
+            "pid": "8F76DA1C",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                }
+            ],
+            "scale": 170,
+            "seed": "41D2E674",
+            "shiny": "Yes",
+            "spa": 18,
+            "spd": 31,
+            "spe": 31,
+            "species": "Palafin",
+            "tera_type": "Dragon",
+            "weight": 131
+        },
+        {
+            "ability": "Slush Rush",
+            "atk": 18,
+            "def": 31,
+            "drops": 5,
+            "ec": "6F034E5E",
+            "gender": "Male",
+            "height": 132,
+            "hp": 31,
+            "nature": "Mild",
+            "pid": "E07E6A85",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 580,
+                    "name": "Balm Mushroom"
+                }
+            ],
+            "scale": 45,
+            "seed": "4C65E403",
+            "shiny": "Yes",
+            "spa": 0,
+            "spd": 31,
+            "spe": 31,
+            "species": "Cetitan",
+            "tera_type": "Rock",
+            "weight": 105
+        },
+        {
+            "ability": "Regenerator",
+            "atk": 31,
+            "def": 10,
+            "drops": 5,
+            "ec": "703D75C7",
+            "gender": "Female",
+            "height": 210,
+            "hp": 31,
+            "nature": "Hardy",
+            "pid": "D5C0EC4A",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                }
+            ],
+            "scale": 53,
+            "seed": "4DA00B6C",
+            "shiny": "Yes",
+            "spa": 1,
+            "spd": 31,
+            "spe": 31,
+            "species": "Amoonguss",
+            "tera_type": "Ghost",
+            "weight": 66
+        },
+        {
+            "ability": "Moody",
+            "atk": 26,
+            "def": 31,
+            "drops": 5,
+            "ec": "7880D176",
+            "gender": "Male",
+            "height": 192,
+            "hp": 16,
+            "nature": "Brave",
+            "pid": "DF275151",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 795,
+                    "name": "Bottle Cap"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                }
+            ],
+            "scale": 63,
+            "seed": "55E3671B",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Glalie",
+            "tera_type": "Ice",
+            "weight": 173
+        },
+        {
+            "ability": "Zero to Hero",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "7EA2D7C8",
+            "gender": "Male",
+            "height": 202,
+            "hp": 31,
+            "nature": "Lax",
+            "pid": "70B82C5B",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 36,
+            "seed": "5C056D6D",
+            "shiny": "Yes",
+            "spa": 19,
+            "spd": 8,
+            "spe": 31,
+            "species": "Palafin",
+            "tera_type": "Steel",
+            "weight": 129
+        },
+        {
+            "ability": "Regenerator",
+            "atk": 11,
+            "def": 31,
+            "drops": 5,
+            "ec": "82D03563",
+            "gender": "Male",
+            "height": 148,
+            "hp": 31,
+            "nature": "Bashful",
+            "pid": "2BDFA471",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 580,
+                    "name": "Balm Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 167,
+            "seed": "6032CB08",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 17,
+            "species": "Amoonguss",
+            "tera_type": "Poison",
+            "weight": 229
+        },
+        {
+            "ability": "Cursed Body",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "861BE8C8",
+            "gender": "Male",
+            "height": 149,
+            "hp": 8,
+            "nature": "Adamant",
+            "pid": "5AEF951D",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                }
+            ],
+            "scale": 211,
+            "seed": "637E7E6D",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 5,
+            "species": "Gengar",
+            "tera_type": "Steel",
+            "weight": 216
+        },
+        {
+            "ability": "Effect Spore",
+            "atk": 22,
+            "def": 31,
+            "drops": 5,
+            "ec": "877435D8",
+            "gender": "Female",
+            "height": 181,
+            "hp": 31,
+            "nature": "Mild",
+            "pid": "C066E168",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                }
+            ],
+            "scale": 160,
+            "seed": "64D6CB7D",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 2,
+            "species": "Amoonguss",
+            "tera_type": "Ice",
+            "weight": 95
+        },
+        {
+            "ability": "Zero to Hero",
+            "atk": 20,
+            "def": 31,
+            "drops": 6,
+            "ec": "87EE0D55",
+            "gender": "Male",
+            "height": 76,
+            "hp": 31,
+            "nature": "Gentle",
+            "pid": "A77699F3",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 50,
+                    "name": "Rare Candy"
+                }
+            ],
+            "scale": 160,
+            "seed": "6550A2FA",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 20,
+            "spe": 31,
+            "species": "Palafin",
+            "tera_type": "Fire",
+            "weight": 162
+        },
+        {
+            "ability": "Thick Fat",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "8831B0DC",
+            "gender": "Female",
+            "height": 138,
+            "hp": 31,
+            "nature": "Mild",
+            "pid": "B9C3DD67",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 123,
+            "seed": "65944681",
+            "shiny": "Yes",
+            "spa": 30,
+            "spd": 28,
+            "spe": 31,
+            "species": "Cetitan",
+            "tera_type": "Flying",
+            "weight": 176
+        },
+        {
+            "ability": "Levitate",
+            "atk": 31,
+            "def": 24,
+            "drops": 5,
+            "ec": "8C04F5E3",
+            "gender": "Male",
+            "height": 167,
+            "hp": 31,
+            "nature": "Hardy",
+            "pid": "068B6075",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                }
+            ],
+            "scale": 105,
+            "seed": "69678B88",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 0,
+            "spe": 31,
+            "species": "Eelektross",
+            "tera_type": "Poison",
+            "weight": 94
+        },
+        {
+            "ability": "Zero to Hero",
+            "atk": 13,
+            "def": 31,
+            "drops": 5,
+            "ec": "96CD2B60",
+            "gender": "Male",
+            "height": 216,
+            "hp": 9,
+            "nature": "Modest",
+            "pid": "3651A111",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 51,
+                    "name": "PP Up"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                }
+            ],
+            "scale": 185,
+            "seed": "742FC105",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Palafin",
+            "tera_type": "Normal",
+            "weight": 127
+        },
+        {
+            "ability": "Cursed Body",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "A111E8C7",
+            "gender": "Male",
+            "height": 166,
+            "hp": 31,
+            "nature": "Rash",
+            "pid": "4E8B7553",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 645,
+                    "name": "Ability Capsule"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 146,
+            "seed": "7E747E6C",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 18,
+            "spe": 17,
+            "species": "Gengar",
+            "tera_type": "Ghost",
+            "weight": 174
+        },
+        {
+            "ability": "Cursed Body",
+            "atk": 31,
+            "def": 31,
+            "drops": 6,
+            "ec": "C510685D",
+            "gender": "Male",
+            "height": 186,
+            "hp": 31,
+            "nature": "Hardy",
+            "pid": "7233DA32",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 51,
+                    "name": "PP Up"
+                }
+            ],
+            "scale": 133,
+            "seed": "A272FE02",
+            "shiny": "Yes",
+            "spa": 15,
+            "spd": 31,
+            "spe": 21,
+            "species": "Gengar",
+            "tera_type": "Fire",
+            "weight": 161
+        },
+        {
+            "ability": "Sheer Force",
+            "atk": 31,
+            "def": 26,
+            "drops": 5,
+            "ec": "CC1DF0DF",
+            "gender": "Female",
+            "height": 119,
+            "hp": 0,
+            "nature": "Naive",
+            "pid": "C32DE0AA",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                }
+            ],
+            "scale": 104,
+            "seed": "A9808684",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Cetitan",
+            "tera_type": "Dark",
+            "weight": 228
+        },
+        {
+            "ability": "Effect Spore",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "DDDF8155",
+            "gender": "Female",
+            "height": 133,
+            "hp": 19,
+            "nature": "Hasty",
+            "pid": "C8891001",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 223,
+            "seed": "BB4216FA",
+            "shiny": "Yes",
+            "spa": 11,
+            "spd": 31,
+            "spe": 31,
+            "species": "Amoonguss",
+            "tera_type": "Fighting",
+            "weight": 21
+        },
+        {
+            "ability": "Healer",
+            "atk": 10,
+            "def": 19,
+            "drops": 5,
+            "ec": "E141A6DE",
+            "gender": "Female",
+            "height": 153,
+            "hp": 31,
+            "nature": "Gentle",
+            "pid": "46595DE5",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                }
+            ],
+            "scale": 110,
+            "seed": "BEA43C83",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Blissey",
+            "tera_type": "Grass",
+            "weight": 185
+        },
+        {
+            "ability": "Slush Rush",
+            "atk": 31,
+            "def": 0,
+            "drops": 5,
+            "ec": "EC0649C7",
+            "gender": "Female",
+            "height": 130,
+            "hp": 31,
+            "nature": "Calm",
+            "pid": "7F401BA4",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 795,
+                    "name": "Bottle Cap"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                }
+            ],
+            "scale": 74,
+            "seed": "C968DF6C",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 23,
+            "spe": 31,
+            "species": "Cetitan",
+            "tera_type": "Ghost",
+            "weight": 236
+        },
+        {
+            "ability": "Levitate",
+            "atk": 23,
+            "def": 4,
+            "drops": 5,
+            "ec": "EF323647",
+            "gender": "Male",
+            "height": 36,
+            "hp": 31,
+            "nature": "Quirky",
+            "pid": "15D13DBF",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1907,
+                    "name": "Bitter Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                }
+            ],
+            "scale": 190,
+            "seed": "CC94CBEC",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Eelektross",
+            "tera_type": "Ghost",
+            "weight": 135
+        },
+        {
+            "ability": "Unburden",
+            "atk": 31,
+            "def": 31,
+            "drops": 5,
+            "ec": "F59E87DA",
+            "gender": "Male",
+            "height": 127,
+            "hp": 31,
+            "nature": "Jolly",
+            "pid": "E19C0A70",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                }
+            ],
+            "scale": 163,
+            "seed": "D3011D7F",
+            "shiny": "Yes",
+            "spa": 23,
+            "spd": 29,
+            "spe": 31,
+            "species": "Drifblim",
+            "tera_type": "Flying",
+            "weight": 137
+        },
+        {
+            "ability": "Zero to Hero",
+            "atk": 11,
+            "def": 31,
+            "drops": 5,
+            "ec": "096BCC5C",
+            "gender": "Female",
+            "height": 61,
+            "hp": 5,
+            "nature": "Bashful",
+            "pid": "0FA419EC",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 795,
+                    "name": "Bottle Cap"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                }
+            ],
+            "scale": 209,
+            "seed": "E6CE6201",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Palafin",
+            "tera_type": "Electric",
+            "weight": 29
+        },
+        {
+            "ability": "Zero to Hero",
+            "atk": 15,
+            "def": 31,
+            "drops": 5,
+            "ec": "21096BD4",
+            "gender": "Male",
+            "height": 140,
+            "hp": 26,
+            "nature": "Impish",
+            "pid": "9DBC274B",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1905,
+                    "name": "Salty Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 99,
+            "seed": "FE6C0179",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Palafin",
+            "tera_type": "Grass",
+            "weight": 70
         }
     ]
 }
