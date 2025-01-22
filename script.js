@@ -1,8 +1,8 @@
 // Fetch data from the GitHub JSON file and display results on page load
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
             if (!Array.isArray(data.seeds)) {
                 console.error('Data is not in expected array format:', data);
                 return;
@@ -10,11 +10,11 @@ window.addEventListener('load', function() {
             // Display all results when the page loads
             displayResults(data.seeds);
         })
-        .catch(error => console.error('Error fetching seed data:', error));
+        .catch((error) => console.error('Error fetching seed data:', error));
 });
 
 // Function to handle form submission
-document.getElementById('filterForm').addEventListener('submit', function(event) {
+document.getElementById('filterForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form submission
 
     const species = document.getElementById('species').value.toLowerCase();
@@ -23,15 +23,15 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
 
     // Fetch data from the GitHub JSON file again for filtered results
     fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
             if (!Array.isArray(data.seeds)) {
                 console.error('Data is not in expected array format:', data);
                 return;
             }
 
             const seeds = data.seeds;
-            const filteredSeeds = seeds.filter(seed => {
+            const filteredSeeds = seeds.filter((seed) => {
                 return (
                     (species === '' || seed.species.toLowerCase().includes(species)) &&
                     (shiny === '' || seed.shiny === shiny) &&
@@ -41,13 +41,17 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
 
             displayResults(filteredSeeds);
         })
-        .catch(error => console.error('Error fetching seed data:', error));
+        .catch((error) => console.error('Error fetching seed data:', error));
 });
 
 // Function to get the sprite URL for the Pokémon species
 const getPokemonSprite = (species) => {
-    const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
-    return `https://raw.githubusercontent.com/remokon/gen-9-sprites/refs/heads/main/${formattedSpecies}.png`;
+    const formattedSpecies = species
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, '') // Remove non-alphanumeric characters
+        .replace(/♀/g, 'f') // Replace gender symbols
+        .replace(/♂/g, 'm'); // Replace gender symbols
+    return `https://img.pokemondb.net/sprites/home/shiny/2x/${formattedSpecies}.jpg`;
 };
 
 // Function to display the filtered seeds in the UI
@@ -60,7 +64,7 @@ function displayResults(seeds) {
         return;
     }
 
-    seeds.forEach(seed => {
+    seeds.forEach((seed) => {
         const seedDiv = document.createElement('li');
         seedDiv.classList.add('seed');
 
@@ -68,9 +72,12 @@ function displayResults(seeds) {
         const raidCommand = `.ra ${seed.seed} 5 6`; // Default: 5-star raid with progress level 6
 
         // Add item drops display as plain text (each item on a new line)
-        const itemDrops = seed.rewards && seed.rewards.length > 0 
-            ? `<strong>Item Drops:</strong><br>${seed.rewards.map(reward => `${reward.count} x ${reward.name}`).join('<br>')}` 
-            : '<strong>Item Drops:</strong> No items <br>';
+        const itemDrops =
+            seed.rewards && seed.rewards.length > 0
+                ? `<strong>Item Drops:</strong><br>${seed.rewards
+                      .map((reward) => `${reward.count} x ${reward.name}`)
+                      .join('<br>')}`
+                : '<strong>Item Drops:</strong> No items <br>';
 
         seedDiv.innerHTML = ` 
             <strong>Species:</strong> ${seed.species} <br>
