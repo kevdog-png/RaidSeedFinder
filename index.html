@@ -110,6 +110,7 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            width: 120px; /* Updated width for the button */
         }
 
         button:hover {
@@ -328,13 +329,14 @@
             buttons.forEach(button => {
                 button.addEventListener('click', function() {
                     const seed = this.getAttribute('data-seed');
-                    const command = `.ra ${seed} 5 6`;  // Always use 5 for star count
+                    const starCount = this.getAttribute('data-star');
+                    const command = `.ra ${seed} ${starCount} 6`;
 
                     // Copy to clipboard
                     navigator.clipboard.writeText(command);
-                    this.querySelector('.command-message').style.display = 'block';
+                    this.querySelector('.command-message').innerText = 'Copied!';
                     setTimeout(() => {
-                        this.querySelector('.command-message').style.display = 'none';
+                        this.querySelector('.command-message').innerText = '';
                     }, 1500);
                 });
             });
