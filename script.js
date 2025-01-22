@@ -5,9 +5,10 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
     const species = document.getElementById('species').value.toLowerCase();
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
+    const selectedSeedList = document.getElementById('seedList').value;
 
-    // Fetch data from the GitHub JSON file
-    fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
+    // Fetch data from the selected JSON file
+    fetch(selectedSeedList)
         .then(response => response.json())
         .then(data => {
             if (!Array.isArray(data.seeds)) {
