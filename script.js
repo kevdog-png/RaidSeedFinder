@@ -8,6 +8,7 @@ window.addEventListener('load', function () {
     // Fetch all JSON files
     Promise.all(files.map(file => fetch(file).then(response => response.json())))
         .then(dataArray => {
+            // Combine all seeds from both files
             const allSeeds = dataArray.flatMap(data => data.seeds); // Combine all seeds
 
             if (!Array.isArray(allSeeds)) {
