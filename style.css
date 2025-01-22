@@ -126,7 +126,10 @@ button:active {
     width: 220px;
     position: relative;
     text-align: left;
-    overflow: hidden; /* Added to contain content */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Ensures vertical alignment of content */
+    justify-content: space-between; /* Pushes the copy button to the bottom */
 }
 
 .pokemon-image {
@@ -191,9 +194,7 @@ h2 {
 
 .command-message {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%);
+    top: 0;
     width: 100%;
     font-size: 1rem;
     color: green;
@@ -204,4 +205,8 @@ h2 {
 .copy-button {
     position: relative;
     z-index: 1;
+}
+
+.command-container {
+    margin-top: auto; /* Pushes the button to the bottom */
 }
