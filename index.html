@@ -324,28 +324,23 @@
                     </div>
                 `;
                 resultsContainer.appendChild(seedDiv);
-            });
 
-            // Add event listeners for Copy Command buttons
-            const buttons = document.querySelectorAll('.copy-button');
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const seed = this.getAttribute('data-seed');
-                    const starCount = this.getAttribute('data-star');
-                    const command = `.ra ${seed} ${starCount} 6`;
+                // Add copy button functionality
+                const copyButton = seedDiv.querySelector('.copy-button');
+                const commandMessage = seedDiv.querySelector('.command-message');
 
-                    // Copy to clipboard
-                    navigator.clipboard.writeText(command);
-
-                    // Show "Copied!" message
-                    const messageElement = this.parentElement.querySelector('.command-message');
-                    messageElement.innerText = 'Copied!';
-                    messageElement.style.display = 'block';
-
-                    // Hide "Copied!" message after 2 seconds
-                    setTimeout(() => {
-                        messageElement.style.display = 'none';
-                    }, 2000);
+                copyButton.addEventListener('click', function() {
+                    const seedCommand = `!raid ${seed.seed} 5 ${seed.tera_type}`;
+                    navigator.clipboard.writeText(seedCommand)
+                        .then(() => {
+                            commandMessage.style.display = 'block'; // Show the "Copied!" message
+                            setTimeout(() => {
+                                commandMessage.style.display = 'none'; // Hide the message after 2 seconds
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy command:', err);
+                        });
                 });
             });
         }
