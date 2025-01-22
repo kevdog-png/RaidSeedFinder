@@ -126,8 +126,7 @@ button:active {
     width: 220px;
     position: relative;
     text-align: left;
-    overflow: hidden;
-    display: block; /* Remove flex layout */
+    overflow: hidden; /* Added to contain content */
 }
 
 .pokemon-image {
@@ -139,33 +138,61 @@ button:active {
     z-index: 10;
 }
 
-/* Inline text layout */
-#results li strong {
-    display: inline-block; /* Makes labels inline with their values */
-    margin-right: 5px; /* Small space between label and value */
+h2 {
+    text-align: center; /* Center the Results header */
+    color: #f9f9f9;
+    margin-top: 50px;
 }
 
-#results li .pokemon-details {
-    margin-top: 10px; /* Space between details and item list */
-}
-
-.command-container {
-    margin-top: 15px; /* Adjust spacing above the "Copy Command" box */
-}
-
-/* Optional: To remove extra spaces between items */
+/* Merged reward styling */
 .rewards {
-    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
 }
 
 .rewards li {
+    color: #ddd;
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 1rem;
+}
+
+/* Pokemon details styling */
+.pokemon-details {
     font-size: 1rem;
     color: #ddd;
-    margin: 0; /* Remove spacing between items */
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pokemon-details span {
+    font-weight: bold;
+}
+
+.pokemon-details .items {
+    list-style-type: none;
     padding: 0;
+    margin-top: 5px;
+}
+
+.pokemon-details .items li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
 
 /* Command Box Styling */
+.command-container {
+    margin-top: 15px; /* Adjust spacing above the "Copy Command" box */
+    margin-bottom: 20px; /* Add bottom margin to force a gap */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 .command-box {
     text-align: center; /* Center the content */
     position: relative; /* Allow absolute positioning of the message */
@@ -184,9 +211,4 @@ button:active {
 .copy-button {
     position: relative;
     z-index: 1;
-}
-
-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px 2px #4CAF50;
 }
