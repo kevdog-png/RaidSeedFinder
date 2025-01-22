@@ -1,9 +1,9 @@
-// Fetch data from multiple GitHub JSON files and display results on page load
+// Fetch data from multiple local JSON files and display results on page load
 window.addEventListener('load', function () {
     const jsonFiles = [
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
+        'scarlet6iv5star.json',
+        'scarlet6iv4star.json',
+        'scarlet6iv5star3.json'
     ]; // Add more files as needed
 
     // Fetch data from all the JSON files concurrently
@@ -33,11 +33,11 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
 
-    // List of JSON files to fetch
+    // List of local JSON files to fetch
     const jsonFiles = [
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
+        'scarlet6iv5star.json',
+        'scarlet6iv4star.json',
+        'scarlet6iv5star3.json'
     ]; // Add more files as needed
 
     // Fetch data from all the JSON files concurrently
