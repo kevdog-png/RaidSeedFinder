@@ -1,0 +1,116 @@
+    "meta": {
+        "event_id": -1,
+        "event_name": "",
+        "game": "Scarlet",
+        "map_id": 0,
+        "map_name": "Paldea",
+        "raid_boost": 0,
+        "stage": 3,
+        "stars": 5
+    },
+    "seeds": [
+        {
+            "ability": "Regenerator",
+            "atk": 31,
+            "def": 8,
+            "drops": 5,
+            "ec": "289875C7",
+            "gender": "Female",
+            "height": 147,
+            "hp": 31,
+            "nature": "Bold",
+            "pid": "EA711B0D",
+            "rewards": [
+                {
+                    "count": 1,
+                    "item_id": 1906,
+                    "name": "Sour Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1908,
+                    "name": "Spicy Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1904,
+                    "name": "Sweet Herba Mystica"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1128,
+                    "name": "Exp. Candy XL"
+                },
+                {
+                    "count": 5,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 580,
+                    "name": "Balm Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 580,
+                    "name": "Balm Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                }
+            ],
+            "scale": 143,
+            "seed": "05FB0B6C",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 16,
+            "species": "Amoonguss",
+            "tera_type": "Ghost",
+            "weight": 123
+        }
+    ]
+}
