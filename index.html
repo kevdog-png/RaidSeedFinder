@@ -277,21 +277,24 @@
             const shiny = document.getElementById('shiny').value;
             const teraType = document.getElementById('tera_type').value.toLowerCase();
 
-            // Fetch data from the JSON file
-            fetch('scarlet6iv5star.json')
-                .then(response => response.json())
-                .then(data => {
-                    const filteredSeeds = data.seeds.filter(seed => {
-                        return (
-                            (species === '' || seed.species.toLowerCase().includes(species)) &&
-                            (shiny === '' || seed.shiny === shiny) &&
-                            (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
-                        );
-                    });
+            // Fetch data from multiple JSON files
+            Promise.all([
+                fetch('scarlet5star.json').then(response => response.json()),
+                fetch('scarlet6iv5star.json').then(response => response.json())
+            ])
+            .then(([data1, data2]) => {
+                const combinedSeeds = [...data1.seeds, ...data2.seeds];
+                const filteredSeeds = combinedSeeds.filter(seed => {
+                    return (
+                        (species === '' || seed.species.toLowerCase().includes(species)) &&
+                        (shiny === '' || seed.shiny === shiny) &&
+                        (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
+                    );
+                });
 
-                    displayResults(filteredSeeds);
-                })
-                .catch(error => console.error('Error fetching seed data:', error));
+                displayResults(filteredSeeds);
+            })
+            .catch(error => console.error('Error fetching seed data:', error));
         });
 
         // Function to get the sprite URL for the Pokémon species
@@ -373,12 +376,15 @@
 
         // Display all results on page load
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('scarlet6iv5star.json')
-                .then(response => response.json())
-                .then(data => {
-                    displayResults(data.seeds);
-                })
-                .catch(error => console.error('Error fetching seed data:', error));
+            Promise.all([
+                fetch('scarlet5star.json').then(response => response.json()),
+                fetch('scarlet6iv5star.json').then(response => response.json())
+            ])
+            .then(([data1, data2]) => {
+                const combinedSeeds = [...data1.seeds, ...data2.seeds];
+                displayResults(combinedSeeds);
+            })
+            .catch(error => console.error('Error fetching seed data:', error));
         });
     </script>
 </body>
