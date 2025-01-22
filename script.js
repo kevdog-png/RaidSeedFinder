@@ -9,7 +9,13 @@ window.addEventListener('load', function () {
     Promise.all(files.map(file => fetch(file).then(response => response.json())))
         .then(dataArray => {
             // Combine all seeds from both files
-            const allSeeds = dataArray.flatMap(data => data.seeds); // Combine all seeds
+            const allSeeds = dataArray.flatMap((data) => {
+                const starCount = data.meta.stars; // Get the star count from the meta section
+                return data.seeds.map(seed => ({
+                    ...seed,
+                    starCount: starCount // Attach the star count to each seed
+                }));
+            });
 
             if (!Array.isArray(allSeeds)) {
                 console.error('Data is not in expected array format:', allSeeds);
@@ -38,7 +44,13 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 
     Promise.all(files.map(file => fetch(file).then(response => response.json())))
         .then(dataArray => {
-            const allSeeds = dataArray.flatMap(data => data.seeds); // Combine all seeds
+            const allSeeds = dataArray.flatMap((data) => {
+                const starCount = data.meta.stars; // Get the star count from the meta section
+                return data.seeds.map(seed => ({
+                    ...seed,
+                    starCount: starCount // Attach the star count to each seed
+                }));
+            });
 
             if (!Array.isArray(allSeeds)) {
                 console.error('Data is not in expected array format:', allSeeds);
@@ -70,8 +82,7 @@ function displayResults(seeds) {
 
     seeds.forEach((seed) => {
         const seedDiv = document.createElement('li');
-        seedDiv.classList.add('seed');
-        const raidCommand = `.ra ${seed.seed} 5 6`; // Default: 5-star raid with progress level 6
+        const raidCommand = `.ra ${seed.seed} ${seed.starCount} 6`; // Use the star count from the meta section
 
         // Add item drops display as plain text (each item on a new line)
         const itemDrops =
