@@ -1,106 +1,74 @@
 // Fetch data from multiple GitHub JSON files and display results on page load
-window.addEventListener('load', async function () {
+window.addEventListener('load', function () {
     const jsonFiles = [
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star2.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
-        // Add more files as needed
-    ];
+    ]; // Add more files as needed
 
-    // Array to hold all the seed data from fetched files
-    const allSeeds = [];
+    // Fetch data from all the JSON files concurrently
+    const fetchPromises = jsonFiles.map(file => fetch(file).then(response => response.json()));
 
-    // Loop through each file and fetch its content
-    for (const file of jsonFiles) {
-        try {
-            const response = await fetch(file);
+    Promise.all(fetchPromises)
+        .then(results => {
+            const allSeeds = results.flatMap(data => {
+                if (!Array.isArray(data.seeds)) {
+                    console.error('Data is not in expected array format:', data);
+                    return [];
+                }
+                return data.seeds; // Flatten all seed data into one array
+            });
 
-            // Check if response is ok
-            if (!response.ok) {
-                throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
-            }
-
-            // Check if the content type is JSON
-            const contentType = response.headers.get('Content-Type');
-            if (!contentType || !contentType.includes('application/json')) {
-                throw new Error(`Invalid content type for ${file}. Expected JSON, but got ${contentType}`);
-            }
-
-            // Parse the JSON content
-            const data = await response.json();
-
-            // Make sure data contains 'seeds' array
-            if (data && data.seeds) {
-                allSeeds.push(...data.seeds); // Merge seeds into the allSeeds array
-            } else {
-                console.warn(`No seeds found in ${file}`);
-            }
-        } catch (error) {
-            console.error(`Error fetching or parsing ${file}:`, error);
-        }
-    }
-
-    // If no seeds were loaded
-    if (allSeeds.length === 0) {
-        console.warn('No seeds found in the fetched data.');
-    } else {
-        displayResults(allSeeds); // Call function to display results
-    }
+            // Display all results when the page loads
+            displayResults(allSeeds);
+        })
+        .catch((error) => console.error('Error fetching seed data:', error));
 });
 
 // Function to handle form submission
-document.getElementById('filterForm').addEventListener('submit', async function (event) {
+document.getElementById('filterForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form submission
 
     const species = document.getElementById('species').value.toLowerCase();
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
 
-    // Array to hold filtered seeds
-    const filteredSeeds = [];
-
-    // Loop through each file for the filtered data
+    // List of JSON files to fetch
     const jsonFiles = [
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star2.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
-        // Add more files as needed
-    ];
+    ]; // Add more files as needed
 
-    for (const file of jsonFiles) {
-        try {
-            const response = await fetch(file);
+    // Fetch data from all the JSON files concurrently
+    const fetchPromises = jsonFiles.map(file => fetch(file).then(response => response.json()));
 
-            if (!response.ok) {
-                throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
-            }
+    Promise.all(fetchPromises)
+        .then(results => {
+            const allSeeds = results.flatMap(data => {
+                if (!Array.isArray(data.seeds)) {
+                    console.error('Data is not in expected array format:', data);
+                    return [];
+                }
+                return data.seeds; // Flatten all seed data into one array
+            });
 
-            const contentType = response.headers.get('Content-Type');
-            if (!contentType || !contentType.includes('application/json')) {
-                throw new Error(`Invalid content type for ${file}. Expected JSON, but got ${contentType}`);
-            }
+            // Filter seeds based on form inputs
+            const filteredSeeds = allSeeds.filter((seed) => {
+                return (
+                    (species === '' || seed.species.toLowerCase().includes(species)) &&
+                    (shiny === '' || seed.shiny === shiny) &&
+                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
+                );
+            });
 
-            const data = await response.json();
-
-            if (data && data.seeds) {
-                const filtered = data.seeds.filter((seed) => {
-                    return (
-                        (species === '' || seed.species.toLowerCase().includes(species)) &&
-                        (shiny === '' || seed.shiny === shiny) &&
-                        (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
-                    );
-                });
-                filteredSeeds.push(...filtered);
-            }
-        } catch (error) {
-            console.error(`Error fetching or parsing ${file}:`, error);
-        }
-    }
-
-    displayResults(filteredSeeds); // Display the filtered results
+            // Display filtered results
+            displayResults(filteredSeeds);
+        })
+        .catch((error) => console.error('Error fetching seed data:', error));
 });
 
-// Function to display the results in the UI
+// Function to display the filtered seeds in the UI
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = ''; // Clear previous results
@@ -115,6 +83,7 @@ function displayResults(seeds) {
         seedDiv.classList.add('seed');
         const raidCommand = `.ra ${seed.seed} 5 6`; // Default: 5-star raid with progress level 6
 
+        // Add item drops display as plain text (each item on a new line)
         const itemDrops =
             seed.rewards && seed.rewards.length > 0
                 ? `<strong>Item Drops:</strong><br>${seed.rewards
@@ -139,6 +108,7 @@ function displayResults(seeds) {
 
         resultsContainer.appendChild(seedDiv);
 
+        // Add event listeners for command functionality
         const showCommandButton = seedDiv.querySelector('.show-command');
         const commandBox = seedDiv.querySelector('.command-box');
         const copyButton = seedDiv.querySelector('.copy-command');
@@ -151,11 +121,11 @@ function displayResults(seeds) {
         copyButton.addEventListener('click', () => {
             commandInput.select();
             document.execCommand('copy');
-            const originalText = copyButton.textContent;
-            copyButton.textContent = 'Copied!';
+            const originalText = copyButton.textContent; // Save the original text
+            copyButton.textContent = 'Copied!'; // Change the text to "Copied!"
             setTimeout(() => {
-                copyButton.textContent = originalText;
-            }, 2000);
+                copyButton.textContent = originalText; // Revert to the original text after a delay
+            }, 2000); // Delay of 2 seconds
         });
     });
 }
