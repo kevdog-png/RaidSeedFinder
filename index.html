@@ -289,7 +289,7 @@
 
             Promise.all(fetchPromises)
                 .then(results => {
-                    const allSeeds = results.flatMap(data => data.seeds); // Merge all seeds
+                    const allSeeds = results.flatMap(data => data.seeds || []); // Merge all seeds
                     const filteredSeeds = allSeeds.filter(seed => {
                         return (
                             (species === '' || seed.species.toLowerCase().includes(species)) &&
@@ -300,7 +300,11 @@
 
                     displayResults(filteredSeeds);
                 })
-                .catch(error => console.error('Error fetching seed data:', error));
+                .catch(error => {
+                    console.error('Error fetching seed data:', error);
+                    const resultsContainer = document.getElementById('results');
+                    resultsContainer.innerHTML = '<li>Error fetching data. Please try again later.</li>';
+                });
         });
 
         // Function to get the sprite URL for the Pokémon species
