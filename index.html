@@ -312,7 +312,10 @@
                     <strong>Tera Type:</strong> ${seed.tera_type} <br>
                     <strong>Shiny:</strong> ${seed.shiny} <br>
                     <strong>Seed:</strong> ${seed.seed} <br>
-                    <strong>Item Drops:</strong> ${mergedRewards.map(reward => `${reward.count}x ${reward.name}`).join(', ')} <br>
+                    <strong>Item Drops:</strong>
+                    <ul class="rewards">
+                        ${mergedRewards.map(reward => `<li>${reward.count}x ${reward.name}</li>`).join('')}
+                    </ul>
                     <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
                     <div class="command-box">
                         <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.star_count}">Copy Command</button>
