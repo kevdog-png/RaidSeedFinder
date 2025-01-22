@@ -315,33 +315,35 @@
                     <strong>Tera Type:</strong> ${seed.tera_type} <br>
                     <strong>Shiny:</strong> ${seed.shiny} <br>
                     <strong>Seed:</strong> ${seed.seed} <br>
-                    <strong>Item Drops:</strong><br>
-                    ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-                    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+                    <strong>Item Drops:</strong>
+                    <ul class="rewards">
+                        ${mergedRewards.map(reward => `<li>${reward.name}: ${reward.count}</li>`).join('')}
+                    </ul>
                     <div class="command-box">
-                        <button class="copy-button" data-seed="${seed.seed}" data-star="5">Copy Command</button>
-                        <span class="command-message">Copied!</span>
+                        <button class="copy-button" onclick="copyCommand('${seed.seed}')">Copy Command</button>
+                        <div class="command-message">Copied!</div>
                     </div>
                 `;
+
                 resultsContainer.appendChild(seedDiv);
+            });
+        }
 
-                // Add copy button functionality
-                const copyButton = seedDiv.querySelector('.copy-button');
-                const commandMessage = seedDiv.querySelector('.command-message');
+        // Function to copy the seed command to clipboard and show the "Copied!" message
+        function copyCommand(seed) {
+            const command = `!5star ${seed}`;
+            navigator.clipboard.writeText(command).then(() => {
+                const commandBox = event.target.closest('.command-box');
+                const message = commandBox.querySelector('.command-message');
+                const button = commandBox.querySelector('.copy-button');
+                
+                message.style.display = 'block';
+                button.textContent = 'Copied!';
 
-                copyButton.addEventListener('click', function() {
-                    const seedCommand = `!raid ${seed.seed} 5 ${seed.tera_type}`;
-                    navigator.clipboard.writeText(seedCommand)
-                        .then(() => {
-                            commandMessage.style.display = 'block'; // Show the "Copied!" message
-                            setTimeout(() => {
-                                commandMessage.style.display = 'none'; // Hide the message after 2 seconds
-                            }, 2000);
-                        })
-                        .catch(err => {
-                            console.error('Failed to copy command:', err);
-                        });
-                });
+                setTimeout(() => {
+                    message.style.display = 'none';
+                    button.textContent = 'Copy Command';
+                }, 2000);
             });
         }
     </script>
