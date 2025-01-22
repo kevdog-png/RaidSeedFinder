@@ -13,17 +13,26 @@ window.addEventListener('load', function () {
                 if (!response.ok) {
                     throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
                 }
-                return response.json();
+                return response.text(); // Get raw response as text
+            })
+            .then(text => {
+                console.log('Fetched text:', text); // Log the raw text to debug
+                try {
+                    return JSON.parse(text); // Try to parse JSON manually
+                } catch (error) {
+                    console.error(`Error parsing JSON from ${file}:`, error);
+                    return {}; // Return empty object if parsing fails
+                }
             })
             .catch(error => {
                 console.error(`Error fetching ${file}:`, error);
-                return []; // Return empty array if an error occurs fetching a file
+                return {}; // Return empty object if an error occurs fetching the file
             })
     );
 
     Promise.all(fetchPromises)
         .then(results => {
-            const allSeeds = results.flatMap(data => data.seeds); // Merge all seeds from all files
+            const allSeeds = results.flatMap(data => data.seeds || []); // Merge all seeds from all files
             if (allSeeds.length === 0) {
                 console.warn('No seeds found in the fetched data.');
             }
@@ -54,17 +63,26 @@ document.getElementById('filterForm').addEventListener('submit', function (event
                 if (!response.ok) {
                     throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
                 }
-                return response.json();
+                return response.text(); // Get raw response as text
+            })
+            .then(text => {
+                console.log('Fetched text:', text); // Log the raw text to debug
+                try {
+                    return JSON.parse(text); // Try to parse JSON manually
+                } catch (error) {
+                    console.error(`Error parsing JSON from ${file}:`, error);
+                    return {}; // Return empty object if parsing fails
+                }
             })
             .catch(error => {
                 console.error(`Error fetching ${file}:`, error);
-                return []; // Return empty array if an error occurs fetching a file
+                return {}; // Return empty object if an error occurs fetching the file
             })
     );
 
     Promise.all(fetchPromises)
         .then(results => {
-            const allSeeds = results.flatMap(data => data.seeds); // Merge all seeds from all files
+            const allSeeds = results.flatMap(data => data.seeds || []); // Merge all seeds from all files
             const filteredSeeds = allSeeds.filter((seed) => {
                 return (
                     (species === '' || seed.species.toLowerCase().includes(species)) &&
