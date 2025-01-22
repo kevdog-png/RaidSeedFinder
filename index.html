@@ -278,7 +278,11 @@
             const teraType = document.getElementById('tera_type').value.toLowerCase();
 
             // List of JSON files to fetch
-            const jsonFiles = ['scarlet6iv5star.json', 'scarlet6iv5star2.json', 'scarlet6iv5star3.json']; // Add more files as needed
+            const jsonFiles = [
+                'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
+                'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star2.json',
+                'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
+            ]; // Add more files as needed
 
             // Fetch data from all the JSON files and merge the results
             const fetchPromises = jsonFiles.map(file => fetch(file).then(response => response.json()));
