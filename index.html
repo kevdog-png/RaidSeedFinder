@@ -275,108 +275,88 @@
 
             const species = document.getElementById('species').value.toLowerCase();
             const shiny = document.getElementById('shiny').value;
-            const teraType = document.getElementById('tera_type').value.toLowerCase();
+            const teraType = document.getElementById('tera_type').value;
 
-            // Load data from both JSON files
-            const files = ['scarlet6iv5star.json', 'scarlet6iv4star.json'];
+            fetch('scarlet6iv5star.json')
+                .then(response => response.json())
+                .then(data => {
+                    let results = data.seeds;
 
-            Promise.all(files.map(file => fetch(file).then(response => response.json())))
-                .then(dataArray => {
-                    const allSeeds = dataArray.flatMap(data => data.seeds); // Combine all seeds
+                    // Filter by species, shiny, and tera type
+                    if (species) {
+                        results = results.filter(seed => seed.species.toLowerCase().includes(species));
+                    }
 
-                    const filteredSeeds = allSeeds.filter(seed => {
-                        return (
-                            (species === '' || seed.species.toLowerCase().includes(species)) &&
-                            (shiny === '' || seed.shiny === shiny) &&
-                            (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
-                        );
-                    });
+                    if (shiny) {
+                        results = results.filter(seed => seed.shiny === shiny);
+                    }
 
-                    displayResults(filteredSeeds);
+                    if (teraType) {
+                        results = results.filter(seed => seed.tera_type === teraType);
+                    }
+
+                    displayResults(results);
+                })
+                .catch(error => console.error('Error fetching seed data:', error));
+
+            fetch('scarlet6iv4star.json')
+                .then(response => response.json())
+                .then(data => {
+                    let results = data.seeds;
+
+                    // Filter by species, shiny, and tera type
+                    if (species) {
+                        results = results.filter(seed => seed.species.toLowerCase().includes(species));
+                    }
+
+                    if (shiny) {
+                        results = results.filter(seed => seed.shiny === shiny);
+                    }
+
+                    if (teraType) {
+                        results = results.filter(seed => seed.tera_type === teraType);
+                    }
+
+                    displayResults(results);
                 })
                 .catch(error => console.error('Error fetching seed data:', error));
         });
 
-        // Function to get the sprite URL for the Pokémon species
-        const getPokemonSprite = (species) => {
-            const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
-            return `https://img.pokemondb.net/sprites/home/shiny/${formattedSpecies}.png`; // Dynamic sprite URL based on species
-        };
-
-        // Function to display the filtered seeds in the UI
+        // Function to display the results
         function displayResults(seeds) {
             const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = ''; // Clear previous results
+            resultsContainer.innerHTML = '';
 
             if (seeds.length === 0) {
-                resultsContainer.innerHTML = '<li>No matching results found.</li>';
-                return;
+                resultsContainer.innerHTML = '<li>No results found.</li>';
+            } else {
+                seeds.forEach(seed => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <h3>${seed.species}</h3>
+                        <img src="${seed.image}" class="pokemon-image" alt="${seed.species}">
+                        <p><strong>Shiny:</strong> ${seed.shiny}</p>
+                        <p><strong>Tera Type:</strong> ${seed.tera_type}</p>
+                        <ul class="rewards">
+                            <li><strong>Item:</strong> ${seed.item}</li>
+                            <li><strong>Level:</strong> ${seed.level}</li>
+                        </ul>
+                    `;
+                    resultsContainer.appendChild(li);
+                });
             }
-
-            seeds.forEach(seed => {
-                const seedDiv = document.createElement('li');
-                seedDiv.classList.add('seed');
-
-                const spriteURL = getPokemonSprite(seed.species);
-
-                const rewardsMap = new Map();
-                seed.rewards.forEach(reward => {
-                    const key = reward.name;
-                    if (rewardsMap.has(key)) {
-                        rewardsMap.set(key, rewardsMap.get(key) + reward.count);
-                    } else {
-                        rewardsMap.set(key, reward.count);
-                    }
-                });
-
-                const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
-                    name,
-                    count
-                }));
-
-                seedDiv.innerHTML = `
-                    <strong>Species:</strong> ${seed.species} <br>
-                    <strong>Tera Type:</strong> ${seed.tera_type} <br>
-                    <strong>Shiny:</strong> ${seed.shiny} <br>
-                    <strong>Seed:</strong> ${seed.seed} <br>
-                    <strong>Item Drops:</strong><br>
-                    ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-                    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
-                    <div class="command-box">
-                        <button class="copy-button" data-seed="${seed.seed}" data-star="5">Copy Command</button>
-                        <span class="command-message">Copied!</span>
-                    </div>
-                `;
-                resultsContainer.appendChild(seedDiv);
-            });
-
-            // Add event listeners for Copy Command buttons
-            const buttons = document.querySelectorAll('.copy-button');
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const seed = this.getAttribute('data-seed');
-                    const starCount = this.getAttribute('data-star');
-                    const command = `.ra ${seed} ${starCount} 6`;
-
-                    // Copy to clipboard
-                    navigator.clipboard.writeText(command);
-
-                    // Show "Copied!" message
-                    const messageElement = this.parentElement.querySelector('.command-message');
-                    messageElement.innerText = 'Copied!';
-                    messageElement.style.display = 'block';
-
-                    // Hide "Copied!" message after 2 seconds
-                    setTimeout(() => {
-                        messageElement.style.display = 'none';
-                    }, 2000);
-                });
-            });
         }
 
         // Display all results on page load
         document.addEventListener('DOMContentLoaded', function() {
             fetch('scarlet6iv5star.json')
+                .then(response => response.json())
+                .then(data => {
+                    displayResults(data.seeds);
+                })
+                .catch(error => console.error('Error fetching seed data:', error));
+
+            fetch('scarlet6iv4star.json')
                 .then(response => response.json())
                 .then(data => {
                     displayResults(data.seeds);
