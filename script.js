@@ -91,7 +91,7 @@ function displayResults(seeds) {
             const originalText = copyButton.textContent; // Save the original text
             copyButton.textContent = 'Copied!'; // Change the text to "Copied!"
             setTimeout(() => {
-                copyButton.textContent = originalText; // Restore the original text after a delay
+                copyButton.textContent = originalText; // Revert to the original text after a delay
             }, 2000); // Delay of 2 seconds
         });
     });
