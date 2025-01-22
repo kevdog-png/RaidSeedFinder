@@ -69,6 +69,7 @@ function displayResults(seeds) {
                 <div class="command-box hidden">
                     <input type="text" value="${raidCommand}" readonly>
                     <button class="copy-command">Copy</button>
+                    <span class="command-message">Copied!</span>
                 </div>
             </div>
         `;
@@ -80,6 +81,7 @@ function displayResults(seeds) {
         const commandBox = seedDiv.querySelector('.command-box');
         const copyButton = seedDiv.querySelector('.copy-command');
         const commandInput = seedDiv.querySelector('input');
+        const commandMessage = seedDiv.querySelector('.command-message');
 
         showCommandButton.addEventListener('click', () => {
             commandBox.classList.toggle('hidden');
@@ -88,7 +90,14 @@ function displayResults(seeds) {
         copyButton.addEventListener('click', () => {
             commandInput.select();
             document.execCommand('copy');
-            alert('Command copied to clipboard!');
+
+            // Show "Copied!" message
+            commandMessage.style.display = 'inline';
+
+            // Hide "Copied!" message after 2 seconds
+            setTimeout(() => {
+                commandMessage.style.display = 'none';
+            }, 2000);
         });
     });
 }
