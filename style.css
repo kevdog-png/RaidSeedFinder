@@ -184,15 +184,6 @@ h2 {
 }
 
 /* Command Box Styling */
-.command-container {
-    margin-top: 15px; /* Adjust spacing above the "Copy Command" box */
-    margin-bottom: 20px; /* Add bottom margin to force a gap */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
 .command-box {
     text-align: center; /* Center the content */
     position: relative; /* Allow absolute positioning of the message */
@@ -200,7 +191,9 @@ h2 {
 
 .command-message {
     position: absolute;
-    top: 0;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
     width: 100%;
     font-size: 1rem;
     color: green;
