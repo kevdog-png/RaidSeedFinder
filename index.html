@@ -60,7 +60,7 @@
             text-align: center;
             color: #f9f9f9;
             font-size: 2.5rem;
-            margin-top: 20px; /* Reduced gap above header */
+            margin-top: 70px;
         }
 
         /* Smaller text below the header */
@@ -68,7 +68,7 @@
             text-align: center;
             color: #ddd;
             font-size: 1rem;
-            margin-top: 5px; /* Reduced gap */
+            margin-top: 10px;
         }
 
         /* Adjusted filter form styling */
@@ -209,7 +209,6 @@
             margin: 0 auto;
             max-width: 100%;
             height: auto;
-            margin-bottom: 10px; /* Reduced gap below the image */
         }
     </style>
 </head>
@@ -295,57 +294,92 @@
                 .catch(error => console.error('Error fetching seed data:', error));
         });
 
-        // Function to display the filtered seeds
+        // Function to get the sprite URL for the Pokémon species
+        const getPokemonSprite = (species) => {
+            const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
+            return `https://raw.githubusercontent.com/remokon/gen-9-sprites/refs/heads/main/${formattedSpecies}.png`;
+        };
+
+        // Function to display the filtered seeds in the UI
         function displayResults(seeds) {
             const resultsContainer = document.getElementById('results');
             resultsContainer.innerHTML = ''; // Clear previous results
 
             if (seeds.length === 0) {
-                resultsContainer.innerHTML = '<li>No results found</li>';
+                resultsContainer.innerHTML = '<li>No matching results found.</li>';
                 return;
             }
 
             seeds.forEach(seed => {
                 const seedDiv = document.createElement('li');
+                seedDiv.classList.add('seed');
 
-                // Get the Pokémon sprite URL based on species
                 const spriteURL = getPokemonSprite(seed.species);
 
-                // Create the seed details
-                const seedHTML = `
-                    <img src="${spriteURL}" alt="${seed.species}" class="pokemon-image">
-                    <h3>${seed.species}</h3>
-                    <div>Shiny: ${seed.shiny}</div>
-                    <div>Tera Type: ${seed.tera_type}</div>
-                    <div>Seed: ${seed.seed}</div>
-                    <ul class="rewards">
-                        ${seed.rewards.map(reward => `<li>${reward}</li>`).join('')}
-                    </ul>
+                const rewardsMap = new Map();
+                seed.rewards.forEach(reward => {
+                    const key = reward.name;
+                    if (rewardsMap.has(key)) {
+                        rewardsMap.set(key, rewardsMap.get(key) + reward.count);
+                    } else {
+                        rewardsMap.set(key, reward.count);
+                    }
+                });
+
+                const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
+                    name,
+                    count
+                }));
+
+                seedDiv.innerHTML = `
+                    <strong>Species:</strong> ${seed.species} <br>
+                    <strong>Tera Type:</strong> ${seed.tera_type} <br>
+                    <strong>Shiny:</strong> ${seed.shiny} <br>
+                    <strong>Seed:</strong> ${seed.seed} <br>
+                    <strong>Item Drops:</strong><br>
+                    ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+                    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
                     <div class="command-box">
-                        <div class="command-message">Click to copy the command</div>
-                        <button class="copy-button" onclick="copySeed('${seed.seed}')">Copy Command</button>
+                        <button class="copy-button" data-seed="${seed.seed}" data-star="5">Copy Command</button>
+                        <span class="command-message">Copied!</span>
                     </div>
                 `;
-                seedDiv.innerHTML = seedHTML;
-
-                // Append the seed item to the results container
                 resultsContainer.appendChild(seedDiv);
             });
-        }
 
-        // Function to copy seed command to clipboard
-        function copySeed(seed) {
-            const command = `!raid ${seed}`;
-            navigator.clipboard.writeText(command).then(() => {
-                const messageElement = document.querySelector('.command-message');
-                messageElement.style.display = 'block'; // Show success message
-                setTimeout(() => {
-                    messageElement.style.display = 'none'; // Hide after 3 seconds
-                }, 3000);
-            }).catch(err => {
-                console.error('Error copying command:', err);
+            // Add event listeners for Copy Command buttons
+            const buttons = document.querySelectorAll('.copy-button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const seed = this.getAttribute('data-seed');
+                    const starCount = this.getAttribute('data-star');
+                    const command = `.ra ${seed} ${starCount} 6`;
+
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(command);
+
+                    // Show "Copied!" message
+                    const messageElement = this.parentElement.querySelector('.command-message');
+                    messageElement.innerText = 'Copied!';
+                    messageElement.style.display = 'block';
+
+                    // Hide "Copied!" message after 2 seconds
+                    setTimeout(() => {
+                        messageElement.style.display = 'none';
+                    }, 2000);
+                });
             });
         }
+
+        // Display all results on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('scarlet6iv5star.json')
+                .then(response => response.json())
+                .then(data => {
+                    displayResults(data.seeds);
+                })
+                .catch(error => console.error('Error fetching seed data:', error));
+        });
     </script>
 </body>
 </html>
