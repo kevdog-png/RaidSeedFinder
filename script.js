@@ -1,11 +1,27 @@
-// Fetch and display data when the page loads
-document.addEventListener('DOMContentLoaded', function() {
-    fetchSeedData(); // Automatically fetch and display the seeds
+// Fetch data from the GitHub JSON file and display results on page load
+window.addEventListener('load', function() {
+    fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
+        .then(response => response.json())
+        .then(data => {
+            if (!Array.isArray(data.seeds)) {
+                console.error('Data is not in expected array format:', data);
+                return;
+            }
+            // Display all results when the page loads
+            displayResults(data.seeds);
+        })
+        .catch(error => console.error('Error fetching seed data:', error));
 });
 
-// Function to fetch and display the seeds
-function fetchSeedData() {
-    // Fetch data from the GitHub JSON file
+// Function to handle form submission
+document.getElementById('filterForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const species = document.getElementById('species').value.toLowerCase();
+    const shiny = document.getElementById('shiny').value;
+    const teraType = document.getElementById('tera_type').value.toLowerCase();
+
+    // Fetch data from the GitHub JSON file again for filtered results
     fetch('https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json')
         .then(response => response.json())
         .then(data => {
@@ -15,10 +31,18 @@ function fetchSeedData() {
             }
 
             const seeds = data.seeds;
-            displayResults(seeds); // Display all seeds immediately
+            const filteredSeeds = seeds.filter(seed => {
+                return (
+                    (species === '' || seed.species.toLowerCase().includes(species)) &&
+                    (shiny === '' || seed.shiny === shiny) &&
+                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
+                );
+            });
+
+            displayResults(filteredSeeds);
         })
         .catch(error => console.error('Error fetching seed data:', error));
-}
+});
 
 // Function to get the sprite URL for the Pokémon species
 const getPokemonSprite = (species) => {
