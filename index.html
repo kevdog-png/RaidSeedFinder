@@ -297,7 +297,7 @@
         // Function to get the sprite URL for the Pokémon species
         const getPokemonSprite = (species) => {
             const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
-            return `https://img.pokemondb.net/sprites/home/shiny/pecharunt.png`; // Updated to use "pecharunt.png"
+            return `https://img.pokemondb.net/sprites/home/shiny/${formattedSpecies}.png`; // Dynamic sprite URL based on species
         };
 
         // Function to display the filtered seeds in the UI
