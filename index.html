@@ -110,7 +110,6 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            width: 120px; /* Updated width for the button */
         }
 
         button:hover {
@@ -191,6 +190,9 @@
         .copy-button {
             position: relative;
             z-index: 1;
+            width: 100%; /* Ensures button is the full width of the container */
+            padding: 12px; /* Increased padding */
+            font-size: 1.1rem; /* Slightly larger text */
         }
     </style>
 </head>
@@ -334,10 +336,16 @@
 
                     // Copy to clipboard
                     navigator.clipboard.writeText(command);
-                    this.querySelector('.command-message').innerText = 'Copied!';
+
+                    // Show "Copied!" message
+                    const messageElement = this.parentElement.querySelector('.command-message');
+                    messageElement.innerText = 'Copied!';
+                    messageElement.style.display = 'block';
+
+                    // Hide "Copied!" message after 2 seconds
                     setTimeout(() => {
-                        this.querySelector('.command-message').innerText = '';
-                    }, 1500);
+                        messageElement.style.display = 'none';
+                    }, 2000);
                 });
             });
         }
