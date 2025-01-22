@@ -349,6 +349,16 @@
                 });
             });
         }
+
+        // Display all results on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('scarlet6iv5star.json')
+                .then(response => response.json())
+                .then(data => {
+                    displayResults(data.seeds);
+                })
+                .catch(error => console.error('Error fetching seed data:', error));
+        });
     </script>
 </body>
 </html>
