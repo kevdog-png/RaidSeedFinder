@@ -297,7 +297,7 @@
         // Function to get the sprite URL for the Pokémon species
         const getPokemonSprite = (species) => {
             const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
-            return `https://raw.githubusercontent.com/remokon/gen-9-sprites/refs/heads/main/${formattedSpecies}.png`;
+            return `https://img.pokemondb.net/sprites/home/shiny/2x/${formattedSpecies}.jpg`; // New sprite URL format
         };
 
         // Function to display the filtered seeds in the UI
