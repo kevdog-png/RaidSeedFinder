@@ -2,7 +2,7 @@
 window.addEventListener('load', function () {
     const jsonFiles = [
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star2.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
     ]; // Add more files as needed
 
@@ -36,7 +36,7 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     // List of JSON files to fetch
     const jsonFiles = [
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star2.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
     ]; // Add more files as needed
 
