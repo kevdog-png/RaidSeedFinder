@@ -127,9 +127,7 @@ button:active {
     position: relative;
     text-align: left;
     overflow: hidden;
-    display: flex;
-    flex-direction: column; /* Ensures vertical alignment of content */
-    justify-content: space-between; /* Pushes the copy button to the bottom */
+    display: block; /* Remove flex layout */
 }
 
 .pokemon-image {
@@ -141,49 +139,30 @@ button:active {
     z-index: 10;
 }
 
-h2 {
-    text-align: center; /* Center the Results header */
-    color: #f9f9f9;
-    margin-top: 50px;
+/* Inline text layout */
+#results li strong {
+    display: inline-block; /* Makes labels inline with their values */
+    margin-right: 5px; /* Small space between label and value */
 }
 
-/* Merged reward styling */
+#results li .pokemon-details {
+    margin-top: 10px; /* Space between details and item list */
+}
+
+.command-container {
+    margin-top: 15px; /* Adjust spacing above the "Copy Command" box */
+}
+
+/* Optional: To remove extra spaces between items */
 .rewards {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
+    margin: 0;
 }
 
 .rewards li {
-    color: #ddd;
-    margin-bottom: 5px;
-    padding: 0;
-    font-size: 1rem;
-}
-
-/* Pokemon details styling */
-.pokemon-details {
     font-size: 1rem;
     color: #ddd;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.pokemon-details span {
-    font-weight: bold;
-}
-
-.pokemon-details .items {
-    list-style-type: none;
+    margin: 0; /* Remove spacing between items */
     padding: 0;
-    margin-top: 5px;
-}
-
-.pokemon-details .items li {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
 }
 
 /* Command Box Styling */
@@ -207,6 +186,7 @@ h2 {
     z-index: 1;
 }
 
-.command-container {
-    margin-top: auto; /* Pushes the button to the bottom */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #4CAF50;
 }
