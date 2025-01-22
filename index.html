@@ -294,7 +294,7 @@
 
                 const rewardsMap = new Map();
                 seed.rewards.forEach(reward => {
-                    const key = `${reward.name} ${reward.count}`;
+                    const key = reward.name;
                     if (rewardsMap.has(key)) {
                         rewardsMap.set(key, rewardsMap.get(key) + reward.count);
                     } else {
@@ -332,14 +332,11 @@
                     const command = `.ra ${seed} ${starCount} 6`;
 
                     // Copy to clipboard
-                    navigator.clipboard.writeText(command).then(() => {
-                        const messageSpan = this.nextElementSibling;
-                        messageSpan.style.display = "block"; // Show "Copied!"
-                        messageSpan.textContent = "Copied!";
-                        setTimeout(() => {
-                            messageSpan.style.display = "none"; // Hide after 2 seconds
-                        }, 2000);
-                    });
+                    navigator.clipboard.writeText(command);
+                    this.querySelector('.command-message').style.display = 'block';
+                    setTimeout(() => {
+                        this.querySelector('.command-message').style.display = 'none';
+                    }, 1500);
                 });
             });
         }
