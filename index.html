@@ -261,6 +261,10 @@
         <label for="star_count">Star Count:</label>
         <select id="star_count" name="star_count">
             <option value="">Any</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
             <option value="5">5 Stars</option>
             <option value="6">6 Stars</option>
         </select><br><br>
@@ -287,12 +291,10 @@
 
             // Determine which files to load based on the selected star count
             const files = [];
-
-            if (starCount === '5' || starCount === '') {
-                files.push('scarlet6iv5star.json');
-            }
-            if (starCount === '6' || starCount === '') {
-                files.push('scarlet6iv6star.json');
+            for (let i = 1; i <= 6; i++) {
+                if (starCount === '' || starCount == i) {
+                    files.push(`scarlet${i}star.json`);
+                }
             }
 
             Promise.all(files.map(file => fetch(file).then(response => response.json())))
@@ -392,7 +394,7 @@
         // Display all results on page load
         document.addEventListener('DOMContentLoaded', function() {
             // Load all relevant JSON files (no initial filter for star count)
-            const files = ['scarlet6iv5star.json', 'scarlet6iv6star.json'];
+            const files = ['scarlet1star.json', 'scarlet2star.json', 'scarlet3star.json', 'scarlet4star.json', 'scarlet5star.json', 'scarlet6star.json'];
 
             Promise.all(files.map(file => fetch(file).then(response => response.json())))
                 .then(dataArray => {
