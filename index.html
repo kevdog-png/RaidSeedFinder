@@ -258,6 +258,13 @@
             <option value="Stellar">Stellar</option>
         </select><br><br>
 
+        <label for="star_count">Star Count:</label>
+        <select id="star_count" name="star_count">
+            <option value="">Any</option>
+            <option value="5">5 Stars</option>
+            <option value="6">6 Stars</option>
+        </select><br><br>
+
         <button type="submit">Search</button>
     </form>
 
@@ -276,9 +283,17 @@
             const species = document.getElementById('species').value.toLowerCase();
             const shiny = document.getElementById('shiny').value;
             const teraType = document.getElementById('tera_type').value.toLowerCase();
+            const starCount = document.getElementById('star_count').value;
 
-            // Load data from both JSON files
-            const files = ['scarlet6iv5star.json', 'scarlet6iv4star.json'];
+            // Determine which files to load based on the selected star count
+            const files = [];
+
+            if (starCount === '5' || starCount === '') {
+                files.push('scarlet6iv5star.json');
+            }
+            if (starCount === '6' || starCount === '') {
+                files.push('scarlet6iv6star.json');
+            }
 
             Promise.all(files.map(file => fetch(file).then(response => response.json())))
                 .then(dataArray => {
@@ -376,8 +391,8 @@
 
         // Display all results on page load
         document.addEventListener('DOMContentLoaded', function() {
-            // Load both JSON files
-            const files = ['scarlet6iv5star.json', 'scarlet6iv4star.json'];
+            // Load all relevant JSON files (no initial filter for star count)
+            const files = ['scarlet6iv5star.json', 'scarlet6iv6star.json'];
 
             Promise.all(files.map(file => fetch(file).then(response => response.json())))
                 .then(dataArray => {
