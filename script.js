@@ -44,16 +44,6 @@ document.getElementById('filterForm').addEventListener('submit', function (event
         .catch((error) => console.error('Error fetching seed data:', error));
 });
 
-// Function to get the sprite URL for the Pokémon species
-const getPokemonSprite = (species) => {
-    const formattedSpecies = species
-        .toLowerCase()
-        .replace(/[^a-z0-9]/g, '') // Remove non-alphanumeric characters
-        .replace(/♀/g, 'f') // Replace gender symbols
-        .replace(/♂/g, 'm'); // Replace gender symbols
-    return `https://img.pokemondb.net/sprites/home/shiny/2x/${formattedSpecies}.jpg`;
-};
-
 // Function to display the filtered seeds in the UI
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
@@ -67,8 +57,6 @@ function displayResults(seeds) {
     seeds.forEach((seed) => {
         const seedDiv = document.createElement('li');
         seedDiv.classList.add('seed');
-
-        const spriteURL = getPokemonSprite(seed.species);
         const raidCommand = `.ra ${seed.seed} 5 6`; // Default: 5-star raid with progress level 6
 
         // Add item drops display as plain text (each item on a new line)
@@ -85,7 +73,6 @@ function displayResults(seeds) {
             <strong>Shiny:</strong> ${seed.shiny} <br>
             <strong>Seed:</strong> ${seed.seed} <br>
             ${itemDrops}
-            <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
             <div class="command-container">
                 <button class="show-command">Show Command</button>
                 <div class="command-box hidden">
