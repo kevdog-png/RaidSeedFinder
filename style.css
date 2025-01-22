@@ -1,0 +1,207 @@
+/* Discord bar styling */
+#discord-bar {
+    background-color: #5865F2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#discord-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+#discord-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+#footer {
+    background-color: #2a2a2a;
+    color: #ddd;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 50px 0 50px 0; /* Adjust for header and footer space */
+}
+
+h1 {
+    text-align: center;
+    color: #f9f9f9;
+    font-size: 2.5rem;
+    margin-top: 70px;
+}
+
+/* Adjusted filter form styling */
+form {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+input, select, button {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 5px 0;
+    width: calc(33.33% - 10px);
+    max-width: 180px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #7f7f7f;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+/* Adjusted results container styling */
+#results {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#results li {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    width: 220px;
+    position: relative;
+    text-align: left;
+    overflow: hidden; /* Added to contain content */
+}
+
+.pokemon-image {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+h2 {
+    text-align: center; /* Center the Results header */
+    color: #f9f9f9;
+    margin-top: 50px;
+}
+
+/* Merged reward styling */
+.rewards {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.rewards li {
+    color: #ddd;
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 1rem;
+}
+
+/* Pokemon details styling */
+.pokemon-details {
+    font-size: 1rem;
+    color: #ddd;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pokemon-details span {
+    font-weight: bold;
+}
+
+.pokemon-details .items {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.pokemon-details .items li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* Command Box Styling */
+.command-box {
+    text-align: center; /* Center the content */
+    position: relative; /* Allow absolute positioning of the message */
+}
+
+.command-message {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 1rem;
+    color: green;
+    font-weight: bold;
+    display: none;
+}
+
+.copy-button {
+    position: relative;
+    z-index: 1;
+}
