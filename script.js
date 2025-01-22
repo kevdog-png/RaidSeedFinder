@@ -57,7 +57,7 @@ function displayResults(seeds) {
             ? `<strong>Item Drops:</strong><br>${seed.rewards.map(reward => `${reward.count} x ${reward.name}`).join('<br>')}` 
             : '<strong>Item Drops:</strong> No items <br>';
 
-        seedDiv.innerHTML = `
+        seedDiv.innerHTML = ` 
             <strong>Species:</strong> ${seed.species} <br>
             <strong>Tera Type:</strong> ${seed.tera_type} <br>
             <strong>Shiny:</strong> ${seed.shiny} <br>
@@ -69,7 +69,6 @@ function displayResults(seeds) {
                 <div class="command-box hidden">
                     <input type="text" value="${raidCommand}" readonly>
                     <button class="copy-command">Copy</button>
-                    <span class="command-message">Copied!</span>
                 </div>
             </div>
         `;
@@ -81,7 +80,6 @@ function displayResults(seeds) {
         const commandBox = seedDiv.querySelector('.command-box');
         const copyButton = seedDiv.querySelector('.copy-command');
         const commandInput = seedDiv.querySelector('input');
-        const commandMessage = seedDiv.querySelector('.command-message');
 
         showCommandButton.addEventListener('click', () => {
             commandBox.classList.toggle('hidden');
@@ -90,14 +88,11 @@ function displayResults(seeds) {
         copyButton.addEventListener('click', () => {
             commandInput.select();
             document.execCommand('copy');
-
-            // Show "Copied!" message
-            commandMessage.style.display = 'inline';
-
-            // Hide "Copied!" message after 2 seconds
+            const originalText = copyButton.textContent; // Save the original text
+            copyButton.textContent = 'Copied!'; // Change the text to "Copied!"
             setTimeout(() => {
-                commandMessage.style.display = 'none';
-            }, 2000);
+                copyButton.textContent = originalText; // Restore the original text after a delay
+            }, 2000); // Delay of 2 seconds
         });
     });
 }
