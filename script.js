@@ -1,7 +1,7 @@
 // Fetch data from multiple GitHub JSON files and display results on page load
 window.addEventListener('load', function () {
     const jsonFiles = [
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star1.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star2.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star3.json'
         // Add more files as needed
