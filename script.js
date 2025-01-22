@@ -1,23 +1,19 @@
-// Fetch data from multiple local JSON files and display results on page load
+// Fetch data from both GitHub JSON files and display results on page load
 window.addEventListener('load', function () {
-    const jsonFiles = [
-        'scarlet6iv5star.json',
-        'scarlet6iv4star.json',
-        'scarlet6iv5star3.json'
-    ]; // Add more files as needed
+    const files = [
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json'
+    ];
 
-    // Fetch data from all the JSON files concurrently
-    const fetchPromises = jsonFiles.map(file => fetch(file).then(response => response.json()));
+    // Fetch all JSON files
+    Promise.all(files.map(file => fetch(file).then(response => response.json())))
+        .then(dataArray => {
+            const allSeeds = dataArray.flatMap(data => data.seeds); // Combine all seeds
 
-    Promise.all(fetchPromises)
-        .then(results => {
-            const allSeeds = results.flatMap(data => {
-                if (!Array.isArray(data.seeds)) {
-                    console.error('Data is not in expected array format:', data);
-                    return [];
-                }
-                return data.seeds; // Flatten all seed data into one array
-            });
+            if (!Array.isArray(allSeeds)) {
+                console.error('Data is not in expected array format:', allSeeds);
+                return;
+            }
 
             // Display all results when the page loads
             displayResults(allSeeds);
@@ -33,27 +29,21 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
 
-    // List of local JSON files to fetch
-    const jsonFiles = [
-        'scarlet6iv5star.json',
-        'scarlet6iv4star.json',
-        'scarlet6iv5star3.json'
-    ]; // Add more files as needed
+    // Fetch data from both JSON files again for filtered results
+    const files = [
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json'
+    ];
 
-    // Fetch data from all the JSON files concurrently
-    const fetchPromises = jsonFiles.map(file => fetch(file).then(response => response.json()));
+    Promise.all(files.map(file => fetch(file).then(response => response.json())))
+        .then(dataArray => {
+            const allSeeds = dataArray.flatMap(data => data.seeds); // Combine all seeds
 
-    Promise.all(fetchPromises)
-        .then(results => {
-            const allSeeds = results.flatMap(data => {
-                if (!Array.isArray(data.seeds)) {
-                    console.error('Data is not in expected array format:', data);
-                    return [];
-                }
-                return data.seeds; // Flatten all seed data into one array
-            });
+            if (!Array.isArray(allSeeds)) {
+                console.error('Data is not in expected array format:', allSeeds);
+                return;
+            }
 
-            // Filter seeds based on form inputs
             const filteredSeeds = allSeeds.filter((seed) => {
                 return (
                     (species === '' || seed.species.toLowerCase().includes(species)) &&
@@ -62,7 +52,6 @@ document.getElementById('filterForm').addEventListener('submit', function (event
                 );
             });
 
-            // Display filtered results
             displayResults(filteredSeeds);
         })
         .catch((error) => console.error('Error fetching seed data:', error));
