@@ -49,6 +49,14 @@ h1 {
     margin-top: 70px;
 }
 
+/* Smaller text styling */
+.small-text {
+    text-align: center;
+    color: #ddd;
+    font-size: 1rem;
+    margin-top: 5px; /* Reduced gap */
+}
+
 /* Adjusted filter form styling */
 form {
     background-color: #2a2a2a;
@@ -152,34 +160,8 @@ h2 {
 }
 
 .rewards li {
-    color: #ddd;
-    margin-bottom: 5px;
-    padding: 0;
-    font-size: 1rem;
-}
-
-/* Pokemon details styling */
-.pokemon-details {
-    font-size: 1rem;
-    color: #ddd;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.pokemon-details span {
-    font-weight: bold;
-}
-
-.pokemon-details .items {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 5px;
-}
-
-.pokemon-details .items li {
     font-size: 0.9rem;
+    color: #ddd;
     margin-bottom: 5px;
 }
 
@@ -191,9 +173,7 @@ h2 {
 
 .command-message {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%);
+    top: 0;
     width: 100%;
     font-size: 1rem;
     color: green;
@@ -204,4 +184,7 @@ h2 {
 .copy-button {
     position: relative;
     z-index: 1;
+    width: 100%; /* Ensures button is the full width of the container */
+    padding: 12px; /* Increased padding */
+    font-size: 1.1rem; /* Slightly larger text */
 }
