@@ -316,7 +316,7 @@
                     ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
                     <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
                     <div class="command-box">
-                        <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.star_count}">Copy Command</button>
+                        <button class="copy-button" data-seed="${seed.seed}" data-star="5">Copy Command</button>
                         <span class="command-message">Copied!</span>
                     </div>
                 `;
@@ -328,8 +328,7 @@
             buttons.forEach(button => {
                 button.addEventListener('click', function() {
                     const seed = this.getAttribute('data-seed');
-                    const starCount = this.getAttribute('data-star');
-                    const command = `.ra ${seed} ${starCount} 6`;
+                    const command = `.ra ${seed} 5 6`;  // Always use 5 for star count
 
                     // Copy to clipboard
                     navigator.clipboard.writeText(command);
