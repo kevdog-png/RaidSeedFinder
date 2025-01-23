@@ -407,7 +407,7 @@
                 button.addEventListener('click', () => {
                     const seed = button.getAttribute('data-seed');
                     const star = button.getAttribute('data-star');
-                    const command = `.ra ${seed} ${star} 6;`;
+                    const command = `.ra ${seed} ${star} 6`;
                     navigator.clipboard.writeText(command);
 
                     const message = button.previousElementSibling;
