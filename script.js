@@ -2,7 +2,7 @@
 window.addEventListener('load', function () {
     const files = [
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json'
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json'
     ];
 
@@ -40,7 +40,7 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     // Fetch data from both JSON files again for filtered results
     const files = [
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json'
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json'
     ];
 
