@@ -83,6 +83,9 @@ function displayResults(seeds) {
     seeds.forEach((seed) => {
         const seedDiv = document.createElement('li');
         seedDiv.classList.add('seed');
+
+        // Create stars display
+        const starsDisplay = '⭐'.repeat(seed.stars); // Repeat the star character based on the seed's stars
         const raidCommand = `.ra ${seed.seed} ${seed.stars} 6`; // Use stars from the seed object now
 
         // Add item drops display as plain text (each item on a new line)
@@ -94,6 +97,9 @@ function displayResults(seeds) {
                 : '<strong>Item Drops:</strong> No items <br>';
 
         seedDiv.innerHTML = ` 
+            <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
+                ${starsDisplay} 
+            </div>
             <strong>Species:</strong> ${seed.species} <br>
             <strong>Tera Type:</strong> ${seed.tera_type} <br>
             <strong>Shiny:</strong> ${seed.shiny} <br>
