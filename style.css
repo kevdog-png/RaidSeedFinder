@@ -172,6 +172,8 @@ h2 {
     position: relative; /* Allow absolute positioning of the message */
     display: flex;
     flex-direction: column; /* Align items in a column */
+    justify-content: flex-end; /* Push button to the bottom */
+    height: 100%; /* Allow container to fill the space */
 }
 
 .command-message {
@@ -190,5 +192,5 @@ h2 {
     width: 100%; /* Ensures button is the full width of the container */
     padding: 12px; /* Increased padding */
     font-size: 1.1rem; /* Slightly larger text */
-    margin-top: auto; /* Push the button to the bottom */
+    margin-top: 10px; /* Added space above button */
 }
