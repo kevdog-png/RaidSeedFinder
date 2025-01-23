@@ -1,20 +1,19 @@
 // Fetch data from both GitHub JSON files and display results on page load
 window.addEventListener('load', function () {
     const files = [
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json'
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3 }
     ];
 
     // Fetch all JSON files
-    Promise.all(files.map(file => fetch(file).then(response => response.json())))
+    Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
         .then(dataArray => {
             // Combine all seeds from both files
-            const allSeeds = dataArray.flatMap(data => {
-                const stars = data.meta.stars;  // Get stars from the meta section at the top of the JSON
+            const allSeeds = dataArray.flatMap((data, index) => {
                 return data.seeds.map(seed => ({
                     ...seed,
-                    stars: stars  // Add the stars property to each seed
+                    starLevel: files[index].starLevel  // Add star level to each seed
                 }));
             });
 
@@ -36,21 +35,21 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     const species = document.getElementById('species').value.toLowerCase();
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
+    const starLevel = document.getElementById('star_level').value;
 
     // Fetch data from both JSON files again for filtered results
     const files = [
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json',
-        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json'
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3 }
     ];
 
-    Promise.all(files.map(file => fetch(file).then(response => response.json())))
+    Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
         .then(dataArray => {
-            const allSeeds = dataArray.flatMap(data => {
-                const stars = data.meta.stars;  // Get stars from the meta section at the top of the JSON
+            const allSeeds = dataArray.flatMap((data, index) => {
                 return data.seeds.map(seed => ({
                     ...seed,
-                    stars: stars  // Add the stars property to each seed
+                    starLevel: files[index].starLevel  // Add star level to each seed
                 }));
             });
 
@@ -59,11 +58,13 @@ document.getElementById('filterForm').addEventListener('submit', function (event
                 return;
             }
 
+            // Filter results based on form inputs, including star level
             const filteredSeeds = allSeeds.filter((seed) => {
                 return (
                     (species === '' || seed.species.toLowerCase().includes(species)) &&
                     (shiny === '' || seed.shiny === shiny) &&
-                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType))
+                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
+                    (starLevel === '' || seed.starLevel == starLevel) // Include star level filter
                 );
             });
 
@@ -87,8 +88,8 @@ function displayResults(seeds) {
         seedDiv.classList.add('seed');
 
         // Create stars display
-        const starsDisplay = '⭐'.repeat(seed.stars); // Repeat the star character based on the seed's stars
-        const raidCommand = `.ra ${seed.seed} ${seed.stars} 6`; // Use stars from the seed object now
+        const starsDisplay = '⭐'.repeat(seed.starLevel); // Use starLevel from seed data
+        const raidCommand = `.ra ${seed.seed} ${seed.starLevel} 6`; // Use star level in raid command
 
         // Add item drops display as plain text (each item on a new line)
         const itemDrops =
