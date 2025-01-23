@@ -407,14 +407,14 @@
                 button.addEventListener('click', () => {
                     const seed = button.getAttribute('data-seed');
                     const star = button.getAttribute('data-star');
-                    const command = `/join ${seed} ${star}`;
-                    navigator.clipboard.writeText(command);
-
-                    const message = button.previousElementSibling;
-                    message.style.display = 'block';
-                    setTimeout(() => {
-                        message.style.display = 'none';
-                    }, 1000);
+                    const command = .ra ${seed} ${star} 6;
+                    navigator.clipboard.writeText(command).then(() => {
+                        const message = button.previousElementSibling;
+                        message.style.display = 'inline';
+                        setTimeout(() => {
+                            message.style.display = 'none';
+                        }, 1000);
+                    });
                 });
             });
         }
