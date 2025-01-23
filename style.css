@@ -69,7 +69,7 @@ form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column; /* Ensure form elements stack vertically */
-    gap: 15px; /* Add space between elements */
+    gap: 10px; /* Reduced gap between form elements */
     justify-content: flex-start;
     align-items: center;
 }
@@ -77,7 +77,7 @@ form {
 label {
     font-size: 1.1rem;
     color: #ddd;
-    margin-bottom: 5px;
+    margin-bottom: 3px; /* Reduced gap between label and input */
     width: 100%;
     text-align: center;
 }
@@ -89,7 +89,7 @@ input, select {
     border-radius: 6px;
     font-size: 1rem;
     padding: 10px;
-    margin: 5px 0;
+    margin: 3px 0; /* Reduced margin between input/select fields */
     width: 100%; /* Make inputs and selects take up full width */
     max-width: 180px;
     transition: background-color 0.3s ease, border 0.3s ease;
