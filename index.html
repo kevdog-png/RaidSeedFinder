@@ -183,6 +183,7 @@
         .command-box {
             text-align: center; /* Center the content */
             position: relative; /* Allow absolute positioning of the message */
+            padding-bottom: 10px; /* Space at the bottom for button */
         }
 
         .command-message {
@@ -196,8 +197,6 @@
         }
 
         .copy-button {
-            position: relative;
-            z-index: 1;
             width: 100%; /* Ensures button is the full width of the container */
             padding: 12px; /* Increased padding */
             font-size: 1.1rem; /* Slightly larger text */
@@ -360,8 +359,8 @@
                     ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
                     <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
                     <div class="command-box">
-                        <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}">Copy Command</button>
                         <span class="command-message">Copied!</span>
+                        <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}">Copy Command</button>
                     </div>
                 `;
                 resultsContainer.appendChild(seedDiv);
@@ -375,7 +374,7 @@
                     const star = button.getAttribute('data-star');
                     const command = `.ra ${seed} ${star} 6`;
                     navigator.clipboard.writeText(command).then(() => {
-                        const message = button.nextElementSibling;
+                        const message = button.previousElementSibling;
                         message.style.display = 'inline';
                         setTimeout(() => {
                             message.style.display = 'none';
