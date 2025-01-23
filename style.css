@@ -168,13 +168,13 @@ h2 {
 
 /* Command Box Styling */
 .command-box {
-    text-align: center; /* Center the content */
-    position: relative; /* Allow absolute positioning of the message */
     display: flex;
-    flex-direction: column; /* Align items in a column */
+    flex-direction: column;
     justify-content: flex-end; /* Push button to the bottom */
-    height: 100%; /* Allow container to fill the space */
-    padding-bottom: 20px; /* Ensure there's enough space for the button */
+    height: 100%; /* Ensure it uses the full height of the container */
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .command-message {
@@ -188,11 +188,23 @@ h2 {
 }
 
 .copy-button {
-    position: relative;
-    z-index: 1;
-    width: 100%; /* Ensures button is the full width of the container */
-    padding: 12px; /* Increased padding */
-    font-size: 1.1rem; /* Slightly larger text */
-    margin-top: 10px; /* Added space above button */
-    text-align: center; /* Ensure button is centered */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 12px;
+    width: 100%; /* Button fills the container */
+    text-align: center; /* Ensure the text is centered */
+    margin-top: 10px; /* Add a little space above */
+    transition: background-color 0.3s ease;
+    visibility: visible !important; /* Force button to be visible */
+}
+
+.copy-button:hover {
+    background-color: #45a049;
+}
+
+.copy-button:active {
+    background-color: #3e8e41;
 }
