@@ -409,12 +409,12 @@
                     const star = button.getAttribute('data-star');
                     const command = .ra ${seed} ${star} 6;
                     navigator.clipboard.writeText(command).then(() => {
-                        const message = button.previousElementSibling;
-                        message.style.display = 'inline';
-                        setTimeout(() => {
-                            message.style.display = 'none';
-                        }, 1000);
-                    });
+
+                    const message = button.previousElementSibling;
+                    message.style.display = 'block';
+                    setTimeout(() => {
+                        message.style.display = 'none';
+                    }, 1000);
                 });
             });
         }
