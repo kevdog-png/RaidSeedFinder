@@ -118,9 +118,6 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            width: 100%; /* Ensures the button is at the bottom */
-            padding: 12px;
-            font-size: 1.1rem;
         }
 
         button:hover {
@@ -142,6 +139,7 @@
             justify-content: center;
         }
 
+        /* Adjusted individual seed card styling */
         #results li {
             background-color: #333;
             border: 1px solid #444;
@@ -151,58 +149,30 @@
             width: 220px;
             position: relative;
             text-align: left;
+            display: flex;
+            flex-direction: column; /* Add flexbox for column layout */
+            justify-content: space-between; /* Pushes content to top, button to bottom */
+            height: 350px; /* Fixed height to make sure button stays at the bottom */
             overflow: hidden; /* Added to contain content */
         }
 
-        .pokemon-image {
-            width: 80px;
-            height: 80px;
-            position: absolute;
-            top: 70px; /* Adjusted position of sprite to lower */
-            right: 10px;
-            z-index: 10;
-        }
-
-        h2 {
-            text-align: center; /* Center the Results header */
-            color: #f9f9f9;
-            margin-top: 50px;
-        }
-
-        /* Merged reward styling */
+        /* Move the rewards section and pokemon sprite */
         .rewards {
-            list-style-type: none;
-            padding: 0;
             margin-top: 10px;
         }
 
-        .rewards li {
-            font-size: 0.9rem;
-            color: #ddd;
-            margin-bottom: 5px;
-        }
-
-        /* Command Box Styling */
+        /* Adjust the command box container to be at the bottom */
         .command-box {
-            text-align: center; /* Center the content */
-            position: relative; /* Allow absolute positioning of the message */
-            padding-bottom: 10px; /* Space at the bottom for button */
+            margin-top: auto; /* Push the button down */
+            text-align: center;
+            position: relative;
         }
 
-        .command-message {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            font-size: 1rem;
-            color: green;
-            font-weight: bold;
-            display: none;
-        }
-
+        /* Adjust the button */
         .copy-button {
-            width: 100%; /* Ensures button is the full width of the container */
-            padding: 12px; /* Increased padding */
-            font-size: 1.1rem; /* Slightly larger text */
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1rem;
         }
 
         /* Center image above header */
