@@ -3,6 +3,7 @@ window.addEventListener('load', function () {
     const files = [
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json'
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json'
     ];
 
     // Fetch all JSON files
@@ -40,6 +41,7 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     const files = [
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json',
         'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json'
+        'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json'
     ];
 
     Promise.all(files.map(file => fetch(file).then(response => response.json())))
