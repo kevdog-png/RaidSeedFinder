@@ -407,8 +407,8 @@
                 button.addEventListener('click', () => {
                     const seed = button.getAttribute('data-seed');
                     const star = button.getAttribute('data-star');
-                    const command = .ra ${seed} ${star} 6;
-                    navigator.clipboard.writeText(command).then(() => {
+                    const command = `/join ${seed} ${star}`;
+                    navigator.clipboard.writeText(command);
 
                     const message = button.previousElementSibling;
                     message.style.display = 'block';
