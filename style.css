@@ -170,10 +170,6 @@ h2 {
 .command-box {
     text-align: center; /* Center the content */
     position: relative; /* Allow absolute positioning of the message */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Push the button to the bottom */
-    height: 100%; /* Ensure the container fills the space */
 }
 
 .command-message {
@@ -192,5 +188,4 @@ h2 {
     width: 100%; /* Ensures button is the full width of the container */
     padding: 12px; /* Increased padding */
     font-size: 1.1rem; /* Slightly larger text */
-    margin-top: 10px; /* Space above the button */
 }
