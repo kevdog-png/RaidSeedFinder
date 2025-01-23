@@ -104,7 +104,7 @@
             padding: 8px; /* Reduced padding for smaller elements */
             margin: 5px 0;
             width: calc(50% - 10px); /* Make inputs and selects take up half of the form width */
-            max-width: 250px; /* Increased width for selects */
+            max-width: 300px; /* Increased width for selects */
             transition: background-color 0.3s ease, border 0.3s ease;
         }
 
@@ -227,6 +227,12 @@
 
         .form-row label {
             text-align: left; /* Align labels to the left */
+        }
+
+        /* Make dropdowns (shiny, tera type, star level) longer */
+        select {
+            width: calc(50% - 10px); /* Make the dropdowns longer */
+            max-width: 320px; /* Increased maximum width for dropdowns */
         }
     </style>
 </head>
