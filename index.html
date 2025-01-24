@@ -409,32 +409,21 @@
             });
 
             // Add copy command functionality
-const copyButtons = document.querySelectorAll('.copy-button');
-copyButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Retrieve the seed, star, and map name from the button's attributes
-        const seed = button.getAttribute('data-seed');
-        const star = button.getAttribute('data-star');
-        const mapName = button.getAttribute('data-map');
+            const copyButtons = document.querySelectorAll('.copy-button');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const seed = button.getAttribute('data-seed');
+                    const star = button.getAttribute('data-star');
+                    const command = `.ra ${seed} ${star} 6`;
+                    navigator.clipboard.writeText(command);
 
-        // Determine the command prefix based on map_name
-        const commandPrefix = mapName === 'Kitakami' ? '-ra' : '.ra';
-
-        // Construct the command string
-        const command = `${commandPrefix} ${seed} ${star} 6`;
-
-        // Copy the command to the clipboard
-        navigator.clipboard.writeText(command);
-
-        // Display feedback message
-        const message = button.previousElementSibling;
-        message.style.display = 'block';
-        setTimeout(() => {
-            message.style.display = 'none';
-        }, 1000);
-    });
-});
-
+                    const message = button.previousElementSibling;
+                    message.style.display = 'block';
+                    setTimeout(() => {
+                        message.style.display = 'none';
+                    }, 1000);
+                });
+            });
         }
 
         // Automatically load and display all seeds when the page loads
