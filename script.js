@@ -14,6 +14,7 @@ window.addEventListener('load', function () {
                 return data.seeds.map(seed => ({
                     ...seed,
                     starLevel: files[index].starLevel, // Add star level to each seed
+                    mapName: data.meta.map_name || "Unknown", // Add map name from JSON metadata
                     fileName: files[index].file // Include file name for context
                 }));
             });
@@ -51,6 +52,7 @@ document.getElementById('filterForm').addEventListener('submit', function (event
                 return data.seeds.map(seed => ({
                     ...seed,
                     starLevel: files[index].starLevel,
+                    mapName: data.meta.map_name || "Unknown", // Add map name to each seed
                     fileName: files[index].file
                 }));
             });
@@ -89,8 +91,7 @@ function displayResults(seeds) {
         seedDiv.classList.add('seed');
 
         const starsDisplay = '⭐'.repeat(seed.starLevel);
-        const isKitakami = seed.fileName.includes('kitakami'); // Check if the file name includes "kitakami"
-        const raidCommandPrefix = isKitakami ? '-ra' : '.ra'; // Determine command prefix
+        const raidCommandPrefix = seed.mapName === "Paldea" ? '.ra' : seed.mapName === "Kitakami" ? '-ra' : '?'; // Prefix logic
         const raidCommand = `${raidCommandPrefix} ${seed.seed} ${seed.starLevel} 6`;
 
         const itemDrops = seed.rewards?.length
@@ -101,6 +102,7 @@ function displayResults(seeds) {
             <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
                 ${starsDisplay}
             </div>
+            <strong>Map:</strong> ${seed.mapName} <br>
             <strong>Species:</strong> ${seed.species} <br>
             <strong>Tera Type:</strong> ${seed.tera_type} <br>
             <strong>Shiny:</strong> ${seed.shiny} <br>
