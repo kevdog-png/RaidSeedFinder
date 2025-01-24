@@ -91,7 +91,10 @@ function displayResults(seeds) {
 
         // Create stars display
         const starsDisplay = '⭐'.repeat(seed.starLevel); // Use starLevel from seed data
-        const raidCommand = `.ra ${seed.seed} ${seed.starLevel} 6`; // Use star level in raid command
+
+        // Determine the raid command prefix based on the source file
+        const commandPrefix = seed.source && seed.source.includes('kitakami') ? '-ra' : '.ra';
+        const raidCommand = `${commandPrefix} ${seed.seed} ${seed.starLevel} 6`; // Use star level in raid command
 
         // Add item drops display as plain text (each item on a new line)
         const itemDrops =
