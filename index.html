@@ -414,8 +414,9 @@
                 button.addEventListener('click', () => {
                     const seed = button.getAttribute('data-seed');
                     const star = button.getAttribute('data-star');
-                    const command = `.ra ${seed} ${star} 6`;
-                    navigator.clipboard.writeText(command);
+                    const mapName = button.getAttribute('data-map'); // Get the map name from the button
+                    const command = mapName === 'Kitakami (Teal Mask)' ? `-ra ${seed} ${star} 6` : `.ra ${seed} ${star} 6`; 
+                    navigator.clipboard.writeText(command); 
 
                     const message = button.previousElementSibling;
                     message.style.display = 'block';
