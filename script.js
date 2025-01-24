@@ -91,7 +91,10 @@ function displayResults(seeds) {
 
         // Create stars display
         const starsDisplay = '⭐'.repeat(seed.starLevel); // Use starLevel from seed data
-        const raidCommand = `.ra ${seed.seed} ${seed.starLevel} 6`; // Use star level in raid command
+        
+        // Determine the number at the end based on seed.starLevel
+        const endNumber = seed.starLevel >= 3 ? 6 : 3; // 6 for starLevel 3-6, 3 for starLevel 1-2
+        const raidCommand = `.ra ${seed.seed} ${seed.starLevel} ${endNumber}`; // Use dynamic end number in raid command
 
         // Add item drops display as plain text (each item on a new line)
         const itemDrops =
@@ -100,6 +103,7 @@ function displayResults(seeds) {
                       .map((reward) => `${reward.count} x ${reward.name}`)
                       .join('<br>')}`
                 : '<strong>Item Drops:</strong> No items <br>';
+
 
         seedDiv.innerHTML = ` 
             <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
