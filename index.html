@@ -393,6 +393,7 @@
 
         // Determine the command prefix based on map_name
         const commandPrefix = seed.map_name === 'Paldea' ? '.ra' : '-ra';
+        const commandText = `${commandPrefix} ${seed.seed} ${seed.starLevel} 6`;
 
         seedDiv.innerHTML = `
             <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
@@ -405,7 +406,7 @@
             <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
             <div class="command-box">
                 <span class="command-message">Copied!</span>
-                <button class="copy-button">${commandPrefix} ${seed.seed} ${seed.starLevel} 6</button>
+                <button class="copy-button" data-command="${commandText}">Copy Command</button>
             </div>
         `;
         resultsContainer.appendChild(seedDiv);
@@ -415,7 +416,7 @@
     const copyButtons = document.querySelectorAll('.copy-button');
     copyButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const command = button.textContent;
+            const command = button.getAttribute('data-command');
             navigator.clipboard.writeText(command);
 
             const message = button.previousElementSibling;
@@ -426,6 +427,7 @@
         });
     });
 }
+
 
         // Automatically load and display all seeds when the page loads
         window.addEventListener('load', () => {
