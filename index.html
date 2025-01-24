@@ -393,7 +393,7 @@
                 count
             }));
 
-            const endNumber = seed.starLevel >= 3 ? 6 : 3; // Determine number for the .ra command
+            const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
 
             seedDiv.innerHTML = `
                 <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
