@@ -295,6 +295,7 @@
                 <label for="star_level">Star Level:</label>
                 <select id="star_level" name="star_level">
                     <option value="">Any</option>
+                    <option value="2">2 Star</option>
                     <option value="3">3 Star</option>
                     <option value="4">4 Star</option>
                     <option value="5">5 Star</option>
@@ -327,7 +328,8 @@
                 { file: 'paldea6iv5star.json', starLevel: 5 },
                 { file: 'paldea6iv4star.json', starLevel: 4 },
                 { file: 'kitakami6iv4star.json', starLevel: 4 },
-                { file: 'paldea3star.json', starLevel: 3 }
+                { file: 'paldea3star.json', starLevel: 3 },
+                { file: 'paldea2star.json', starLevel: 2 }
             ];
 
             Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
