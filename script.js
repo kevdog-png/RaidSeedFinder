@@ -1,20 +1,20 @@
 // Fetch data from both GitHub JSON files and display results on page load
 window.addEventListener('load', function () {
     const files = [
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 } // Kitakami file
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv5star.json', starLevel: 5 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv4star.json', starLevel: 4 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea3star.json', starLevel: 3 }
     ];
 
     // Fetch all JSON files
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
         .then(dataArray => {
+            // Combine all seeds from both files
             const allSeeds = dataArray.flatMap((data, index) => {
                 return data.seeds.map(seed => ({
                     ...seed,
-                    starLevel: files[index].starLevel, // Add star level to each seed
-                    fileName: files[index].file // Include file name for context
+                    starLevel: files[index].starLevel  // Add star level to each seed
                 }));
             });
 
@@ -38,11 +38,12 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     const teraType = document.getElementById('tera_type').value.toLowerCase();
     const starLevel = document.getElementById('star_level').value;
 
+    // Fetch data from both JSON files again for filtered results
     const files = [
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 }
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv5star.json', starLevel: 5 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv4star.json', starLevel: 4 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea3star.json', starLevel: 3 }
     ];
 
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
@@ -50,8 +51,7 @@ document.getElementById('filterForm').addEventListener('submit', function (event
             const allSeeds = dataArray.flatMap((data, index) => {
                 return data.seeds.map(seed => ({
                     ...seed,
-                    starLevel: files[index].starLevel,
-                    fileName: files[index].file
+                    starLevel: files[index].starLevel  // Add star level to each seed
                 }));
             });
 
@@ -60,12 +60,13 @@ document.getElementById('filterForm').addEventListener('submit', function (event
                 return;
             }
 
+            // Filter results based on form inputs, including star level
             const filteredSeeds = allSeeds.filter((seed) => {
                 return (
                     (species === '' || seed.species.toLowerCase().includes(species)) &&
                     (shiny === '' || seed.shiny === shiny) &&
                     (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
-                    (starLevel === '' || seed.starLevel == starLevel)
+                    (starLevel === '' || seed.starLevel == starLevel) // Include star level filter
                 );
             });
 
@@ -88,18 +89,21 @@ function displayResults(seeds) {
         const seedDiv = document.createElement('li');
         seedDiv.classList.add('seed');
 
-        const starsDisplay = '⭐'.repeat(seed.starLevel);
-        const isKitakami = seed.fileName.includes('kitakami'); // Check if the file name includes "kitakami"
-        const raidCommandPrefix = isKitakami ? '-ra' : '.ra'; // Determine command prefix
-        const raidCommand = `${raidCommandPrefix} ${seed.seed} ${seed.starLevel} 6`;
+        // Create stars display
+        const starsDisplay = '⭐'.repeat(seed.starLevel); // Use starLevel from seed data
+        const raidCommand = `.ra ${seed.seed} ${seed.starLevel} 6`; // Use star level in raid command
 
-        const itemDrops = seed.rewards?.length
-            ? `<strong>Item Drops:</strong><br>${seed.rewards.map(reward => `${reward.count} x ${reward.name}`).join('<br>')}`
-            : '<strong>Item Drops:</strong> No items <br>';
+        // Add item drops display as plain text (each item on a new line)
+        const itemDrops =
+            seed.rewards && seed.rewards.length > 0
+                ? `<strong>Item Drops:</strong><br>${seed.rewards
+                      .map((reward) => `${reward.count} x ${reward.name}`)
+                      .join('<br>')}`
+                : '<strong>Item Drops:</strong> No items <br>';
 
-        seedDiv.innerHTML = `
+        seedDiv.innerHTML = ` 
             <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
-                ${starsDisplay}
+                ${starsDisplay} 
             </div>
             <strong>Species:</strong> ${seed.species} <br>
             <strong>Tera Type:</strong> ${seed.tera_type} <br>
@@ -117,6 +121,7 @@ function displayResults(seeds) {
 
         resultsContainer.appendChild(seedDiv);
 
+        // Add event listeners for command functionality
         const showCommandButton = seedDiv.querySelector('.show-command');
         const commandBox = seedDiv.querySelector('.command-box');
         const copyButton = seedDiv.querySelector('.copy-command');
@@ -129,11 +134,11 @@ function displayResults(seeds) {
         copyButton.addEventListener('click', () => {
             commandInput.select();
             document.execCommand('copy');
-            const originalText = copyButton.textContent;
-            copyButton.textContent = 'Copied!';
+            const originalText = copyButton.textContent; // Save the original text
+            copyButton.textContent = 'Copied!'; // Change the text to "Copied!"
             setTimeout(() => {
-                copyButton.textContent = originalText;
-            }, 2000);
+                copyButton.textContent = originalText; // Revert to the original text after a delay
+            }, 2000); // Delay of 2 seconds
         });
     });
 }
