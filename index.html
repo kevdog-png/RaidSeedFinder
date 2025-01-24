@@ -362,69 +362,76 @@
 
         // Function to display the filtered seeds in the UI
         function displayResults(seeds) {
-            const resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = ''; // Clear previous results
+    const resultsContainer = document.getElementById('results');
+    resultsContainer.innerHTML = ''; // Clear previous results
 
-            if (seeds.length === 0) {
-                resultsContainer.innerHTML = '<li>No matching results found.</li>';
-                return;
+    if (seeds.length === 0) {
+        resultsContainer.innerHTML = '<li>No matching results found.</li>';
+        return;
+    }
+
+    seeds.forEach(seed => {
+        const seedDiv = document.createElement('li');
+        seedDiv.classList.add('seed');
+
+        const spriteURL = getPokemonSprite(seed.species);
+
+        const rewardsMap = new Map();
+        seed.rewards.forEach(reward => {
+            const key = reward.name;
+            if (rewardsMap.has(key)) {
+                rewardsMap.set(key, rewardsMap.get(key) + reward.count);
+            } else {
+                rewardsMap.set(key, reward.count);
             }
+        });
 
-            seeds.forEach(seed => {
-                const seedDiv = document.createElement('li');
-                seedDiv.classList.add('seed');
+        const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
+            name,
+            count
+        }));
 
-                const spriteURL = getPokemonSprite(seed.species);
+        const fileName = seed.file; // Assume this is passed from the seed object
 
-                const rewardsMap = new Map();
-                seed.rewards.forEach(reward => {
-                    const key = reward.name;
-                    if (rewardsMap.has(key)) {
-                        rewardsMap.set(key, rewardsMap.get(key) + reward.count);
-                    } else {
-                        rewardsMap.set(key, reward.count);
-                    }
-                });
+        seedDiv.innerHTML = `
+            <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
+            <strong>Species:</strong> ${seed.species} <br>
+            <strong>Tera Type:</strong> ${seed.tera_type} <br>
+            <strong>Shiny:</strong> ${seed.shiny} <br>
+            <strong>Seed:</strong> ${seed.seed} <br>
+            <strong>Item Drops:</strong><br>
+            ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+            <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+            <div class="command-box">
+                <span class="command-message">Copied!</span>
+                <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-file="${fileName}">Copy Command</button>
+            </div>
+        `;
+        resultsContainer.appendChild(seedDiv);
+    });
 
-                const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
-                    name,
-                    count
-                }));
+    // Add copy command functionality
+    const copyButtons = document.querySelectorAll('.copy-button');
+    copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const seed = button.getAttribute('data-seed');
+            const star = button.getAttribute('data-star');
+            const fileName = button.getAttribute('data-file'); // Get the file name associated with this seed
+            const command = fileName.includes('kitakami') 
+                ? `-ra ${seed} ${star} 6` 
+                : `.ra ${seed} ${star} 6`;
 
-                seedDiv.innerHTML = `
-                    <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
-                    <strong>Species:</strong> ${seed.species} <br>
-                    <strong>Tera Type:</strong> ${seed.tera_type} <br>
-                    <strong>Shiny:</strong> ${seed.shiny} <br>
-                    <strong>Seed:</strong> ${seed.seed} <br>
-                    <strong>Item Drops:</strong><br>
-                    ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-                    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
-                    <div class="command-box">
-                        <span class="command-message">Copied!</span>
-                        <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}">Copy Command</button>
-                    </div>
-                `;
-                resultsContainer.appendChild(seedDiv);
-            });
+            navigator.clipboard.writeText(command);
 
-            // Add copy command functionality
-            const copyButtons = document.querySelectorAll('.copy-button');
-            copyButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const seed = button.getAttribute('data-seed');
-                    const star = button.getAttribute('data-star');
-                    const command = `.ra ${seed} ${star} 6`;
-                    navigator.clipboard.writeText(command);
+            const message = button.previousElementSibling;
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 1000);
+        });
+    });
+}
 
-                    const message = button.previousElementSibling;
-                    message.style.display = 'block';
-                    setTimeout(() => {
-                        message.style.display = 'none';
-                    }, 1000);
-                });
-            });
-        }
 
         // Automatically load and display all seeds when the page loads
         window.addEventListener('load', () => {
