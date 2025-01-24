@@ -413,7 +413,9 @@
                 button.addEventListener('click', () => {
                     const seed = button.getAttribute('data-seed');
                     const star = button.getAttribute('data-star');
-                    const command = `.ra ${seed} ${star} 6`;
+                    const filename = button.getAttribute('data-filename'); // Assume filename is passed as data attribute
+                    const prefix = filename.includes('kitakami') ? '-ra' : '.ra'; // Determine prefix
+                    const command = `${prefix} ${seed} ${star} 6`;
                     navigator.clipboard.writeText(command);
 
                     const message = button.previousElementSibling;
