@@ -94,10 +94,10 @@ function displayResults(seeds) {
         // Create stars display
         const starsDisplay = '⭐'.repeat(seed.starLevel); // Use starLevel from seed data
 
-        // Determine the number at the end based on seed.starLevel
-        const raidStarLevel = seed.starLevel <= 2 ? 3 : seed.starLevel; // Force 1-2 stars to be 3
-        const endNumber = raidStarLevel >= 3 ? 6 : 3; // End number: 6 for 3+ stars, 3 for 1-2 stars
-        const raidCommand = `.ra ${seed.seed} ${raidStarLevel} ${endNumber}`; // Adjust raid command with forced star level
+        // Always force 1-2 star raids to use raidStarLevel 3 and endNumber 3
+        const raidStarLevel = seed.starLevel <= 2 ? 3 : seed.starLevel; // Force starLevel 3 for 1-2 star raids
+        const endNumber = seed.starLevel <= 2 ? 3 : 6; // Force end number 3 for 1-2 star raids
+        const raidCommand = `.ra ${seed.seed} ${raidStarLevel} ${endNumber}`; // Construct the raid command
 
         // Add item drops display as plain text (each item on a new line)
         const itemDrops =
