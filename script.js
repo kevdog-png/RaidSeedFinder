@@ -94,10 +94,10 @@ function displayResults(seeds) {
         // Create stars display
         const starsDisplay = '⭐'.repeat(seed.starLevel); // Use starLevel from seed data
 
-        // Adjust starLevel and endNumber for 1- or 2-star raids
-        const adjustedStarLevel = seed.starLevel <= 2 ? 3 : seed.starLevel; // Force starLevel to 3 for 1-2 star raids
-        const endNumber = adjustedStarLevel >= 3 ? 6 : 3; // 6 for 3+ star raids, 3 otherwise
-        const raidCommand = `.ra ${seed.seed} ${adjustedStarLevel} ${endNumber}`; // Use adjusted starLevel and endNumber
+        // Determine the number at the end based on seed.starLevel
+        const raidStarLevel = seed.starLevel <= 2 ? 3 : seed.starLevel; // Force 1-2 stars to be 3
+        const endNumber = raidStarLevel >= 3 ? 6 : 3; // End number: 6 for 3+ stars, 3 for 1-2 stars
+        const raidCommand = `.ra ${seed.seed} ${raidStarLevel} ${endNumber}`; // Adjust raid command with forced star level
 
         // Add item drops display as plain text (each item on a new line)
         const itemDrops =
@@ -107,9 +107,9 @@ function displayResults(seeds) {
                       .join('<br>')}`
                 : '<strong>Item Drops:</strong> No items <br>';
 
-        seedDiv.innerHTML = ` 
+        seedDiv.innerHTML = `
             <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
-                ${starsDisplay} 
+                ${starsDisplay}
             </div>
             <strong>Species:</strong> ${seed.species} <br>
             <strong>Tera Type:</strong> ${seed.tera_type} <br>
