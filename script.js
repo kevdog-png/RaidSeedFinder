@@ -11,7 +11,8 @@ window.addEventListener('load', function () {
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
         .then(dataArray => {
             const allSeeds = dataArray.flatMap((data, index) => {
-                const isKitakami = data.meta?.map_name?.includes('Kitakami');
+                const mapName = data.meta?.map_name || ''; // Safely access map_name
+                const isKitakami = mapName === 'Kitakami (Teal Mask)'; // Strict comparison
                 return data.seeds.map(seed => ({
                     ...seed,
                     starLevel: files[index].starLevel, // Add star level to each seed
@@ -29,6 +30,7 @@ window.addEventListener('load', function () {
         })
         .catch((error) => console.error('Error fetching seed data:', error));
 });
+
 
 // Function to handle form submission
 document.getElementById('filterForm').addEventListener('submit', function (event) {
