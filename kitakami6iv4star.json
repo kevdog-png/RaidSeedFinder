@@ -1,0 +1,1022 @@
+{
+    "meta": {
+        "event_id": -1,
+        "event_name": "",
+        "game": "Scarlet",
+        "map_id": 1,
+        "map_name": "Kitakami (Teal Mask)",
+        "raid_boost": 0,
+        "stage": 4,
+        "stars": 4
+    },
+    "seeds": [
+        {
+            "ability": "Overcoat",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "29E836A3",
+            "gender": "Male",
+            "height": 100,
+            "hp": 31,
+            "nature": "Careful",
+            "pid": "2899DC3C",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 566,
+                    "name": "Muscle Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 157,
+                    "name": "Lum Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 91,
+                    "name": "Star Piece"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 3,
+                    "item_id": 170,
+                    "name": "Kelpsy Berry"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 91,
+                    "name": "Star Piece"
+                }
+            ],
+            "scale": 38,
+            "seed": "074ACC48",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Leavanny",
+            "tera_type": "Poison",
+            "weight": 115
+        },
+        {
+            "ability": "Flame Body",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "3B3111AF",
+            "gender": "Female",
+            "height": 132,
+            "hp": 31,
+            "nature": "Gentle",
+            "pid": "5EA3524E",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 567,
+                    "name": "Resist Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 163,
+                    "name": "Iapapa Berry"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 3,
+                    "item_id": 171,
+                    "name": "Qualot Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 567,
+                    "name": "Resist Feather"
+                },
+                {
+                    "count": 3,
+                    "item_id": 171,
+                    "name": "Qualot Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 157,
+                    "name": "Lum Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 567,
+                    "name": "Resist Feather"
+                }
+            ],
+            "scale": 124,
+            "seed": "1893A754",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Magcargo",
+            "tera_type": "Dragon",
+            "weight": 91
+        },
+        {
+            "ability": "Snow Cloak",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "4B0BDF2A",
+            "gender": "Male",
+            "height": 184,
+            "hp": 31,
+            "nature": "Hasty",
+            "pid": "DEB8BC31",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                }
+            ],
+            "scale": 82,
+            "seed": "286E74CF",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Piloswine",
+            "tera_type": "Water",
+            "weight": 176
+        },
+        {
+            "ability": "Clear Body",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "5138282B",
+            "gender": "Genderless",
+            "height": 219,
+            "hp": 31,
+            "nature": "Bold",
+            "pid": "8E3DD7F8",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 567,
+                    "name": "Resist Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 3,
+                    "item_id": 171,
+                    "name": "Qualot Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 89,
+                    "name": "Big Pearl"
+                },
+                {
+                    "count": 1,
+                    "item_id": 157,
+                    "name": "Lum Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 89,
+                    "name": "Big Pearl"
+                },
+                {
+                    "count": 1,
+                    "item_id": 163,
+                    "name": "Iapapa Berry"
+                }
+            ],
+            "scale": 187,
+            "seed": "2E9ABDD0",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Carbink",
+            "tera_type": "Grass",
+            "weight": 86
+        },
+        {
+            "ability": "Sniper",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "61D123B1",
+            "gender": "Male",
+            "height": 221,
+            "hp": 31,
+            "nature": "Hardy",
+            "pid": "02C7EF8A",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 566,
+                    "name": "Muscle Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 566,
+                    "name": "Muscle Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 159,
+                    "name": "Figy Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 3,
+                    "item_id": 170,
+                    "name": "Kelpsy Berry"
+                }
+            ],
+            "scale": 35,
+            "seed": "3F33B956",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Ariados",
+            "tera_type": "Fairy",
+            "weight": 126
+        },
+        {
+            "ability": "Overcoat",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "813CBE3E",
+            "gender": "Female",
+            "height": 32,
+            "hp": 31,
+            "nature": "Gentle",
+            "pid": "D79544E3",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 566,
+                    "name": "Muscle Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 159,
+                    "name": "Figy Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 566,
+                    "name": "Muscle Feather"
+                },
+                {
+                    "count": 1,
+                    "item_id": 91,
+                    "name": "Star Piece"
+                },
+                {
+                    "count": 1,
+                    "item_id": 91,
+                    "name": "Star Piece"
+                }
+            ],
+            "scale": 123,
+            "seed": "5E9F53E3",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Leavanny",
+            "tera_type": "Ghost",
+            "weight": 106
+        },
+        {
+            "ability": "Soundproof",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "952672F6",
+            "gender": "Male",
+            "height": 81,
+            "hp": 31,
+            "nature": "Impish",
+            "pid": "9701F841",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 567,
+                    "name": "Resist Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 3,
+                    "item_id": 171,
+                    "name": "Qualot Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 89,
+                    "name": "Big Pearl"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 567,
+                    "name": "Resist Feather"
+                }
+            ],
+            "scale": 97,
+            "seed": "7289089B",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Hakamo-o",
+            "tera_type": "Water",
+            "weight": 139
+        },
+        {
+            "ability": "Unaware",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "A89F8CFC",
+            "gender": "Female",
+            "height": 183,
+            "hp": 31,
+            "nature": "Adamant",
+            "pid": "9C4F4A5C",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 569,
+                    "name": "Clever Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 89,
+                    "name": "Big Pearl"
+                },
+                {
+                    "count": 1,
+                    "item_id": 157,
+                    "name": "Lum Berry"
+                },
+                {
+                    "count": 3,
+                    "item_id": 173,
+                    "name": "Grepa Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                }
+            ],
+            "scale": 25,
+            "seed": "860222A1",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Clefable",
+            "tera_type": "Ice",
+            "weight": 107
+        },
+        {
+            "ability": "Unaware",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "BD4BADB7",
+            "gender": "Female",
+            "height": 125,
+            "hp": 31,
+            "nature": "Impish",
+            "pid": "3EF248CA",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 3,
+                    "item_id": 169,
+                    "name": "Pomeg Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 87,
+                    "name": "Big Mushroom"
+                },
+                {
+                    "count": 1,
+                    "item_id": 92,
+                    "name": "Nugget"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                }
+            ],
+            "scale": 170,
+            "seed": "9AAE435C",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Quagsire",
+            "tera_type": "Water",
+            "weight": 181
+        },
+        {
+            "ability": "Gulp Missile",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "E0101220",
+            "gender": "Female",
+            "height": 167,
+            "hp": 31,
+            "nature": "Rash",
+            "pid": "90B78729",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 565,
+                    "name": "Health Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 2,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 158,
+                    "name": "Sitrus Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                }
+            ],
+            "scale": 145,
+            "seed": "BD72A7C5",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Cramorant",
+            "tera_type": "Normal",
+            "weight": 178
+        },
+        {
+            "ability": "Quick Feet",
+            "atk": 31,
+            "def": 31,
+            "drops": 0,
+            "ec": "1F0318A7",
+            "gender": "Female",
+            "height": 117,
+            "hp": 31,
+            "nature": "Quirky",
+            "pid": "8597DC06",
+            "rewards": [
+                {
+                    "count": 2,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1127,
+                    "name": "Exp. Candy L"
+                },
+                {
+                    "count": 4,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 2,
+                    "item_id": 566,
+                    "name": "Muscle Feather"
+                },
+                {
+                    "count": 2,
+                    "item_id": 10000,
+                    "name": "Material"
+                },
+                {
+                    "count": 1,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 2,
+                    "item_id": 20000,
+                    "name": "Tera Shard"
+                },
+                {
+                    "count": 1,
+                    "item_id": 91,
+                    "name": "Star Piece"
+                },
+                {
+                    "count": 3,
+                    "item_id": 170,
+                    "name": "Kelpsy Berry"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                },
+                {
+                    "count": 1,
+                    "item_id": 1126,
+                    "name": "Exp. Candy M"
+                }
+            ],
+            "scale": 125,
+            "seed": "FC65AE4C",
+            "shiny": "Yes",
+            "spa": 31,
+            "spd": 31,
+            "spe": 31,
+            "species": "Mightyena",
+            "tera_type": "Ghost",
+            "weight": 96
+        }
+    ]
+}
