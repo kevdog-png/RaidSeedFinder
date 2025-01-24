@@ -103,23 +103,27 @@ function displayResults(seeds) {
                       .join('<br>')}`
                 : '<strong>Item Drops:</strong> No items <br>';
 
-        seedDiv.innerHTML = ` 
-            <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
-                ${starsDisplay} 
-            </div>
-            <strong>Species:</strong> ${seed.species} <br>
-            <strong>Tera Type:</strong> ${seed.tera_type} <br>
-            <strong>Shiny:</strong> ${seed.shiny} <br>
-            <strong>Seed:</strong> ${seed.seed} <br>
-            ${itemDrops}
-            <div class="command-container">
-                <button class="show-command">Show Command</button>
-                <div class="command-box hidden">
-                    <input type="text" value="${seed.mapName === 'Kitakami (Teal Mask)' ? '-ra ${seed.seed} ${seed.starLevel} 6' : `.ra ${seed.seed} ${seed.starLevel} 6`}" readonly> 
-                    <button class="copy-command">Copy</button>
-                </div>
-            </div>
-        `;
+        seedDiv.innerHTML = `
+    <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
+        ${starsDisplay}
+    </div>
+    <strong>Species:</strong> ${seed.species} <br>
+    <strong>Tera Type:</strong> ${seed.tera_type} <br>
+    <strong>Shiny:</strong> ${seed.shiny} <br>
+    <strong>Seed:</strong> ${seed.seed} <br>
+    ${itemDrops}
+    <div class="command-container">
+        <button class="show-command">Show Command</button>
+        <div class="command-box hidden">
+            <input 
+                type="text" 
+                value="${seed.mapName === 'Kitakami' ? `-ra ${seed.seed} ${seed.starLevel} 6` : seed.mapName === 'Paldea' ? `.ra ${seed.seed} ${seed.starLevel} 6` : ''}" 
+                readonly> 
+            <button class="copy-command">Copy</button>
+        </div>
+    </div>
+`;
+
 
         resultsContainer.appendChild(seedDiv);
 
