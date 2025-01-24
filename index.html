@@ -373,62 +373,62 @@
         }
 
         seeds.forEach(seed => {
-            const seedDiv = document.createElement('li');
-            seedDiv.classList.add('seed');
+    const seedDiv = document.createElement('li');
+    seedDiv.classList.add('seed');
 
-            const spriteURL = getPokemonSprite(seed.species);
+    const spriteURL = getPokemonSprite(seed.species);
 
-            const rewardsMap = new Map();
-            seed.rewards.forEach(reward => {
-                const key = reward.name;
-                if (rewardsMap.has(key)) {
-                    rewardsMap.set(key, rewardsMap.get(key) + reward.count);
-                } else {
-                    rewardsMap.set(key, reward.count);
-                }
-            });
+    const rewardsMap = new Map();
+    seed.rewards.forEach(reward => {
+        const key = reward.name;
+        if (rewardsMap.has(key)) {
+            rewardsMap.set(key, rewardsMap.get(key) + reward.count);
+        } else {
+            rewardsMap.set(key, reward.count);
+        }
+    });
 
-            const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
-                name,
-                count
-            }));
+    const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
+        name,
+        count
+    }));
 
-            const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
+    const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
 
-            seedDiv.innerHTML = `
-                <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
-                <strong>Species:</strong> ${seed.species} <br>
-                <strong>Tera Type:</strong> ${seed.tera_type} <br>
-                <strong>Shiny:</strong> ${seed.shiny} <br>
-                <strong>Seed:</strong> ${seed.seed} <br>
-                <strong>Item Drops:</strong><br>
-                ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-                <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
-                <div class="command-box">
-                    <span class="command-message">Copied!</span>
-                    <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}">Copy Command</button>
-                </div>
-            `;
-            resultsContainer.appendChild(seedDiv);
-        });
+    seedDiv.innerHTML = `
+        <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
+        <strong>Species:</strong> ${seed.species} <br>
+        <strong>Tera Type:</strong> ${seed.tera_type} <br>
+        <strong>Shiny:</strong> ${seed.shiny} <br>
+        <strong>Seed:</strong> ${seed.seed} <br>
+        <strong>Item Drops:</strong><br>
+        ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+        <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+        <div class="command-box">
+            <span class="command-message">Copied!</span>
+            <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}">Copy Command</button>
+        </div>
+    `;
+    resultsContainer.appendChild(seedDiv);
+});
 
-        // Add copy command functionality
-        const copyButtons = document.querySelectorAll('.copy-button');
-        copyButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const seed = button.getAttribute('data-seed');
-                const star = button.getAttribute('data-star');
-                const endNumber = button.getAttribute('data-end');
-                const command = `.ra ${seed} ${star} ${endNumber}`;
-                navigator.clipboard.writeText(command);
+// Add copy command functionality
+const copyButtons = document.querySelectorAll('.copy-button');
+copyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const seed = button.getAttribute('data-seed');
+        const star = button.getAttribute('data-star');
+        const endNumber = button.getAttribute('data-end');
+        const command = `.ra ${seed} ${endNumber}`; // Replace star level 1 or 2 with 3
+        navigator.clipboard.writeText(command);
 
-                const message = button.previousElementSibling;
-                message.style.display = 'block';
-                setTimeout(() => {
-                    message.style.display = 'none';
-                }, 1000);
-            });
-        });
+        const message = button.previousElementSibling;
+        message.style.display = 'block';
+        setTimeout(() => {
+            message.style.display = 'none';
+        }, 1000);
+    });
+});
     }
 
         // Automatically load and display all seeds when the page loads
