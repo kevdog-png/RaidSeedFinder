@@ -1,10 +1,10 @@
 // Fetch data from both GitHub JSON files and display results on page load
 window.addEventListener('load', function () {
     const files = [
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3 }
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5, mapName: 'Scarlet' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4, mapName: 'Scarlet' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4, mapName: 'Kitakami (Teal Mask)' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3, mapName: 'Scarlet' }
     ];
 
     // Fetch all JSON files
@@ -14,7 +14,8 @@ window.addEventListener('load', function () {
             const allSeeds = dataArray.flatMap((data, index) => {
                 return data.seeds.map(seed => ({
                     ...seed,
-                    starLevel: files[index].starLevel  // Add star level to each seed
+                    starLevel: files[index].starLevel, // Add star level to each seed
+                    mapName: files[index].mapName      // Add map name to each seed
                 }));
             });
 
@@ -40,10 +41,10 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 
     // Fetch data from both JSON files again for filtered results
     const files = [
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3 }
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5, mapName: 'Scarlet' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4, mapName: 'Scarlet' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4, mapName: 'Kitakami (Teal Mask)' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3, mapName: 'Scarlet' }
     ];
 
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
@@ -51,7 +52,8 @@ document.getElementById('filterForm').addEventListener('submit', function (event
             const allSeeds = dataArray.flatMap((data, index) => {
                 return data.seeds.map(seed => ({
                     ...seed,
-                    starLevel: files[index].starLevel  // Add star level to each seed
+                    starLevel: files[index].starLevel, // Add star level to each seed
+                    mapName: files[index].mapName      // Add map name to each seed
                 }));
             });
 
@@ -91,7 +93,7 @@ function displayResults(seeds) {
 
         // Create stars display
         const starsDisplay = '⭐'.repeat(seed.starLevel); // Use starLevel from seed data
-        const raidCommand = `.ra ${seed.seed} ${seed.starLevel} 6`; // Use star level in raid command
+        const raidCommand = seed.mapName === 'Kitakami (Teal Mask)' ? `-ra ${seed.seed} ${seed.starLevel} 6` : `.ra ${seed.seed} ${seed.starLevel} 6`;
 
         // Add item drops display as plain text (each item on a new line)
         const itemDrops =
