@@ -1,10 +1,10 @@
 // Fetch data from both GitHub JSON files and display results on page load
 window.addEventListener('load', function () {
     const files = [
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5, mapName: 'Scarlet' },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4, mapName: 'Scarlet' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5, mapName: 'Paldea' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4, mapName: 'Paldea' },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4, mapName: 'Kitakami (Teal Mask)' },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3, mapName: 'Scarlet' }
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3, mapName: 'Paldea' }
     ];
 
     // Fetch all JSON files
@@ -41,10 +41,10 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 
     // Fetch data from both JSON files again for filtered results
     const files = [
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5, mapName: 'Scarlet' },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4, mapName: 'Scarlet' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5, mapName: 'Paldea' },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4, mapName: 'Paldea' },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4, mapName: 'Kitakami (Teal Mask)' },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3, mapName: 'Scarlet' }
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3, mapName: 'Paldea' }
     ];
 
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
