@@ -11,10 +11,11 @@ window.addEventListener('load', function () {
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
         .then(dataArray => {
             const allSeeds = dataArray.flatMap((data, index) => {
+                const isKitakami = data.meta?.map_name?.includes('Kitakami');
                 return data.seeds.map(seed => ({
                     ...seed,
                     starLevel: files[index].starLevel, // Add star level to each seed
-                    fileName: files[index].file // Include file name for context
+                    commandPrefix: isKitakami ? '-ra' : '.ra' // Set command prefix based on map_name
                 }));
             });
 
@@ -48,10 +49,11 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
         .then(dataArray => {
             const allSeeds = dataArray.flatMap((data, index) => {
+                const isKitakami = data.meta?.map_name?.includes('Kitakami');
                 return data.seeds.map(seed => ({
                     ...seed,
                     starLevel: files[index].starLevel,
-                    fileName: files[index].file
+                    commandPrefix: isKitakami ? '-ra' : '.ra' // Set command prefix based on map_name
                 }));
             });
 
@@ -89,9 +91,7 @@ function displayResults(seeds) {
         seedDiv.classList.add('seed');
 
         const starsDisplay = '⭐'.repeat(seed.starLevel);
-        const isKitakami = seed.fileName.includes('kitakami'); // Check if the file name includes "kitakami"
-        const raidCommandPrefix = isKitakami ? '-ra' : '.ra'; // Determine command prefix
-        const raidCommand = `${raidCommandPrefix} ${seed.seed} ${seed.starLevel} 6`;
+        const raidCommand = `${seed.commandPrefix} ${seed.seed} ${seed.starLevel} 6`;
 
         const itemDrops = seed.rewards?.length
             ? `<strong>Item Drops:</strong><br>${seed.rewards.map(reward => `${reward.count} x ${reward.name}`).join('<br>')}`
