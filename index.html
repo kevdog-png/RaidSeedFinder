@@ -417,9 +417,10 @@ const copyButtons = document.querySelectorAll('.copy-button');
 copyButtons.forEach(button => {
     button.addEventListener('click', () => {
         const seed = button.getAttribute('data-seed');
-        const star = button.getAttribute('data-star');
+        const star = parseInt(button.getAttribute('data-star'), 10);
         const endNumber = button.getAttribute('data-end');
-        const command = `.ra ${seed} ${endNumber}`; // Replace star level 1 or 2 with 3
+        const adjustedStar = star <= 2 ? 3 : star; // Override star level to 3 if it's 1 or 2
+        const command = `.ra ${seed} ${adjustedStar} ${endNumber}`;
         navigator.clipboard.writeText(command);
 
         const message = button.previousElementSibling;
