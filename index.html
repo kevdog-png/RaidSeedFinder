@@ -326,6 +326,7 @@
             const files = [
                 { file: 'scarlet6iv5star.json', starLevel: 5 },
                 { file: 'scarlet6iv4star.json', starLevel: 4 },
+                { file: 'kitakami6iv4star.json', starLevel: 4 },
                 { file: 'scarlet3star.json', starLevel: 3 }
             ];
 
@@ -413,9 +414,7 @@
                 button.addEventListener('click', () => {
                     const seed = button.getAttribute('data-seed');
                     const star = button.getAttribute('data-star');
-                    const filename = button.getAttribute('data-filename'); // Assume filename is passed as data attribute
-                    const prefix = filename.includes('kitakami') ? '-ra' : '.ra'; // Determine prefix
-                    const command = `${prefix} ${seed} ${star} 6`;
+                    const command = `.ra ${seed} ${star} 6`;
                     navigator.clipboard.writeText(command);
 
                     const message = button.previousElementSibling;
