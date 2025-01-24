@@ -64,13 +64,13 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 
             // Filter results based on form inputs, including star level
             const filteredSeeds = allSeeds.filter((seed) => {
-                return (
-                    (species === '' || seed.species.toLowerCase().includes(species)) &&
-                    (shiny === '' || seed.shiny === shiny) &&
-                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
-                    (starLevel === '' || seed.starLevel == starLevel) // Include star level filter
-                );
-            });
+    return (
+        (species === '' || seed.species.toLowerCase().includes(species)) &&
+        (shiny === '' || seed.shiny === shiny) &&
+        (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
+        (starLevel === '' || seed.starLevel === parseInt(starLevel)) // Convert starLevel to number
+    );
+});
 
             displayResults(filteredSeeds);
         })
