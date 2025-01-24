@@ -3,6 +3,7 @@ window.addEventListener('load', function () {
     const files = [
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3 }
     ];
 
@@ -41,6 +42,7 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     const files = [
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv5star.json', starLevel: 5 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet6iv4star.json', starLevel: 4 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/scarlet3star.json', starLevel: 3 }
     ];
 
