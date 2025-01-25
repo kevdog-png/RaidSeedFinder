@@ -96,7 +96,8 @@
             "spe": 31,
             "species": "Wugtrio",
             "tera_type": "Poison",
-            "weight": 115
+            "weight": 115,
+            "map": "Paldea"
         },
         {
             "ability": "Vital Spirit",
@@ -189,7 +190,8 @@
             "spe": 31,
             "species": "Lycanroc (Midnight)",
             "tera_type": "Dragon",
-            "weight": 91
+            "weight": 91,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -282,7 +284,8 @@
             "spe": 31,
             "species": "Sawsbuck",
             "tera_type": "Water",
-            "weight": 176
+            "weight": 176,
+            "map": "Paldea"
         },
         {
             "ability": "Guts",
@@ -375,7 +378,8 @@
             "spe": 31,
             "species": "Ursaring",
             "tera_type": "Grass",
-            "weight": 86
+            "weight": 86,
+            "map": "Paldea"
         },
         {
             "ability": "Swift Swim",
@@ -468,7 +472,8 @@
             "spe": 31,
             "species": "Golduck",
             "tera_type": "Fairy",
-            "weight": 126
+            "weight": 126,
+            "map": "Paldea"
         },
         {
             "ability": "Unaware",
@@ -561,7 +566,8 @@
             "spe": 31,
             "species": "Clodsire",
             "tera_type": "Ghost",
-            "weight": 106
+            "weight": 106,
+            "map": "Paldea"
         },
         {
             "ability": "Unburden",
@@ -654,7 +660,8 @@
             "spe": 31,
             "species": "Drifblim",
             "tera_type": "Water",
-            "weight": 139
+            "weight": 139,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -747,7 +754,8 @@
             "spe": 31,
             "species": "Floatzel",
             "tera_type": "Ice",
-            "weight": 107
+            "weight": 107,
+            "map": "Paldea"
         },
         {
             "ability": "Cud Chew",
@@ -840,7 +848,8 @@
             "spe": 31,
             "species": "Tauros (Combat Breed)",
             "tera_type": "Water",
-            "weight": 149
+            "weight": 149,
+            "map": "Paldea"
         },
         {
             "ability": "Intimidate",
@@ -928,7 +937,8 @@
             "spe": 31,
             "species": "Masquerain",
             "tera_type": "Normal",
-            "weight": 178
+            "weight": 178,
+            "map": "Paldea"
         },
         {
             "ability": "Shield Dust",
@@ -1016,7 +1026,8 @@
             "spe": 31,
             "species": "Frosmoth",
             "tera_type": "Ghost",
-            "weight": 96
+            "weight": 96,
+            "map": "Paldea"
         }
     ]
 }
