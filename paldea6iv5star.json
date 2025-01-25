@@ -111,7 +111,8 @@
             "spe": 16,
             "species": "Amoonguss",
             "tera_type": "Ghost",
-            "weight": 123
+            "weight": 123,
+            "map": "Paldea"
         },
         {
             "ability": "Unaware",
@@ -219,7 +220,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Water",
-            "weight": 121
+            "weight": 121,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -322,7 +324,8 @@
             "spe": 31,
             "species": "Gengar",
             "tera_type": "Steel",
-            "weight": 73
+            "weight": 73,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -430,7 +433,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Ground",
-            "weight": 167
+            "weight": 167,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -533,7 +537,8 @@
             "spe": 31,
             "species": "Gengar",
             "tera_type": "Ground",
-            "weight": 186
+            "weight": 186,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -641,7 +646,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Psychic",
-            "weight": 139
+            "weight": 139,
+            "map": "Paldea"
         },
         {
             "ability": "Unburden",
@@ -749,7 +755,8 @@
             "spe": 31,
             "species": "Drifblim",
             "tera_type": "Steel",
-            "weight": 67
+            "weight": 67,
+            "map": "Paldea"
         },
         {
             "ability": "Flare Boost",
@@ -852,7 +859,8 @@
             "spe": 31,
             "species": "Drifblim",
             "tera_type": "Ice",
-            "weight": 241
+            "weight": 241,
+            "map": "Paldea"
         },
         {
             "ability": "Ice Body",
@@ -960,7 +968,8 @@
             "spe": 31,
             "species": "Glalie",
             "tera_type": "Poison",
-            "weight": 196
+            "weight": 196,
+            "map": "Paldea"
         },
         {
             "ability": "Serene Grace",
@@ -1068,7 +1077,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Ground",
-            "weight": 173
+            "weight": 173,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -1176,7 +1186,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Ground",
-            "weight": 21
+            "weight": 21,
+            "map": "Paldea"
         },
         {
             "ability": "Natural Cure",
@@ -1279,7 +1290,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Dragon",
-            "weight": 109
+            "weight": 109,
+            "map": "Paldea"
         },
         {
             "ability": "Unaware",
@@ -1387,7 +1399,8 @@
             "spe": 14,
             "species": "Dondozo",
             "tera_type": "Ghost",
-            "weight": 186
+            "weight": 186,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -1490,7 +1503,8 @@
             "spe": 31,
             "species": "Eelektross",
             "tera_type": "Ghost",
-            "weight": 198
+            "weight": 198,
+            "map": "Paldea"
         },
         {
             "ability": "Effect Spore",
@@ -1593,7 +1607,8 @@
             "spe": 27,
             "species": "Amoonguss",
             "tera_type": "Ghost",
-            "weight": 183
+            "weight": 183,
+            "map": "Paldea"
         },
         {
             "ability": "Moody",
@@ -1701,7 +1716,8 @@
             "spe": 31,
             "species": "Glalie",
             "tera_type": "Rock",
-            "weight": 131
+            "weight": 131,
+            "map": "Paldea"
         },
         {
             "ability": "Rocky Payload",
@@ -1809,7 +1825,8 @@
             "spe": 31,
             "species": "Bombirdier",
             "tera_type": "Normal",
-            "weight": 238
+            "weight": 238,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -1917,7 +1934,8 @@
             "spe": 31,
             "species": "Gengar",
             "tera_type": "Poison",
-            "weight": 35
+            "weight": 35,
+            "map": "Paldea"
         },
         {
             "ability": "Zero to Hero",
@@ -2025,7 +2043,8 @@
             "spe": 19,
             "species": "Palafin",
             "tera_type": "Fighting",
-            "weight": 29
+            "weight": 29,
+            "map": "Paldea"
         },
         {
             "ability": "Slush Rush",
@@ -2133,7 +2152,8 @@
             "spe": 12,
             "species": "Cetitan",
             "tera_type": "Normal",
-            "weight": 161
+            "weight": 161,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -2236,7 +2256,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Psychic",
-            "weight": 224
+            "weight": 224,
+            "map": "Paldea"
         },
         {
             "ability": "Zero to Hero",
@@ -2339,7 +2360,8 @@
             "spe": 31,
             "species": "Palafin",
             "tera_type": "Dragon",
-            "weight": 131
+            "weight": 131,
+            "map": "Paldea"
         },
         {
             "ability": "Slush Rush",
@@ -2447,7 +2469,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Rock",
-            "weight": 105
+            "weight": 105,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -2550,7 +2573,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Ghost",
-            "weight": 66
+            "weight": 66,
+            "map": "Paldea"
         },
         {
             "ability": "Moody",
@@ -2653,7 +2677,8 @@
             "spe": 31,
             "species": "Glalie",
             "tera_type": "Ice",
-            "weight": 173
+            "weight": 173,
+            "map": "Paldea"
         },
         {
             "ability": "Zero to Hero",
@@ -2756,7 +2781,8 @@
             "spe": 31,
             "species": "Palafin",
             "tera_type": "Steel",
-            "weight": 129
+            "weight": 129,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -2864,7 +2890,8 @@
             "spe": 17,
             "species": "Amoonguss",
             "tera_type": "Poison",
-            "weight": 229
+            "weight": 229,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -2967,7 +2994,8 @@
             "spe": 5,
             "species": "Gengar",
             "tera_type": "Steel",
-            "weight": 216
+            "weight": 216,
+            "map": "Paldea"
         },
         {
             "ability": "Effect Spore",
@@ -3070,7 +3098,8 @@
             "spe": 2,
             "species": "Amoonguss",
             "tera_type": "Ice",
-            "weight": 95
+            "weight": 95,
+            "map": "Paldea"
         },
         {
             "ability": "Zero to Hero",
@@ -3173,7 +3202,8 @@
             "spe": 31,
             "species": "Palafin",
             "tera_type": "Fire",
-            "weight": 162
+            "weight": 162,
+            "map": "Paldea"
         },
         {
             "ability": "Thick Fat",
@@ -3281,7 +3311,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Flying",
-            "weight": 176
+            "weight": 176,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -3389,7 +3420,8 @@
             "spe": 31,
             "species": "Eelektross",
             "tera_type": "Poison",
-            "weight": 94
+            "weight": 94,
+            "map": "Paldea"
         },
         {
             "ability": "Zero to Hero",
@@ -3497,7 +3529,8 @@
             "spe": 31,
             "species": "Palafin",
             "tera_type": "Normal",
-            "weight": 127
+            "weight": 127,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -3600,7 +3633,8 @@
             "spe": 17,
             "species": "Gengar",
             "tera_type": "Ghost",
-            "weight": 174
+            "weight": 174,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -3708,7 +3742,8 @@
             "spe": 21,
             "species": "Gengar",
             "tera_type": "Fire",
-            "weight": 161
+            "weight": 161,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -3816,7 +3851,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Dark",
-            "weight": 228
+            "weight": 228,
+            "map": "Paldea"
         },
         {
             "ability": "Effect Spore",
@@ -3919,7 +3955,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Fighting",
-            "weight": 21
+            "weight": 21,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -4027,7 +4064,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Grass",
-            "weight": 185
+            "weight": 185,
+            "map": "Paldea"
         },
         {
             "ability": "Slush Rush",
@@ -4130,7 +4168,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Ghost",
-            "weight": 236
+            "weight": 236,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -4233,7 +4272,8 @@
             "spe": 31,
             "species": "Eelektross",
             "tera_type": "Ghost",
-            "weight": 135
+            "weight": 135,
+            "map": "Paldea"
         },
         {
             "ability": "Unburden",
@@ -4341,7 +4381,8 @@
             "spe": 31,
             "species": "Drifblim",
             "tera_type": "Flying",
-            "weight": 137
+            "weight": 137,
+            "map": "Paldea"
         },
         {
             "ability": "Zero to Hero",
@@ -4449,7 +4490,8 @@
             "spe": 31,
             "species": "Palafin",
             "tera_type": "Electric",
-            "weight": 29
+            "weight": 29,
+            "map": "Paldea"
         },
         {
             "ability": "Zero to Hero",
@@ -4552,7 +4594,8 @@
             "spe": 31,
             "species": "Palafin",
             "tera_type": "Grass",
-            "weight": 70
+            "weight": 70,
+            "map": "Paldea"
         },
         {
             "ability": "Swarm",
@@ -4655,7 +4698,8 @@
             "spe": 31,
             "species": "Scyther",
             "tera_type": "Ice",
-            "weight": 118
+            "weight": 118,
+            "map": "Paldea"
         },
         {
             "ability": "Frisk",
@@ -4758,7 +4802,8 @@
             "spe": 31,
             "species": "Noivern",
             "tera_type": "Fire",
-            "weight": 186
+            "weight": 186,
+            "map": "Paldea"
         },
         {
             "ability": "Overcoat",
@@ -4861,7 +4906,8 @@
             "spe": 31,
             "species": "Cloyster",
             "tera_type": "Grass",
-            "weight": 63
+            "weight": 63,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -4964,7 +5010,8 @@
             "spe": 31,
             "species": "Goodra",
             "tera_type": "Water",
-            "weight": 44
+            "weight": 44,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -5067,7 +5114,8 @@
             "spe": 31,
             "species": "Copperajah",
             "tera_type": "Bug",
-            "weight": 151
+            "weight": 151,
+            "map": "Paldea"
         },
         {
             "ability": "Frisk",
@@ -5175,7 +5223,8 @@
             "spe": 31,
             "species": "Noivern",
             "tera_type": "Rock",
-            "weight": 175
+            "weight": 175,
+            "map": "Paldea"
         },
         {
             "ability": "Pickpocket",
@@ -5278,7 +5327,8 @@
             "spe": 31,
             "species": "Grimmsnarl",
             "tera_type": "Dragon",
-            "weight": 249
+            "weight": 249,
+            "map": "Paldea"
         },
         {
             "ability": "Technician",
@@ -5381,7 +5431,8 @@
             "spe": 31,
             "species": "Breloom",
             "tera_type": "Grass",
-            "weight": 132
+            "weight": 132,
+            "map": "Paldea"
         },
         {
             "ability": "Leaf Guard",
@@ -5484,7 +5535,8 @@
             "spe": 31,
             "species": "Tsareena",
             "tera_type": "Ice",
-            "weight": 176
+            "weight": 176,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -5592,7 +5644,8 @@
             "spe": 31,
             "species": "Copperajah",
             "tera_type": "Ice",
-            "weight": 83
+            "weight": 83,
+            "map": "Paldea"
         },
         {
             "ability": "Truant",
@@ -5700,7 +5753,8 @@
             "spe": 31,
             "species": "Slaking",
             "tera_type": "Normal",
-            "weight": 144
+            "weight": 144,
+            "map": "Paldea"
         },
         {
             "ability": "Gluttony",
@@ -5803,7 +5857,8 @@
             "spe": 31,
             "species": "Flapple",
             "tera_type": "Psychic",
-            "weight": 164
+            "weight": 164,
+            "map": "Paldea"
         },
         {
             "ability": "Oblivious",
@@ -5906,7 +5961,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Dragon",
-            "weight": 171
+            "weight": 171,
+            "map": "Paldea"
         },
         {
             "ability": "Overcoat",
@@ -6009,7 +6065,8 @@
             "spe": 31,
             "species": "Cloyster",
             "tera_type": "Grass",
-            "weight": 138
+            "weight": 138,
+            "map": "Paldea"
         },
         {
             "ability": "Magic Bounce",
@@ -6112,7 +6169,8 @@
             "spe": 31,
             "species": "Hatterene",
             "tera_type": "Psychic",
-            "weight": 107
+            "weight": 107,
+            "map": "Paldea"
         },
         {
             "ability": "Skill Link",
@@ -6215,7 +6273,8 @@
             "spe": 31,
             "species": "Cloyster",
             "tera_type": "Psychic",
-            "weight": 212
+            "weight": 212,
+            "map": "Paldea"
         },
         {
             "ability": "Slush Rush",
@@ -6323,7 +6382,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Normal",
-            "weight": 45
+            "weight": 45,
+            "map": "Paldea"
         },
         {
             "ability": "Queenly Majesty",
@@ -6431,7 +6491,8 @@
             "spe": 31,
             "species": "Tsareena",
             "tera_type": "Flying",
-            "weight": 120
+            "weight": 120,
+            "map": "Paldea"
         },
         {
             "ability": "Natural Cure",
@@ -6534,7 +6595,8 @@
             "spe": 31,
             "species": "Altaria",
             "tera_type": "Ghost",
-            "weight": 111
+            "weight": 111,
+            "map": "Paldea"
         },
         {
             "ability": "Commander",
@@ -6637,7 +6699,8 @@
             "spe": 31,
             "species": "Tatsugiri (Curly)",
             "tera_type": "Steel",
-            "weight": 149
+            "weight": 149,
+            "map": "Paldea"
         },
         {
             "ability": "Pressure",
@@ -6740,7 +6803,8 @@
             "spe": 31,
             "species": "Weavile",
             "tera_type": "Poison",
-            "weight": 73
+            "weight": 73,
+            "map": "Paldea"
         },
         {
             "ability": "Adaptability",
@@ -6848,7 +6912,8 @@
             "spe": 31,
             "species": "Dragalge",
             "tera_type": "Fighting",
-            "weight": 130
+            "weight": 130,
+            "map": "Paldea"
         },
         {
             "ability": "Sturdy",
@@ -6951,7 +7016,8 @@
             "spe": 31,
             "species": "Garganacl",
             "tera_type": "Psychic",
-            "weight": 193
+            "weight": 193,
+            "map": "Paldea"
         },
         {
             "ability": "Technician",
@@ -7054,7 +7120,8 @@
             "spe": 31,
             "species": "Toxtricity (Amped)",
             "tera_type": "Bug",
-            "weight": 74
+            "weight": 74,
+            "map": "Paldea"
         },
         {
             "ability": "Storm Drain",
@@ -7157,7 +7224,8 @@
             "spe": 31,
             "species": "Tatsugiri (Curly)",
             "tera_type": "Dragon",
-            "weight": 217
+            "weight": 217,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -7260,7 +7328,8 @@
             "spe": 31,
             "species": "Hydreigon",
             "tera_type": "Grass",
-            "weight": 137
+            "weight": 137,
+            "map": "Paldea"
         },
         {
             "ability": "Anger Point",
@@ -7368,7 +7437,8 @@
             "spe": 31,
             "species": "Tauros (Blaze Breed)",
             "tera_type": "Fighting",
-            "weight": 126
+            "weight": 126,
+            "map": "Paldea"
         },
         {
             "ability": "Weak Armor",
@@ -7476,7 +7546,8 @@
             "spe": 31,
             "species": "Polteageist",
             "tera_type": "Fighting",
-            "weight": 109
+            "weight": 109,
+            "map": "Paldea"
         },
         {
             "ability": "Ripen",
@@ -7579,7 +7650,8 @@
             "spe": 31,
             "species": "Appletun",
             "tera_type": "Steel",
-            "weight": 175
+            "weight": 175,
+            "map": "Paldea"
         },
         {
             "ability": "Inner Focus",
@@ -7682,7 +7754,8 @@
             "spe": 31,
             "species": "Annihilape",
             "tera_type": "Ice",
-            "weight": 162
+            "weight": 162,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -7785,7 +7858,8 @@
             "spe": 31,
             "species": "Eelektross",
             "tera_type": "Steel",
-            "weight": 219
+            "weight": 219,
+            "map": "Paldea"
         },
         {
             "ability": "Competitive",
@@ -7888,7 +7962,8 @@
             "spe": 31,
             "species": "Gothitelle",
             "tera_type": "Grass",
-            "weight": 180
+            "weight": 180,
+            "map": "Paldea"
         },
         {
             "ability": "Intimidate",
@@ -7996,7 +8071,8 @@
             "spe": 31,
             "species": "Gyarados",
             "tera_type": "Poison",
-            "weight": 131
+            "weight": 131,
+            "map": "Paldea"
         },
         {
             "ability": "Unnerve",
@@ -8099,7 +8175,8 @@
             "spe": 31,
             "species": "Corviknight",
             "tera_type": "Electric",
-            "weight": 122
+            "weight": 122,
+            "map": "Paldea"
         },
         {
             "ability": "Moody",
@@ -8207,7 +8284,8 @@
             "spe": 31,
             "species": "Glalie",
             "tera_type": "Fighting",
-            "weight": 136
+            "weight": 136,
+            "map": "Paldea"
         },
         {
             "ability": "Synchronize",
@@ -8315,7 +8393,8 @@
             "spe": 31,
             "species": "Indeedee",
             "tera_type": "Poison",
-            "weight": 52
+            "weight": 52,
+            "map": "Paldea"
         },
         {
             "ability": "Rocky Payload",
@@ -8418,7 +8497,8 @@
             "spe": 31,
             "species": "Bombirdier",
             "tera_type": "Flying",
-            "weight": 199
+            "weight": 199,
+            "map": "Paldea"
         },
         {
             "ability": "Thermal Exchange",
@@ -8521,7 +8601,8 @@
             "spe": 31,
             "species": "Baxcalibur",
             "tera_type": "Dark",
-            "weight": 170
+            "weight": 170,
+            "map": "Paldea"
         },
         {
             "ability": "Anticipation",
@@ -8624,7 +8705,8 @@
             "spe": 31,
             "species": "Hatterene",
             "tera_type": "Ground",
-            "weight": 192
+            "weight": 192,
+            "map": "Paldea"
         },
         {
             "ability": "Ice Body",
@@ -8732,7 +8814,8 @@
             "spe": 31,
             "species": "Baxcalibur",
             "tera_type": "Water",
-            "weight": 159
+            "weight": 159,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -8840,7 +8923,8 @@
             "spe": 31,
             "species": "Hydreigon",
             "tera_type": "Poison",
-            "weight": 57
+            "weight": 57,
+            "map": "Paldea"
         },
         {
             "ability": "Defiant",
@@ -8948,7 +9032,8 @@
             "spe": 31,
             "species": "Annihilape",
             "tera_type": "Fighting",
-            "weight": 137
+            "weight": 137,
+            "map": "Paldea"
         },
         {
             "ability": "Frisk",
@@ -9051,7 +9136,8 @@
             "spe": 31,
             "species": "Grimmsnarl",
             "tera_type": "Psychic",
-            "weight": 67
+            "weight": 67,
+            "map": "Paldea"
         },
         {
             "ability": "Moody",
@@ -9154,7 +9240,8 @@
             "spe": 31,
             "species": "Glalie",
             "tera_type": "Psychic",
-            "weight": 150
+            "weight": 150,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -9262,7 +9349,8 @@
             "spe": 31,
             "species": "Copperajah",
             "tera_type": "Ghost",
-            "weight": 142
+            "weight": 142,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -9370,7 +9458,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Normal",
-            "weight": 84
+            "weight": 84,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -9478,7 +9567,8 @@
             "spe": 31,
             "species": "Froslass",
             "tera_type": "Fire",
-            "weight": 116
+            "weight": 116,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -9586,7 +9676,8 @@
             "spe": 31,
             "species": "Hydreigon",
             "tera_type": "Ghost",
-            "weight": 198
+            "weight": 198,
+            "map": "Paldea"
         },
         {
             "ability": "Zero to Hero",
@@ -9694,7 +9785,8 @@
             "spe": 31,
             "species": "Palafin",
             "tera_type": "Fairy",
-            "weight": 81
+            "weight": 81,
+            "map": "Paldea"
         },
         {
             "ability": "Shell Armor",
@@ -9802,7 +9894,8 @@
             "spe": 31,
             "species": "Cloyster",
             "tera_type": "Flying",
-            "weight": 129
+            "weight": 129,
+            "map": "Paldea"
         },
         {
             "ability": "Ice Body",
@@ -9905,7 +9998,8 @@
             "spe": 31,
             "species": "Avalugg",
             "tera_type": "Ground",
-            "weight": 151
+            "weight": 151,
+            "map": "Paldea"
         },
         {
             "ability": "Super Luck",
@@ -10013,7 +10107,8 @@
             "spe": 31,
             "species": "Honchkrow",
             "tera_type": "Poison",
-            "weight": 40
+            "weight": 40,
+            "map": "Paldea"
         },
         {
             "ability": "Hustle",
@@ -10121,7 +10216,8 @@
             "spe": 31,
             "species": "Flapple",
             "tera_type": "Fighting",
-            "weight": 50
+            "weight": 50,
+            "map": "Paldea"
         },
         {
             "ability": "Intimidate",
@@ -10229,7 +10325,8 @@
             "spe": 31,
             "species": "Krookodile",
             "tera_type": "Poison",
-            "weight": 58
+            "weight": 58,
+            "map": "Paldea"
         },
         {
             "ability": "Punk Rock",
@@ -10332,7 +10429,8 @@
             "spe": 31,
             "species": "Toxtricity (Amped)",
             "tera_type": "Ghost",
-            "weight": 200
+            "weight": 200,
+            "map": "Paldea"
         },
         {
             "ability": "Own Tempo",
@@ -10440,7 +10538,8 @@
             "spe": 31,
             "species": "Slowking",
             "tera_type": "Fighting",
-            "weight": 178
+            "weight": 178,
+            "map": "Paldea"
         },
         {
             "ability": "Filter",
@@ -10543,7 +10642,8 @@
             "spe": 31,
             "species": "Revavroom",
             "tera_type": "Poison",
-            "weight": 182
+            "weight": 182,
+            "map": "Paldea"
         },
         {
             "ability": "Pressure",
@@ -10651,7 +10751,8 @@
             "spe": 31,
             "species": "Weavile",
             "tera_type": "Ground",
-            "weight": 178
+            "weight": 178,
+            "map": "Paldea"
         },
         {
             "ability": "Guts",
@@ -10754,7 +10855,8 @@
             "spe": 31,
             "species": "Luxray",
             "tera_type": "Water",
-            "weight": 178
+            "weight": 178,
+            "map": "Paldea"
         },
         {
             "ability": "Defiant",
@@ -10857,7 +10959,8 @@
             "spe": 31,
             "species": "Falinks",
             "tera_type": "Fire",
-            "weight": 163
+            "weight": 163,
+            "map": "Paldea"
         },
         {
             "ability": "Rivalry",
@@ -10960,7 +11063,8 @@
             "spe": 31,
             "species": "Luxray",
             "tera_type": "Ground",
-            "weight": 197
+            "weight": 197,
+            "map": "Paldea"
         },
         {
             "ability": "Oblivious",
@@ -11068,7 +11172,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Flying",
-            "weight": 170
+            "weight": 170,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -11176,7 +11281,8 @@
             "spe": 31,
             "species": "Eelektross",
             "tera_type": "Rock",
-            "weight": 141
+            "weight": 141,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -11279,7 +11385,8 @@
             "spe": 31,
             "species": "Rotom",
             "tera_type": "Dragon",
-            "weight": 104
+            "weight": 104,
+            "map": "Paldea"
         },
         {
             "ability": "Thermal Exchange",
@@ -11387,7 +11494,8 @@
             "spe": 31,
             "species": "Baxcalibur",
             "tera_type": "Ghost",
-            "weight": 169
+            "weight": 169,
+            "map": "Paldea"
         },
         {
             "ability": "Rocky Payload",
@@ -11495,7 +11603,8 @@
             "spe": 31,
             "species": "Bombirdier",
             "tera_type": "Ghost",
-            "weight": 227
+            "weight": 227,
+            "map": "Paldea"
         },
         {
             "ability": "Zero to Hero",
@@ -11598,7 +11707,8 @@
             "spe": 31,
             "species": "Palafin",
             "tera_type": "Psychic",
-            "weight": 196
+            "weight": 196,
+            "map": "Paldea"
         },
         {
             "ability": "Sand Veil",
@@ -11701,7 +11811,8 @@
             "spe": 31,
             "species": "Orthworm",
             "tera_type": "Fairy",
-            "weight": 167
+            "weight": 167,
+            "map": "Paldea"
         },
         {
             "ability": "Natural Cure",
@@ -11809,7 +11920,8 @@
             "spe": 31,
             "species": "Pawmot",
             "tera_type": "Normal",
-            "weight": 213
+            "weight": 213,
+            "map": "Paldea"
         },
         {
             "ability": "Anger Point",
@@ -11912,7 +12024,8 @@
             "spe": 31,
             "species": "Camerupt",
             "tera_type": "Fire",
-            "weight": 181
+            "weight": 181,
+            "map": "Paldea"
         },
         {
             "ability": "Earth Eater",
@@ -12015,7 +12128,8 @@
             "spe": 31,
             "species": "Orthworm",
             "tera_type": "Fairy",
-            "weight": 141
+            "weight": 141,
+            "map": "Paldea"
         },
         {
             "ability": "Weak Armor",
@@ -12118,7 +12232,8 @@
             "spe": 31,
             "species": "Armarouge",
             "tera_type": "Dragon",
-            "weight": 173
+            "weight": 173,
+            "map": "Paldea"
         },
         {
             "ability": "Weak Armor",
@@ -12226,7 +12341,8 @@
             "spe": 31,
             "species": "Polteageist",
             "tera_type": "Flying",
-            "weight": 184
+            "weight": 184,
+            "map": "Paldea"
         },
         {
             "ability": "Earth Eater",
@@ -12329,7 +12445,8 @@
             "spe": 31,
             "species": "Orthworm",
             "tera_type": "Psychic",
-            "weight": 176
+            "weight": 176,
+            "map": "Paldea"
         },
         {
             "ability": "Pickpocket",
@@ -12437,7 +12554,8 @@
             "spe": 31,
             "species": "Grimmsnarl",
             "tera_type": "Ghost",
-            "weight": 115
+            "weight": 115,
+            "map": "Paldea"
         },
         {
             "ability": "Unaware",
@@ -12545,7 +12663,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Normal",
-            "weight": 98
+            "weight": 98,
+            "map": "Paldea"
         },
         {
             "ability": "Skill Link",
@@ -12648,7 +12767,8 @@
             "spe": 31,
             "species": "Cloyster",
             "tera_type": "Dragon",
-            "weight": 73
+            "weight": 73,
+            "map": "Paldea"
         },
         {
             "ability": "Flash Fire",
@@ -12756,7 +12876,8 @@
             "spe": 31,
             "species": "Armarouge",
             "tera_type": "Ground",
-            "weight": 168
+            "weight": 168,
+            "map": "Paldea"
         },
         {
             "ability": "Early Bird",
@@ -12864,7 +12985,8 @@
             "spe": 31,
             "species": "Houndoom",
             "tera_type": "Electric",
-            "weight": 87
+            "weight": 87,
+            "map": "Paldea"
         },
         {
             "ability": "Technician",
@@ -12967,7 +13089,8 @@
             "spe": 31,
             "species": "Toxtricity (Amped)",
             "tera_type": "Fairy",
-            "weight": 116
+            "weight": 116,
+            "map": "Paldea"
         },
         {
             "ability": "Overcoat",
@@ -13070,7 +13193,8 @@
             "spe": 31,
             "species": "Revavroom",
             "tera_type": "Dragon",
-            "weight": 99
+            "weight": 99,
+            "map": "Paldea"
         },
         {
             "ability": "Sturdy",
@@ -13178,7 +13302,8 @@
             "spe": 31,
             "species": "Garganacl",
             "tera_type": "Ghost",
-            "weight": 64
+            "weight": 64,
+            "map": "Paldea"
         },
         {
             "ability": "Reckless",
@@ -13286,7 +13411,8 @@
             "spe": 31,
             "species": "Staraptor",
             "tera_type": "Fighting",
-            "weight": 131
+            "weight": 131,
+            "map": "Paldea"
         },
         {
             "ability": "Pickpocket",
@@ -13389,7 +13515,8 @@
             "spe": 31,
             "species": "Tinkaton",
             "tera_type": "Steel",
-            "weight": 122
+            "weight": 122,
+            "map": "Paldea"
         },
         {
             "ability": "Iron Fist",
@@ -13492,7 +13619,8 @@
             "spe": 31,
             "species": "Pawmot",
             "tera_type": "Poison",
-            "weight": 40
+            "weight": 40,
+            "map": "Paldea"
         },
         {
             "ability": "Volt Absorb",
@@ -13600,7 +13728,8 @@
             "spe": 31,
             "species": "Pawmot",
             "tera_type": "Electric",
-            "weight": 144
+            "weight": 144,
+            "map": "Paldea"
         },
         {
             "ability": "Guts",
@@ -13708,7 +13837,8 @@
             "spe": 31,
             "species": "Hariyama",
             "tera_type": "Bug",
-            "weight": 123
+            "weight": 123,
+            "map": "Paldea"
         },
         {
             "ability": "Insomnia",
@@ -13811,7 +13941,8 @@
             "spe": 31,
             "species": "Delibird",
             "tera_type": "Electric",
-            "weight": 111
+            "weight": 111,
+            "map": "Paldea"
         },
         {
             "ability": "Static",
@@ -13919,7 +14050,8 @@
             "spe": 31,
             "species": "Raichu",
             "tera_type": "Bug",
-            "weight": 151
+            "weight": 151,
+            "map": "Paldea"
         },
         {
             "ability": "Insomnia",
@@ -14022,7 +14154,8 @@
             "spe": 31,
             "species": "Delibird",
             "tera_type": "Rock",
-            "weight": 83
+            "weight": 83,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -14130,7 +14263,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Fighting",
-            "weight": 89
+            "weight": 89,
+            "map": "Paldea"
         },
         {
             "ability": "Flash Fire",
@@ -14238,7 +14372,8 @@
             "spe": 31,
             "species": "Houndoom",
             "tera_type": "Fighting",
-            "weight": 110
+            "weight": 110,
+            "map": "Paldea"
         },
         {
             "ability": "Inner Focus",
@@ -14341,7 +14476,8 @@
             "spe": 31,
             "species": "Glalie",
             "tera_type": "Electric",
-            "weight": 141
+            "weight": 141,
+            "map": "Paldea"
         },
         {
             "ability": "Pressure",
@@ -14449,7 +14585,8 @@
             "spe": 31,
             "species": "Weavile",
             "tera_type": "Fire",
-            "weight": 104
+            "weight": 104,
+            "map": "Paldea"
         },
         {
             "ability": "Intimidate",
@@ -14552,7 +14689,8 @@
             "spe": 31,
             "species": "Gyarados",
             "tera_type": "Dark",
-            "weight": 150
+            "weight": 150,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -14655,7 +14793,8 @@
             "spe": 31,
             "species": "Froslass",
             "tera_type": "Fairy",
-            "weight": 232
+            "weight": 232,
+            "map": "Paldea"
         },
         {
             "ability": "Flame Body",
@@ -14758,7 +14897,8 @@
             "spe": 31,
             "species": "Coalossal",
             "tera_type": "Fairy",
-            "weight": 188
+            "weight": 188,
+            "map": "Paldea"
         },
         {
             "ability": "Sand Stream",
@@ -14866,7 +15006,8 @@
             "spe": 31,
             "species": "Hippowdon",
             "tera_type": "Fairy",
-            "weight": 175
+            "weight": 175,
+            "map": "Paldea"
         },
         {
             "ability": "Magnet Pull",
@@ -14974,7 +15115,8 @@
             "spe": 31,
             "species": "Magnezone",
             "tera_type": "Poison",
-            "weight": 65
+            "weight": 65,
+            "map": "Paldea"
         },
         {
             "ability": "Rocky Payload",
@@ -15077,7 +15219,8 @@
             "spe": 31,
             "species": "Bombirdier",
             "tera_type": "Dark",
-            "weight": 164
+            "weight": 164,
+            "map": "Paldea"
         },
         {
             "ability": "Magic Bounce",
@@ -15185,7 +15328,8 @@
             "spe": 31,
             "species": "Hatterene",
             "tera_type": "Ghost",
-            "weight": 156
+            "weight": 156,
+            "map": "Paldea"
         },
         {
             "ability": "Inner Focus",
@@ -15293,7 +15437,8 @@
             "spe": 31,
             "species": "Glalie",
             "tera_type": "Fire",
-            "weight": 150
+            "weight": 150,
+            "map": "Paldea"
         },
         {
             "ability": "Moxie",
@@ -15401,7 +15546,8 @@
             "spe": 31,
             "species": "Krookodile",
             "tera_type": "Flying",
-            "weight": 108
+            "weight": 108,
+            "map": "Paldea"
         },
         {
             "ability": "Adaptability",
@@ -15509,7 +15655,8 @@
             "spe": 31,
             "species": "Eevee",
             "tera_type": "Water",
-            "weight": 140
+            "weight": 140,
+            "map": "Paldea"
         },
         {
             "ability": "Vital Spirit",
@@ -15612,7 +15759,8 @@
             "spe": 31,
             "species": "Annihilape",
             "tera_type": "Ghost",
-            "weight": 164
+            "weight": 164,
+            "map": "Paldea"
         },
         {
             "ability": "Swarm",
@@ -15715,7 +15863,8 @@
             "spe": 31,
             "species": "Volcarona",
             "tera_type": "Psychic",
-            "weight": 90
+            "weight": 90,
+            "map": "Paldea"
         },
         {
             "ability": "Keen Eye",
@@ -15818,7 +15967,8 @@
             "spe": 31,
             "species": "Sableye",
             "tera_type": "Psychic",
-            "weight": 123
+            "weight": 123,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -15921,7 +16071,8 @@
             "spe": 31,
             "species": "Hatterene",
             "tera_type": "Electric",
-            "weight": 160
+            "weight": 160,
+            "map": "Paldea"
         },
         {
             "ability": "Anger Point",
@@ -16024,7 +16175,8 @@
             "spe": 31,
             "species": "Camerupt",
             "tera_type": "Electric",
-            "weight": 77
+            "weight": 77,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -16132,7 +16284,8 @@
             "spe": 31,
             "species": "Slowking",
             "tera_type": "Poison",
-            "weight": 144
+            "weight": 144,
+            "map": "Paldea"
         },
         {
             "ability": "Pressure",
@@ -16235,7 +16388,8 @@
             "spe": 31,
             "species": "Kingambit",
             "tera_type": "Dragon",
-            "weight": 127
+            "weight": 127,
+            "map": "Paldea"
         },
         {
             "ability": "Sand Veil",
@@ -16338,7 +16492,8 @@
             "spe": 31,
             "species": "Garchomp",
             "tera_type": "Psychic",
-            "weight": 136
+            "weight": 136,
+            "map": "Paldea"
         },
         {
             "ability": "Illusion",
@@ -16446,7 +16601,8 @@
             "spe": 31,
             "species": "Zoroark",
             "tera_type": "Steel",
-            "weight": 187
+            "weight": 187,
+            "map": "Paldea"
         },
         {
             "ability": "Oblivious",
@@ -16554,7 +16710,8 @@
             "spe": 31,
             "species": "Slowbro",
             "tera_type": "Ground",
-            "weight": 147
+            "weight": 147,
+            "map": "Paldea"
         },
         {
             "ability": "Inner Focus",
@@ -16662,7 +16819,8 @@
             "spe": 31,
             "species": "Dragonite",
             "tera_type": "Flying",
-            "weight": 140
+            "weight": 140,
+            "map": "Paldea"
         },
         {
             "ability": "Prankster",
@@ -16770,7 +16928,8 @@
             "spe": 31,
             "species": "Grimmsnarl",
             "tera_type": "Fighting",
-            "weight": 85
+            "weight": 85,
+            "map": "Paldea"
         },
         {
             "ability": "Natural Cure",
@@ -16878,7 +17037,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Flying",
-            "weight": 98
+            "weight": 98,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -16981,7 +17141,8 @@
             "spe": 31,
             "species": "Polteageist",
             "tera_type": "Dark",
-            "weight": 194
+            "weight": 194,
+            "map": "Paldea"
         },
         {
             "ability": "Sweet Veil",
@@ -17084,7 +17245,8 @@
             "spe": 31,
             "species": "Tsareena",
             "tera_type": "Dark",
-            "weight": 138
+            "weight": 138,
+            "map": "Paldea"
         },
         {
             "ability": "Light Metal",
@@ -17192,7 +17354,8 @@
             "spe": 31,
             "species": "Scizor",
             "tera_type": "Flying",
-            "weight": 149
+            "weight": 149,
+            "map": "Paldea"
         },
         {
             "ability": "Queenly Majesty",
@@ -17300,7 +17463,8 @@
             "spe": 31,
             "species": "Tsareena",
             "tera_type": "Ground",
-            "weight": 124
+            "weight": 124,
+            "map": "Paldea"
         },
         {
             "ability": "Commander",
@@ -17403,7 +17567,8 @@
             "spe": 31,
             "species": "Tatsugiri (Curly)",
             "tera_type": "Ice",
-            "weight": 57
+            "weight": 57,
+            "map": "Paldea"
         },
         {
             "ability": "Own Tempo",
@@ -17506,7 +17671,8 @@
             "spe": 31,
             "species": "Indeedee",
             "tera_type": "Dark",
-            "weight": 128
+            "weight": 128,
+            "map": "Paldea"
         },
         {
             "ability": "Prankster",
@@ -17614,7 +17780,8 @@
             "spe": 31,
             "species": "Grimmsnarl",
             "tera_type": "Flying",
-            "weight": 56
+            "weight": 56,
+            "map": "Paldea"
         },
         {
             "ability": "Commander",
@@ -17717,7 +17884,8 @@
             "spe": 31,
             "species": "Tatsugiri (Stretchy)",
             "tera_type": "Grass",
-            "weight": 187
+            "weight": 187,
+            "map": "Paldea"
         },
         {
             "ability": "Thermal Exchange",
@@ -17825,7 +17993,8 @@
             "spe": 31,
             "species": "Baxcalibur",
             "tera_type": "Ice",
-            "weight": 126
+            "weight": 126,
+            "map": "Paldea"
         },
         {
             "ability": "Multiscale",
@@ -17933,7 +18102,8 @@
             "spe": 31,
             "species": "Dragonite",
             "tera_type": "Ground",
-            "weight": 32
+            "weight": 32,
+            "map": "Paldea"
         },
         {
             "ability": "Technician",
@@ -18036,7 +18206,8 @@
             "spe": 31,
             "species": "Scizor",
             "tera_type": "Ice",
-            "weight": 228
+            "weight": 228,
+            "map": "Paldea"
         },
         {
             "ability": "Rough Skin",
@@ -18144,7 +18315,8 @@
             "spe": 31,
             "species": "Garchomp",
             "tera_type": "Rock",
-            "weight": 221
+            "weight": 221,
+            "map": "Paldea"
         },
         {
             "ability": "Frisk",
@@ -18247,7 +18419,8 @@
             "spe": 31,
             "species": "Noivern",
             "tera_type": "Psychic",
-            "weight": 210
+            "weight": 210,
+            "map": "Paldea"
         },
         {
             "ability": "Pressure",
@@ -18350,7 +18523,8 @@
             "spe": 31,
             "species": "Weavile",
             "tera_type": "Grass",
-            "weight": 70
+            "weight": 70,
+            "map": "Paldea"
         },
         {
             "ability": "Defiant",
@@ -18453,7 +18627,8 @@
             "spe": 31,
             "species": "Falinks",
             "tera_type": "Ground",
-            "weight": 96
+            "weight": 96,
+            "map": "Paldea"
         },
         {
             "ability": "Keen Eye",
@@ -18556,7 +18731,8 @@
             "spe": 31,
             "species": "Braviary",
             "tera_type": "Electric",
-            "weight": 88
+            "weight": 88,
+            "map": "Paldea"
         },
         {
             "ability": "Queenly Majesty",
@@ -18664,7 +18840,8 @@
             "spe": 31,
             "species": "Tsareena",
             "tera_type": "Fire",
-            "weight": 122
+            "weight": 122,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -18767,7 +18944,8 @@
             "spe": 31,
             "species": "Slowking",
             "tera_type": "Normal",
-            "weight": 127
+            "weight": 127,
+            "map": "Paldea"
         },
         {
             "ability": "Justified",
@@ -18875,7 +19053,8 @@
             "spe": 31,
             "species": "Arcanine",
             "tera_type": "Ice",
-            "weight": 156
+            "weight": 156,
+            "map": "Paldea"
         },
         {
             "ability": "Natural Cure",
@@ -18978,7 +19157,8 @@
             "spe": 31,
             "species": "Altaria",
             "tera_type": "Electric",
-            "weight": 100
+            "weight": 100,
+            "map": "Paldea"
         },
         {
             "ability": "Inner Focus",
@@ -19081,7 +19261,8 @@
             "spe": 31,
             "species": "Glalie",
             "tera_type": "Fighting",
-            "weight": 134
+            "weight": 134,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -19184,7 +19365,8 @@
             "spe": 31,
             "species": "Hydreigon",
             "tera_type": "Dark",
-            "weight": 144
+            "weight": 144,
+            "map": "Paldea"
         },
         {
             "ability": "Psychic Surge",
@@ -19292,7 +19474,8 @@
             "spe": 31,
             "species": "Indeedee",
             "tera_type": "Flying",
-            "weight": 242
+            "weight": 242,
+            "map": "Paldea"
         },
         {
             "ability": "Effect Spore",
@@ -19395,7 +19578,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Electric",
-            "weight": 197
+            "weight": 197,
+            "map": "Paldea"
         },
         {
             "ability": "Thermal Exchange",
@@ -19503,7 +19687,8 @@
             "spe": 31,
             "species": "Baxcalibur",
             "tera_type": "Dragon",
-            "weight": 121
+            "weight": 121,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -19606,7 +19791,8 @@
             "spe": 31,
             "species": "Hydreigon",
             "tera_type": "Rock",
-            "weight": 60
+            "weight": 60,
+            "map": "Paldea"
         },
         {
             "ability": "Justified",
@@ -19714,7 +19900,8 @@
             "spe": 31,
             "species": "Gallade",
             "tera_type": "Dragon",
-            "weight": 86
+            "weight": 86,
+            "map": "Paldea"
         },
         {
             "ability": "Mirror Armor",
@@ -19817,7 +20004,8 @@
             "spe": 31,
             "species": "Corviknight",
             "tera_type": "Water",
-            "weight": 129
+            "weight": 129,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -19920,7 +20108,8 @@
             "spe": 31,
             "species": "Gengar",
             "tera_type": "Electric",
-            "weight": 181
+            "weight": 181,
+            "map": "Paldea"
         },
         {
             "ability": "Defiant",
@@ -20023,7 +20212,8 @@
             "spe": 31,
             "species": "Braviary",
             "tera_type": "Ice",
-            "weight": 86
+            "weight": 86,
+            "map": "Paldea"
         },
         {
             "ability": "Sand Force",
@@ -20126,7 +20316,8 @@
             "spe": 31,
             "species": "Hippowdon",
             "tera_type": "Psychic",
-            "weight": 192
+            "weight": 192,
+            "map": "Paldea"
         },
         {
             "ability": "Oblivious",
@@ -20234,7 +20425,8 @@
             "spe": 31,
             "species": "Slowking",
             "tera_type": "Normal",
-            "weight": 164
+            "weight": 164,
+            "map": "Paldea"
         },
         {
             "ability": "Psychic Surge",
@@ -20337,7 +20529,8 @@
             "spe": 31,
             "species": "Indeedee",
             "tera_type": "Ice",
-            "weight": 231
+            "weight": 231,
+            "map": "Paldea"
         },
         {
             "ability": "Soundproof",
@@ -20440,7 +20633,8 @@
             "spe": 31,
             "species": "Abomasnow",
             "tera_type": "Dragon",
-            "weight": 97
+            "weight": 97,
+            "map": "Paldea"
         },
         {
             "ability": "Shell Armor",
@@ -20543,7 +20737,8 @@
             "spe": 31,
             "species": "Cloyster",
             "tera_type": "Fire",
-            "weight": 122
+            "weight": 122,
+            "map": "Paldea"
         },
         {
             "ability": "Own Tempo",
@@ -20651,7 +20846,8 @@
             "spe": 31,
             "species": "Slowbro",
             "tera_type": "Normal",
-            "weight": 66
+            "weight": 66,
+            "map": "Paldea"
         },
         {
             "ability": "Wind Rider",
@@ -20754,7 +20950,8 @@
             "spe": 31,
             "species": "Brambleghast",
             "tera_type": "Water",
-            "weight": 63
+            "weight": 63,
+            "map": "Paldea"
         },
         {
             "ability": "Snow Warning",
@@ -20857,7 +21054,8 @@
             "spe": 31,
             "species": "Abomasnow",
             "tera_type": "Fairy",
-            "weight": 136
+            "weight": 136,
+            "map": "Paldea"
         },
         {
             "ability": "Volt Absorb",
@@ -20960,7 +21158,8 @@
             "spe": 31,
             "species": "Pawmot",
             "tera_type": "Electric",
-            "weight": 58
+            "weight": 58,
+            "map": "Paldea"
         },
         {
             "ability": "Frisk",
@@ -21068,7 +21267,8 @@
             "spe": 31,
             "species": "Gothitelle",
             "tera_type": "Fairy",
-            "weight": 50
+            "weight": 50,
+            "map": "Paldea"
         },
         {
             "ability": "Stakeout",
@@ -21171,7 +21371,8 @@
             "spe": 31,
             "species": "Mabosstiff",
             "tera_type": "Psychic",
-            "weight": 202
+            "weight": 202,
+            "map": "Paldea"
         },
         {
             "ability": "Truant",
@@ -21274,7 +21475,8 @@
             "spe": 31,
             "species": "Slaking",
             "tera_type": "Rock",
-            "weight": 173
+            "weight": 173,
+            "map": "Paldea"
         },
         {
             "ability": "Sweet Veil",
@@ -21382,7 +21584,8 @@
             "spe": 31,
             "species": "Tsareena",
             "tera_type": "Normal",
-            "weight": 122
+            "weight": 122,
+            "map": "Paldea"
         },
         {
             "ability": "Ripen",
@@ -21485,7 +21688,8 @@
             "spe": 31,
             "species": "Appletun",
             "tera_type": "Dragon",
-            "weight": 121
+            "weight": 121,
+            "map": "Paldea"
         },
         {
             "ability": "Own Tempo",
@@ -21593,7 +21797,8 @@
             "spe": 31,
             "species": "Indeedee",
             "tera_type": "Water",
-            "weight": 185
+            "weight": 185,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -21696,7 +21901,8 @@
             "spe": 31,
             "species": "Rotom",
             "tera_type": "Normal",
-            "weight": 149
+            "weight": 149,
+            "map": "Paldea"
         },
         {
             "ability": "Guts",
@@ -21799,7 +22005,8 @@
             "spe": 31,
             "species": "Hariyama",
             "tera_type": "Water",
-            "weight": 227
+            "weight": 227,
+            "map": "Paldea"
         },
         {
             "ability": "Infiltrator",
@@ -21902,7 +22109,8 @@
             "spe": 31,
             "species": "Noivern",
             "tera_type": "Grass",
-            "weight": 51
+            "weight": 51,
+            "map": "Paldea"
         },
         {
             "ability": "Commander",
@@ -22010,7 +22218,8 @@
             "spe": 31,
             "species": "Tatsugiri (Curly)",
             "tera_type": "Dragon",
-            "weight": 10
+            "weight": 10,
+            "map": "Paldea"
         },
         {
             "ability": "Flare Boost",
@@ -22113,7 +22322,8 @@
             "spe": 31,
             "species": "Drifblim",
             "tera_type": "Psychic",
-            "weight": 172
+            "weight": 172,
+            "map": "Paldea"
         },
         {
             "ability": "Effect Spore",
@@ -22216,7 +22426,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Dragon",
-            "weight": 143
+            "weight": 143,
+            "map": "Paldea"
         },
         {
             "ability": "Pickpocket",
@@ -22319,7 +22530,8 @@
             "spe": 31,
             "species": "Weavile",
             "tera_type": "Dark",
-            "weight": 14
+            "weight": 14,
+            "map": "Paldea"
         },
         {
             "ability": "Inner Focus",
@@ -22422,7 +22634,8 @@
             "spe": 31,
             "species": "Indeedee",
             "tera_type": "Psychic",
-            "weight": 92
+            "weight": 92,
+            "map": "Paldea"
         },
         {
             "ability": "Trace",
@@ -22525,7 +22738,8 @@
             "spe": 31,
             "species": "Gardevoir",
             "tera_type": "Psychic",
-            "weight": 142
+            "weight": 142,
+            "map": "Paldea"
         },
         {
             "ability": "Flame Body",
@@ -22633,7 +22847,8 @@
             "spe": 31,
             "species": "Volcarona",
             "tera_type": "Rock",
-            "weight": 162
+            "weight": 162,
+            "map": "Paldea"
         },
         {
             "ability": "Commander",
@@ -22736,7 +22951,8 @@
             "spe": 31,
             "species": "Tatsugiri (Stretchy)",
             "tera_type": "Psychic",
-            "weight": 226
+            "weight": 226,
+            "map": "Paldea"
         },
         {
             "ability": "Ripen",
@@ -22844,7 +23060,8 @@
             "spe": 31,
             "species": "Flapple",
             "tera_type": "Grass",
-            "weight": 62
+            "weight": 62,
+            "map": "Paldea"
         },
         {
             "ability": "Competitive",
@@ -22947,7 +23164,8 @@
             "spe": 31,
             "species": "Gothitelle",
             "tera_type": "Dark",
-            "weight": 149
+            "weight": 149,
+            "map": "Paldea"
         },
         {
             "ability": "Infiltrator",
@@ -23050,7 +23268,8 @@
             "spe": 31,
             "species": "Brambleghast",
             "tera_type": "Poison",
-            "weight": 111
+            "weight": 111,
+            "map": "Paldea"
         },
         {
             "ability": "Levitate",
@@ -23153,7 +23372,8 @@
             "spe": 31,
             "species": "Rotom",
             "tera_type": "Fairy",
-            "weight": 214
+            "weight": 214,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -23256,7 +23476,8 @@
             "spe": 31,
             "species": "Slowbro",
             "tera_type": "Ghost",
-            "weight": 137
+            "weight": 137,
+            "map": "Paldea"
         },
         {
             "ability": "Infiltrator",
@@ -23359,7 +23580,8 @@
             "spe": 31,
             "species": "Brambleghast",
             "tera_type": "Dragon",
-            "weight": 97
+            "weight": 97,
+            "map": "Paldea"
         },
         {
             "ability": "Commander",
@@ -23467,7 +23689,8 @@
             "spe": 31,
             "species": "Tatsugiri (Stretchy)",
             "tera_type": "Fighting",
-            "weight": 147
+            "weight": 147,
+            "map": "Paldea"
         },
         {
             "ability": "Clear Body",
@@ -23575,7 +23798,8 @@
             "spe": 31,
             "species": "Garganacl",
             "tera_type": "Fairy",
-            "weight": 132
+            "weight": 132,
+            "map": "Paldea"
         },
         {
             "ability": "Insomnia",
@@ -23683,7 +23907,8 @@
             "spe": 31,
             "species": "Delibird",
             "tera_type": "Normal",
-            "weight": 54
+            "weight": 54,
+            "map": "Paldea"
         },
         {
             "ability": "Earth Eater",
@@ -23786,7 +24011,8 @@
             "spe": 31,
             "species": "Orthworm",
             "tera_type": "Dark",
-            "weight": 130
+            "weight": 130,
+            "map": "Paldea"
         },
         {
             "ability": "Imposter",
@@ -23894,7 +24120,8 @@
             "spe": 31,
             "species": "Ditto",
             "tera_type": "Ice",
-            "weight": 120
+            "weight": 120,
+            "map": "Paldea"
         },
         {
             "ability": "Weak Armor",
@@ -24002,7 +24229,8 @@
             "spe": 31,
             "species": "Polteageist",
             "tera_type": "Bug",
-            "weight": 86
+            "weight": 86,
+            "map": "Paldea"
         },
         {
             "ability": "Sand Stream",
@@ -24110,7 +24338,8 @@
             "spe": 31,
             "species": "Hippowdon",
             "tera_type": "Grass",
-            "weight": 96
+            "weight": 96,
+            "map": "Paldea"
         },
         {
             "ability": "Unnerve",
@@ -24213,7 +24442,8 @@
             "spe": 31,
             "species": "Tyranitar",
             "tera_type": "Grass",
-            "weight": 95
+            "weight": 95,
+            "map": "Paldea"
         },
         {
             "ability": "Telepathy",
@@ -24321,7 +24551,8 @@
             "spe": 31,
             "species": "Noivern",
             "tera_type": "Poison",
-            "weight": 144
+            "weight": 144,
+            "map": "Paldea"
         },
         {
             "ability": "Flash Fire",
@@ -24424,7 +24655,8 @@
             "spe": 31,
             "species": "Coalossal",
             "tera_type": "Dark",
-            "weight": 75
+            "weight": 75,
+            "map": "Paldea"
         },
         {
             "ability": "Natural Cure",
@@ -24532,7 +24764,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Normal",
-            "weight": 141
+            "weight": 141,
+            "map": "Paldea"
         },
         {
             "ability": "Flash Fire",
@@ -24635,7 +24868,8 @@
             "spe": 31,
             "species": "Armarouge",
             "tera_type": "Dragon",
-            "weight": 165
+            "weight": 165,
+            "map": "Paldea"
         },
         {
             "ability": "Purifying Salt",
@@ -24743,7 +24977,8 @@
             "spe": 31,
             "species": "Garganacl",
             "tera_type": "Fire",
-            "weight": 32
+            "weight": 32,
+            "map": "Paldea"
         },
         {
             "ability": "Synchronize",
@@ -24846,7 +25081,8 @@
             "spe": 31,
             "species": "Indeedee",
             "tera_type": "Flying",
-            "weight": 209
+            "weight": 209,
+            "map": "Paldea"
         },
         {
             "ability": "Symbiosis",
@@ -24949,7 +25185,8 @@
             "spe": 31,
             "species": "Oranguru",
             "tera_type": "Rock",
-            "weight": 25
+            "weight": 25,
+            "map": "Paldea"
         },
         {
             "ability": "Disguise",
@@ -25052,7 +25289,8 @@
             "spe": 31,
             "species": "Mimikyu",
             "tera_type": "Ground",
-            "weight": 145
+            "weight": 145,
+            "map": "Paldea"
         },
         {
             "ability": "Intimidate",
@@ -25155,7 +25393,8 @@
             "spe": 31,
             "species": "Staraptor",
             "tera_type": "Psychic",
-            "weight": 108
+            "weight": 108,
+            "map": "Paldea"
         },
         {
             "ability": "Oblivious",
@@ -25258,7 +25497,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Electric",
-            "weight": 105
+            "weight": 105,
+            "map": "Paldea"
         },
         {
             "ability": "Adaptability",
@@ -25366,7 +25606,8 @@
             "spe": 31,
             "species": "Eevee",
             "tera_type": "Grass",
-            "weight": 74
+            "weight": 74,
+            "map": "Paldea"
         },
         {
             "ability": "Ice Body",
@@ -25469,7 +25710,8 @@
             "spe": 31,
             "species": "Avalugg",
             "tera_type": "Psychic",
-            "weight": 113
+            "weight": 113,
+            "map": "Paldea"
         },
         {
             "ability": "Toxic Debris",
@@ -25577,7 +25819,8 @@
             "spe": 31,
             "species": "Glimmora",
             "tera_type": "Ghost",
-            "weight": 145
+            "weight": 145,
+            "map": "Paldea"
         },
         {
             "ability": "Plus",
@@ -25685,7 +25928,8 @@
             "spe": 31,
             "species": "Toxtricity (Amped)",
             "tera_type": "Psychic",
-            "weight": 90
+            "weight": 90,
+            "map": "Paldea"
         },
         {
             "ability": "Heavy Metal",
@@ -25788,7 +26032,8 @@
             "spe": 31,
             "species": "Bronzong",
             "tera_type": "Water",
-            "weight": 162
+            "weight": 162,
+            "map": "Paldea"
         },
         {
             "ability": "Sand Veil",
@@ -25891,7 +26136,8 @@
             "spe": 31,
             "species": "Garchomp",
             "tera_type": "Bug",
-            "weight": 190
+            "weight": 190,
+            "map": "Paldea"
         },
         {
             "ability": "Flash Fire",
@@ -25994,7 +26240,8 @@
             "spe": 31,
             "species": "Houndoom",
             "tera_type": "Water",
-            "weight": 112
+            "weight": 112,
+            "map": "Paldea"
         },
         {
             "ability": "Sharpness",
@@ -26097,7 +26344,8 @@
             "spe": 31,
             "species": "Gallade",
             "tera_type": "Grass",
-            "weight": 148
+            "weight": 148,
+            "map": "Paldea"
         },
         {
             "ability": "Flash Fire",
@@ -26200,7 +26448,8 @@
             "spe": 31,
             "species": "Armarouge",
             "tera_type": "Fighting",
-            "weight": 93
+            "weight": 93,
+            "map": "Paldea"
         },
         {
             "ability": "Defiant",
@@ -26308,7 +26557,8 @@
             "spe": 31,
             "species": "Annihilape",
             "tera_type": "Dragon",
-            "weight": 135
+            "weight": 135,
+            "map": "Paldea"
         },
         {
             "ability": "Own Tempo",
@@ -26416,7 +26666,8 @@
             "spe": 31,
             "species": "Tinkaton",
             "tera_type": "Ice",
-            "weight": 130
+            "weight": 130,
+            "map": "Paldea"
         },
         {
             "ability": "Mold Breaker",
@@ -26524,7 +26775,8 @@
             "spe": 31,
             "species": "Tinkaton",
             "tera_type": "Electric",
-            "weight": 69
+            "weight": 69,
+            "map": "Paldea"
         },
         {
             "ability": "Weak Armor",
@@ -26627,7 +26879,8 @@
             "spe": 31,
             "species": "Armarouge",
             "tera_type": "Ice",
-            "weight": 92
+            "weight": 92,
+            "map": "Paldea"
         },
         {
             "ability": "Swarm",
@@ -26735,7 +26988,8 @@
             "spe": 31,
             "species": "Scizor",
             "tera_type": "Ghost",
-            "weight": 101
+            "weight": 101,
+            "map": "Paldea"
         },
         {
             "ability": "Oblivious",
@@ -26838,7 +27092,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Fairy",
-            "weight": 149
+            "weight": 149,
+            "map": "Paldea"
         },
         {
             "ability": "Wind Rider",
@@ -26946,7 +27201,8 @@
             "spe": 31,
             "species": "Brambleghast",
             "tera_type": "Poison",
-            "weight": 151
+            "weight": 151,
+            "map": "Paldea"
         },
         {
             "ability": "Sand Veil",
@@ -27054,7 +27310,8 @@
             "spe": 31,
             "species": "Orthworm",
             "tera_type": "Water",
-            "weight": 71
+            "weight": 71,
+            "map": "Paldea"
         },
         {
             "ability": "Unaware",
@@ -27157,7 +27414,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Fairy",
-            "weight": 196
+            "weight": 196,
+            "map": "Paldea"
         },
         {
             "ability": "Clear Body",
@@ -27265,7 +27523,8 @@
             "spe": 31,
             "species": "Garganacl",
             "tera_type": "Flying",
-            "weight": 80
+            "weight": 80,
+            "map": "Paldea"
         },
         {
             "ability": "Imposter",
@@ -27368,7 +27627,8 @@
             "spe": 31,
             "species": "Ditto",
             "tera_type": "Normal",
-            "weight": 44
+            "weight": 44,
+            "map": "Paldea"
         },
         {
             "ability": "Weak Armor",
@@ -27471,7 +27731,8 @@
             "spe": 31,
             "species": "Polteageist",
             "tera_type": "Dark",
-            "weight": 109
+            "weight": 109,
+            "map": "Paldea"
         },
         {
             "ability": "Seed Sower",
@@ -27574,7 +27835,8 @@
             "spe": 31,
             "species": "Arboliva",
             "tera_type": "Rock",
-            "weight": 106
+            "weight": 106,
+            "map": "Paldea"
         },
         {
             "ability": "Oblivious",
@@ -27682,7 +27944,8 @@
             "spe": 31,
             "species": "Slowbro",
             "tera_type": "Fighting",
-            "weight": 59
+            "weight": 59,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -27785,7 +28048,8 @@
             "spe": 31,
             "species": "Froslass",
             "tera_type": "Ground",
-            "weight": 118
+            "weight": 118,
+            "map": "Paldea"
         },
         {
             "ability": "Prankster",
@@ -27888,7 +28152,8 @@
             "spe": 31,
             "species": "Sableye",
             "tera_type": "Fighting",
-            "weight": 174
+            "weight": 174,
+            "map": "Paldea"
         },
         {
             "ability": "Seed Sower",
@@ -27991,7 +28256,8 @@
             "spe": 31,
             "species": "Arboliva",
             "tera_type": "Dark",
-            "weight": 114
+            "weight": 114,
+            "map": "Paldea"
         },
         {
             "ability": "Reckless",
@@ -28099,7 +28365,8 @@
             "spe": 31,
             "species": "Staraptor",
             "tera_type": "Poison",
-            "weight": 196
+            "weight": 196,
+            "map": "Paldea"
         },
         {
             "ability": "Ripen",
@@ -28202,7 +28469,8 @@
             "spe": 31,
             "species": "Appletun",
             "tera_type": "Electric",
-            "weight": 113
+            "weight": 113,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -28305,7 +28573,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Fire",
-            "weight": 173
+            "weight": 173,
+            "map": "Paldea"
         },
         {
             "ability": "Effect Spore",
@@ -28408,7 +28677,8 @@
             "spe": 31,
             "species": "Breloom",
             "tera_type": "Water",
-            "weight": 190
+            "weight": 190,
+            "map": "Paldea"
         },
         {
             "ability": "Sturdy",
@@ -28511,7 +28781,8 @@
             "spe": 31,
             "species": "Magnezone",
             "tera_type": "Dark",
-            "weight": 100
+            "weight": 100,
+            "map": "Paldea"
         },
         {
             "ability": "Magma Armor",
@@ -28614,7 +28885,8 @@
             "spe": 31,
             "species": "Camerupt",
             "tera_type": "Poison",
-            "weight": 173
+            "weight": 173,
+            "map": "Paldea"
         },
         {
             "ability": "Stall",
@@ -28717,7 +28989,8 @@
             "spe": 31,
             "species": "Sableye",
             "tera_type": "Psychic",
-            "weight": 50
+            "weight": 50,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -28820,7 +29093,8 @@
             "spe": 31,
             "species": "Goodra",
             "tera_type": "Fairy",
-            "weight": 80
+            "weight": 80,
+            "map": "Paldea"
         },
         {
             "ability": "Sturdy",
@@ -28923,7 +29197,8 @@
             "spe": 31,
             "species": "Avalugg",
             "tera_type": "Normal",
-            "weight": 138
+            "weight": 138,
+            "map": "Paldea"
         },
         {
             "ability": "Inner Focus",
@@ -29031,7 +29306,8 @@
             "spe": 31,
             "species": "Oranguru",
             "tera_type": "Electric",
-            "weight": 109
+            "weight": 109,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -29134,7 +29410,8 @@
             "spe": 31,
             "species": "Hatterene",
             "tera_type": "Normal",
-            "weight": 121
+            "weight": 121,
+            "map": "Paldea"
         },
         {
             "ability": "Magic Bounce",
@@ -29242,7 +29519,8 @@
             "spe": 31,
             "species": "Hatterene",
             "tera_type": "Ice",
-            "weight": 160
+            "weight": 160,
+            "map": "Paldea"
         },
         {
             "ability": "Prankster",
@@ -29345,7 +29623,8 @@
             "spe": 31,
             "species": "Sableye",
             "tera_type": "Fairy",
-            "weight": 171
+            "weight": 171,
+            "map": "Paldea"
         },
         {
             "ability": "Intimidate",
@@ -29453,7 +29732,8 @@
             "spe": 31,
             "species": "Staraptor",
             "tera_type": "Poison",
-            "weight": 130
+            "weight": 130,
+            "map": "Paldea"
         },
         {
             "ability": "Truant",
@@ -29556,7 +29836,8 @@
             "spe": 31,
             "species": "Slaking",
             "tera_type": "Psychic",
-            "weight": 58
+            "weight": 58,
+            "map": "Paldea"
         },
         {
             "ability": "Effect Spore",
@@ -29664,7 +29945,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Flying",
-            "weight": 173
+            "weight": 173,
+            "map": "Paldea"
         },
         {
             "ability": "Intimidate",
@@ -29772,7 +30054,8 @@
             "spe": 31,
             "species": "Luxray",
             "tera_type": "Rock",
-            "weight": 167
+            "weight": 167,
+            "map": "Paldea"
         },
         {
             "ability": "Prankster",
@@ -29880,7 +30163,8 @@
             "spe": 31,
             "species": "Sableye",
             "tera_type": "Bug",
-            "weight": 210
+            "weight": 210,
+            "map": "Paldea"
         },
         {
             "ability": "Pressure",
@@ -29983,7 +30267,8 @@
             "spe": 31,
             "species": "Kingambit",
             "tera_type": "Dark",
-            "weight": 111
+            "weight": 111,
+            "map": "Paldea"
         },
         {
             "ability": "Gluttony",
@@ -30091,7 +30376,8 @@
             "spe": 31,
             "species": "Appletun",
             "tera_type": "Dragon",
-            "weight": 95
+            "weight": 95,
+            "map": "Paldea"
         },
         {
             "ability": "Effect Spore",
@@ -30194,7 +30480,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Dark",
-            "weight": 134
+            "weight": 134,
+            "map": "Paldea"
         },
         {
             "ability": "Defiant",
@@ -30302,7 +30589,8 @@
             "spe": 31,
             "species": "Falinks",
             "tera_type": "Poison",
-            "weight": 183
+            "weight": 183,
+            "map": "Paldea"
         },
         {
             "ability": "Defiant",
@@ -30405,7 +30693,8 @@
             "spe": 31,
             "species": "Kingambit",
             "tera_type": "Ghost",
-            "weight": 111
+            "weight": 111,
+            "map": "Paldea"
         },
         {
             "ability": "Adaptability",
@@ -30508,7 +30797,8 @@
             "spe": 31,
             "species": "Dragalge",
             "tera_type": "Electric",
-            "weight": 126
+            "weight": 126,
+            "map": "Paldea"
         },
         {
             "ability": "Commander",
@@ -30611,7 +30901,8 @@
             "spe": 31,
             "species": "Tatsugiri (Droopy)",
             "tera_type": "Ghost",
-            "weight": 94
+            "weight": 94,
+            "map": "Paldea"
         },
         {
             "ability": "Battle Armor",
@@ -30714,7 +31005,8 @@
             "spe": 31,
             "species": "Falinks",
             "tera_type": "Flying",
-            "weight": 131
+            "weight": 131,
+            "map": "Paldea"
         },
         {
             "ability": "Cursed Body",
@@ -30817,7 +31109,8 @@
             "spe": 31,
             "species": "Polteageist",
             "tera_type": "Fighting",
-            "weight": 128
+            "weight": 128,
+            "map": "Paldea"
         }
     ]
 }
