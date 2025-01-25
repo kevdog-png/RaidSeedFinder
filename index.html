@@ -435,13 +435,9 @@ copyButtons.forEach(button => {
 });
     }
 
-        // Lazy-loading initialization on page load
+        // Automatically load and display all seeds when the page loads
         window.addEventListener('load', () => {
-            const resultsContainer = document.getElementById('results');
-            const loadMoreButton = document.getElementById('loadMore');
-
-            // Simulate lazy loading by triggering a scroll event
-            window.dispatchEvent(new Event('scroll'));
+            document.getElementById('filterForm').dispatchEvent(new Event('submit'));
         });
     </script>
 </body>
