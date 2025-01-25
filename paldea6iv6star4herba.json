@@ -111,7 +111,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Poison",
-            "weight": 56
+            "weight": 56,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -219,7 +220,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Rock",
-            "weight": 141
+            "weight": 141,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -327,7 +329,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Bug",
-            "weight": 120
+            "weight": 120,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -435,7 +438,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Water",
-            "weight": 156
+            "weight": 156,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -543,7 +547,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Grass",
-            "weight": 145
+            "weight": 145,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -651,7 +656,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Ghost",
-            "weight": 119
+            "weight": 119,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -754,7 +760,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Dark",
-            "weight": 132
+            "weight": 132,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -857,7 +864,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Water",
-            "weight": 79
+            "weight": 79,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -965,7 +973,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Steel",
-            "weight": 139
+            "weight": 139,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -1073,7 +1082,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Steel",
-            "weight": 106
+            "weight": 106,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -1181,7 +1191,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Electric",
-            "weight": 110
+            "weight": 110,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -1294,7 +1305,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Fighting",
-            "weight": 59
+            "weight": 59,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -1392,7 +1404,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Electric",
-            "weight": 175
+            "weight": 175,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -1500,7 +1513,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Ice",
-            "weight": 182
+            "weight": 182,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -1603,7 +1617,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Ice",
-            "weight": 118
+            "weight": 118,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -1711,7 +1726,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Electric",
-            "weight": 86
+            "weight": 86,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -1824,7 +1840,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Normal",
-            "weight": 160
+            "weight": 160,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -1932,7 +1949,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Dark",
-            "weight": 45
+            "weight": 45,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -2045,7 +2063,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Fighting",
-            "weight": 223
+            "weight": 223,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -2153,7 +2172,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Ice",
-            "weight": 85
+            "weight": 85,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -2251,7 +2271,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Normal",
-            "weight": 143
+            "weight": 143,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -2359,7 +2380,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Grass",
-            "weight": 151
+            "weight": 151,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -2472,7 +2494,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Fighting",
-            "weight": 183
+            "weight": 183,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -2580,7 +2603,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Dragon",
-            "weight": 138
+            "weight": 138,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -2693,7 +2717,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Grass",
-            "weight": 151
+            "weight": 151,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -2796,7 +2821,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Dark",
-            "weight": 96
+            "weight": 96,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -2899,7 +2925,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Fairy",
-            "weight": 84
+            "weight": 84,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -3002,7 +3029,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Fighting",
-            "weight": 142
+            "weight": 142,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -3095,7 +3123,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Steel",
-            "weight": 175
+            "weight": 175,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -3198,7 +3227,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Rock",
-            "weight": 198
+            "weight": 198,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -3291,7 +3321,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Steel",
-            "weight": 49
+            "weight": 49,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -3399,7 +3430,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Fairy",
-            "weight": 62
+            "weight": 62,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -3512,7 +3544,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Rock",
-            "weight": 93
+            "weight": 93,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -3620,7 +3653,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Dragon",
-            "weight": 175
+            "weight": 175,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -3728,7 +3762,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Steel",
-            "weight": 46
+            "weight": 46,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -3831,7 +3866,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Ice",
-            "weight": 204
+            "weight": 204,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -3934,7 +3970,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Bug",
-            "weight": 31
+            "weight": 31,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -4032,7 +4069,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Fire",
-            "weight": 146
+            "weight": 146,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -4130,7 +4168,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Ghost",
-            "weight": 27
+            "weight": 27,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -4233,7 +4272,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Ghost",
-            "weight": 114
+            "weight": 114,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -4336,7 +4376,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Dark",
-            "weight": 98
+            "weight": 98,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -4439,7 +4480,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Electric",
-            "weight": 159
+            "weight": 159,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -4542,7 +4584,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Normal",
-            "weight": 129
+            "weight": 129,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -4650,7 +4693,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Dragon",
-            "weight": 129
+            "weight": 129,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -4758,7 +4802,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Water",
-            "weight": 127
+            "weight": 127,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -4861,7 +4906,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Poison",
-            "weight": 108
+            "weight": 108,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -4974,7 +5020,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Steel",
-            "weight": 224
+            "weight": 224,
+            "map": "Paldea"
         },
         {
             "ability": "Clear Body",
@@ -5077,7 +5124,8 @@
             "spe": 31,
             "species": "Garganacl",
             "tera_type": "Electric",
-            "weight": 127
+            "weight": 127,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -5170,7 +5218,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Fire",
-            "weight": 63
+            "weight": 63,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -5278,7 +5327,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Bug",
-            "weight": 132
+            "weight": 132,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -5386,7 +5436,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Grass",
-            "weight": 70
+            "weight": 70,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -5489,7 +5540,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Bug",
-            "weight": 127
+            "weight": 127,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -5602,7 +5654,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Fighting",
-            "weight": 137
+            "weight": 137,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -5695,7 +5748,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Bug",
-            "weight": 146
+            "weight": 146,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -5793,7 +5847,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Ghost",
-            "weight": 158
+            "weight": 158,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -5896,7 +5951,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Normal",
-            "weight": 175
+            "weight": 175,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -6004,7 +6060,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Fairy",
-            "weight": 91
+            "weight": 91,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -6102,7 +6159,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Fairy",
-            "weight": 137
+            "weight": 137,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -6215,7 +6273,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Poison",
-            "weight": 150
+            "weight": 150,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -6318,7 +6377,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Dragon",
-            "weight": 11
+            "weight": 11,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -6421,7 +6481,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Grass",
-            "weight": 94
+            "weight": 94,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -6524,7 +6585,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Psychic",
-            "weight": 188
+            "weight": 188,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -6617,7 +6679,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Electric",
-            "weight": 99
+            "weight": 99,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -6720,7 +6783,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Dragon",
-            "weight": 163
+            "weight": 163,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -6828,7 +6892,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Fairy",
-            "weight": 152
+            "weight": 152,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -6931,7 +6996,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Ghost",
-            "weight": 114
+            "weight": 114,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -7034,7 +7100,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Grass",
-            "weight": 142
+            "weight": 142,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -7137,7 +7204,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Dragon",
-            "weight": 139
+            "weight": 139,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -7250,7 +7318,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Poison",
-            "weight": 191
+            "weight": 191,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -7353,7 +7422,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Water",
-            "weight": 87
+            "weight": 87,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -7466,7 +7536,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Electric",
-            "weight": 71
+            "weight": 71,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -7559,7 +7630,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Dragon",
-            "weight": 82
+            "weight": 82,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -7672,7 +7744,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Grass",
-            "weight": 120
+            "weight": 120,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -7770,7 +7843,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Electric",
-            "weight": 84
+            "weight": 84,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -7878,7 +7952,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Fairy",
-            "weight": 170
+            "weight": 170,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -7986,7 +8061,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Ground",
-            "weight": 73
+            "weight": 73,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -8094,7 +8170,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Dragon",
-            "weight": 75
+            "weight": 75,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -8202,7 +8279,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Fire",
-            "weight": 46
+            "weight": 46,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -8305,7 +8383,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Bug",
-            "weight": 40
+            "weight": 40,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -8418,7 +8497,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Poison",
-            "weight": 80
+            "weight": 80,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -8516,7 +8596,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Rock",
-            "weight": 35
+            "weight": 35,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -8619,7 +8700,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Ghost",
-            "weight": 30
+            "weight": 30,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -8722,7 +8804,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Poison",
-            "weight": 108
+            "weight": 108,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -8820,7 +8903,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Rock",
-            "weight": 243
+            "weight": 243,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -8928,7 +9012,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Fire",
-            "weight": 168
+            "weight": 168,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -9041,7 +9126,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Normal",
-            "weight": 129
+            "weight": 129,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -9144,7 +9230,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Ice",
-            "weight": 144
+            "weight": 144,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -9257,7 +9344,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Fighting",
-            "weight": 60
+            "weight": 60,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -9370,7 +9458,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Dragon",
-            "weight": 115
+            "weight": 115,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -9473,7 +9562,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Fighting",
-            "weight": 57
+            "weight": 57,
+            "map": "Paldea"
         },
         {
             "ability": "Pickpocket",
@@ -9571,7 +9661,8 @@
             "spe": 31,
             "species": "Tinkaton",
             "tera_type": "Flying",
-            "weight": 223
+            "weight": 223,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -9674,7 +9765,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Fairy",
-            "weight": 87
+            "weight": 87,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -9777,7 +9869,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Water",
-            "weight": 74
+            "weight": 74,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -9880,7 +9973,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Water",
-            "weight": 126
+            "weight": 126,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -9978,7 +10072,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Ice",
-            "weight": 74
+            "weight": 74,
+            "map": "Paldea"
         },
         {
             "ability": "Healer",
@@ -10076,7 +10171,8 @@
             "spe": 31,
             "species": "Blissey",
             "tera_type": "Ghost",
-            "weight": 170
+            "weight": 170,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -10184,7 +10280,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Ghost",
-            "weight": 161
+            "weight": 161,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -10287,7 +10384,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Grass",
-            "weight": 84
+            "weight": 84,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -10395,7 +10493,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Bug",
-            "weight": 139
+            "weight": 139,
+            "map": "Paldea"
         },
         {
             "ability": "Hydration",
@@ -10498,7 +10597,8 @@
             "spe": 31,
             "species": "Vaporeon",
             "tera_type": "Grass",
-            "weight": 145
+            "weight": 145,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -10611,7 +10711,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Ground",
-            "weight": 145
+            "weight": 145,
+            "map": "Paldea"
         },
         {
             "ability": "Regenerator",
@@ -10724,7 +10825,8 @@
             "spe": 31,
             "species": "Amoonguss",
             "tera_type": "Dark",
-            "weight": 114
+            "weight": 114,
+            "map": "Paldea"
         },
         {
             "ability": "Gooey",
@@ -10827,7 +10929,8 @@
             "spe": 31,
             "species": "Goodra",
             "tera_type": "Fighting",
-            "weight": 73
+            "weight": 73,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -10930,7 +11033,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Normal",
-            "weight": 158
+            "weight": 158,
+            "map": "Paldea"
         },
         {
             "ability": "Sap Sipper",
@@ -11043,7 +11147,8 @@
             "spe": 31,
             "species": "Farigiraf",
             "tera_type": "Water",
-            "weight": 169
+            "weight": 169,
+            "map": "Paldea"
         },
         {
             "ability": "Water Veil",
@@ -11151,7 +11256,8 @@
             "spe": 31,
             "species": "Dondozo",
             "tera_type": "Fire",
-            "weight": 145
+            "weight": 145,
+            "map": "Paldea"
         },
         {
             "ability": "Sheer Force",
@@ -11254,7 +11360,8 @@
             "spe": 31,
             "species": "Cetitan",
             "tera_type": "Ghost",
-            "weight": 50
+            "weight": 50,
+            "map": "Paldea"
         }
     ]
 }
