@@ -255,11 +255,11 @@
             </div>
 
             <div>
-                <label for="shiny">Shiny:</label>
-                <select id="shiny" name="shiny">
-                    <option value="">Any</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                <label for="map">Map:</label>
+                <select id="map" name="map">
+            <option value="">Any</option>
+            <option value="Paldea">Paldea</option>
+            <option value="Kitakami">Kitakami</option>
                 </select>
             </div>
         </div>
@@ -321,7 +321,7 @@
             event.preventDefault(); // Prevent form submission
 
             const species = document.getElementById('species').value.toLowerCase();
-            const shiny = document.getElementById('shiny').value;
+            const map = document.getElementById('map').value.toLowerCase();
             const teraType = document.getElementById('tera_type').value.toLowerCase();
             const starLevel = document.getElementById('star_level').value;
 
@@ -349,7 +349,7 @@
                     const filteredSeeds = allSeeds.filter(seed => {
                         return (
                             (species === '' || seed.species.toLowerCase().includes(species)) &&
-                            (shiny === '' || seed.shiny === shiny) &&
+                            (map === '' || seed.map.toLowerCase() === map)
                             (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
                             (starLevel === '' || seed.starLevel == starLevel)
                         );
