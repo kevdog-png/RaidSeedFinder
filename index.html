@@ -255,11 +255,11 @@
             </div>
 
             <div>
-                <label for="map">Map:</label>
-                <select id="map" name="map">
+                <label for="shiny">Shiny:</label>
+                <select id="shiny" name="shiny">
                     <option value="">Any</option>
-                    <option value="Paldea">Paldea</option>
-                    <option value="Kitakami">Kitakami</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
                 </select>
             </div>
         </div>
@@ -318,36 +318,38 @@
     <script>
         // Function to handle form submission
         document.getElementById('filterForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent form submission
 
             const species = document.getElementById('species').value.toLowerCase();
-            const map = document.getElementById('map').value;
+            const shiny = document.getElementById('shiny').value;
             const teraType = document.getElementById('tera_type').value.toLowerCase();
             const starLevel = document.getElementById('star_level').value;
 
+            // Load data from both JSON files
             const files = [
-                { file: 'paldea6iv6star4herba.json', map: 'Paldea' },
-                { file: 'paldea6iv5star.json', map: 'Paldea' },
-                { file: 'paldea6iv4star.json', map: 'Paldea' },
-                { file: 'kitakami6iv4star.json', map: 'Kitakami' },
-                { file: 'paldea3star.json', map: 'Paldea' },
-                { file: 'paldea2star.json', map: 'Paldea' },
-                { file: 'paldea1star.json', map: 'Paldea' }
+                { file: 'paldea6iv6star4herba.json', starLevel: 6 },
+                { file: 'paldea6iv5star.json', starLevel: 5 },
+                { file: 'paldea6iv4star.json', starLevel: 4 },
+                { file: 'kitakami6iv4star.json', starLevel: 4 },
+                { file: 'paldea3star.json', starLevel: 3 },
+                { file: 'paldea2star.json', starLevel: 2 },
+                { file: 'paldea1star.json', starLevel: 1 }
             ];
 
             Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
+
                 .then(dataArray => {
                     const allSeeds = dataArray.flatMap((data, index) => 
                         data.seeds.map(seed => ({
-                            ...seed,
-                            map: files[index].map
+                            ...seed, 
+                            starLevel: files[index].starLevel  // Add star level to the seed object
                         }))
                     );
 
                     const filteredSeeds = allSeeds.filter(seed => {
                         return (
                             (species === '' || seed.species.toLowerCase().includes(species)) &&
-                            (map === '' || seed.map === map) &&
+                            (shiny === '' || seed.shiny === shiny) &&
                             (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
                             (starLevel === '' || seed.starLevel == starLevel)
                         );
