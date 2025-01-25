@@ -349,7 +349,7 @@
                     const filteredSeeds = allSeeds.filter(seed => {
                         return (
                             (species === '' || seed.species.toLowerCase().includes(species)) &&
-                            (map === '' || seed.map.toLowerCase() === map)
+                            (map === '' || seed.map.toLowerCase() === map) &&
                             (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
                             (starLevel === '' || seed.starLevel == starLevel)
                         );
