@@ -25,8 +25,12 @@ window.addEventListener('load', function () {
                 return;
             }
 
-            // Display all results when the page loads
-            displayResults(allSeeds);
+            
+    // Display the first batch of results when the page loads
+    seedsToDisplay = allSeeds;
+    displayedCount = 0;
+    loadNextBatch();
+    
         })
         .catch((error) => console.error('Error fetching seed data:', error));
 });
