@@ -1,3 +1,8 @@
+// Global variables
+let allSeeds = []; // Store all fetched data
+let currentIndex = 0; // Track the index for loading more results
+const RESULTS_PER_PAGE = 495; // Number of results to load per batch
+
 // Fetch data from both GitHub JSON files and display results on page load
 window.addEventListener('load', function () {
     const files = [
@@ -13,7 +18,7 @@ window.addEventListener('load', function () {
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
         .then(dataArray => {
             // Combine all seeds from both files
-            const allSeeds = dataArray.flatMap((data, index) => {
+            allSeeds = dataArray.flatMap((data, index) => {
                 return data.seeds.map(seed => ({
                     ...seed,
                     starLevel: files[index].starLevel  // Add star level to each seed
@@ -25,8 +30,8 @@ window.addEventListener('load', function () {
                 return;
             }
 
-            // Display all results when the page loads
-            displayResults(allSeeds);
+            // Display the initial batch of results
+            loadMoreResults();
         })
         .catch((error) => console.error('Error fetching seed data:', error));
 });
@@ -66,13 +71,13 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 
             // Filter results based on form inputs, including star level
             const filteredSeeds = allSeeds.filter((seed) => {
-    return (
-        (species === '' || seed.species.toLowerCase().includes(species)) &&
-        (shiny === '' || seed.shiny === shiny) &&
-        (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
-        (starLevel === '' || seed.starLevel === parseInt(starLevel)) // Convert starLevel to number
-    );
-});
+                return (
+                    (species === '' || seed.species.toLowerCase().includes(species)) &&
+                    (shiny === '' || seed.shiny === shiny) &&
+                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
+                    (starLevel === '' || seed.starLevel === parseInt(starLevel)) // Convert starLevel to number
+                );
+            });
 
             displayResults(filteredSeeds);
         })
@@ -150,3 +155,22 @@ function displayResults(seeds) {
         });
     });
 }
+
+// Function to load more results (used for lazy loading)
+function loadMoreResults() {
+    const resultsContainer = document.getElementById('results');
+    const nextBatch = allSeeds.slice(currentIndex, currentIndex + RESULTS_PER_PAGE);
+
+    displayResults(nextBatch);
+    currentIndex += RESULTS_PER_PAGE;
+}
+
+// Infinite scroll logic
+window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+        // Load more results when the user scrolls near the bottom
+        if (currentIndex < allSeeds.length) {
+            loadMoreResults();
+        }
+    }
+});
