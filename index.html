@@ -399,19 +399,21 @@
     const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
 
     seedDiv.innerHTML = `
-        <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
-        <strong>Species:</strong> ${seed.species} <br>
-        <strong>Tera Type:</strong> ${seed.tera_type} <br>
-        <strong>Shiny:</strong> ${seed.shiny} <br>
-        <strong>Seed:</strong> ${seed.seed} <br>
-        <strong>Item Drops:</strong><br>
-        ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-        <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
-        <div class="command-box">
-            <span class="command-message">Copied!</span>
-            <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}">Copy Command</button>
-        </div>
-    `;
+    <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
+    <strong>Species:</strong> ${seed.species} <br>
+    <strong>Tera Type:</strong> ${seed.tera_type} <br>
+    <strong>Shiny:</strong> ${seed.shiny} <br>
+    <strong>Map:</strong> ${seed.map} <br>
+    <strong>Seed:</strong> ${seed.seed} <br>
+    <strong>Item Drops:</strong><br>
+    ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+    <div class="command-box">
+        <span class="command-message">Copied!</span>
+        <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">Copy Command</button>
+    </div>
+`;
+
     resultsContainer.appendChild(seedDiv);
 });
 
@@ -422,8 +424,12 @@ copyButtons.forEach(button => {
         const seed = button.getAttribute('data-seed');
         const star = parseInt(button.getAttribute('data-star'), 10);
         const endNumber = button.getAttribute('data-end');
+        const map = button.getAttribute('data-map'); // Get the map from the button's data attribute
+
+        const prefix = map === 'Kitakami' ? '-ra' : '.ra'; // Determine the prefix based on the map
         const adjustedStar = star <= 2 ? 3 : star; // Override star level to 3 if it's 1 or 2
-        const command = `.ra ${seed} ${adjustedStar} ${endNumber}`;
+        const command = `${prefix} ${seed} ${adjustedStar} ${endNumber}`; // Generate the command
+
         navigator.clipboard.writeText(command);
 
         const message = button.previousElementSibling;
@@ -433,6 +439,7 @@ copyButtons.forEach(button => {
         }, 1000);
     });
 });
+
     }
 
         // Automatically load and display all seeds when the page loads
