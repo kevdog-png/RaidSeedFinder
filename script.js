@@ -9,14 +9,12 @@ window.addEventListener('load', function () {
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea1star.json', starLevel: 1 }
     ];
 
-    // Fetch all JSON files
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
         .then(dataArray => {
-            // Combine all seeds from both files
             const allSeeds = dataArray.flatMap((data, index) => {
                 return data.seeds.map(seed => ({
                     ...seed,
-                    starLevel: files[index].starLevel  // Add star level to each seed
+                    starLevel: files[index].starLevel
                 }));
             });
 
@@ -25,22 +23,21 @@ window.addEventListener('load', function () {
                 return;
             }
 
-            // Display all results when the page loads
-            displayResults(allSeeds);
+            // Initialize and display paginated results
+            initializePagination(allSeeds);
         })
         .catch((error) => console.error('Error fetching seed data:', error));
 });
 
 // Function to handle form submission
 document.getElementById('filterForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
     const species = document.getElementById('species').value.toLowerCase();
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
     const starLevel = document.getElementById('star_level').value;
 
-    // Fetch data from both JSON files again for filtered results
     const files = [
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv6star4herba.json', starLevel: 6 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv5star.json', starLevel: 5 },
@@ -55,7 +52,7 @@ document.getElementById('filterForm').addEventListener('submit', function (event
             const allSeeds = dataArray.flatMap((data, index) => {
                 return data.seeds.map(seed => ({
                     ...seed,
-                    starLevel: files[index].starLevel  // Add star level to each seed
+                    starLevel: files[index].starLevel
                 }));
             });
 
@@ -64,25 +61,55 @@ document.getElementById('filterForm').addEventListener('submit', function (event
                 return;
             }
 
-            // Filter results based on form inputs, including star level
             const filteredSeeds = allSeeds.filter((seed) => {
-    return (
-        (species === '' || seed.species.toLowerCase().includes(species)) &&
-        (shiny === '' || seed.shiny === shiny) &&
-        (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
-        (starLevel === '' || seed.starLevel === parseInt(starLevel)) // Convert starLevel to number
-    );
-});
+                return (
+                    (species === '' || seed.species.toLowerCase().includes(species)) &&
+                    (shiny === '' || seed.shiny === shiny) &&
+                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
+                    (starLevel === '' || seed.starLevel === parseInt(starLevel))
+                );
+            });
 
-            displayResults(filteredSeeds);
+            initializePagination(filteredSeeds); // Reinitialize pagination with filtered seeds
         })
         .catch((error) => console.error('Error fetching seed data:', error));
 });
 
+// Function to display results with pagination
+function initializePagination(seeds) {
+    const resultsPerPage = 495;
+    const totalPages = Math.ceil(seeds.length / resultsPerPage);
+    let currentPage = 1;
+
+    function renderPage(page) {
+        const start = (page - 1) * resultsPerPage;
+        const end = start + resultsPerPage;
+        const seedsToShow = seeds.slice(start, end);
+        displayResults(seedsToShow);
+
+        // Update pagination controls
+        const paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.textContent = i;
+            pageButton.className = i === page ? 'active' : '';
+            pageButton.addEventListener('click', () => {
+                currentPage = i;
+                renderPage(currentPage);
+            });
+            paginationContainer.appendChild(pageButton);
+        }
+    }
+
+    renderPage(currentPage); // Render the first page on initialization
+}
+
 // Function to display the filtered seeds in the UI
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
-    resultsContainer.innerHTML = ''; // Clear previous results
+    resultsContainer.innerHTML = '';
 
     if (seeds.length === 0) {
         resultsContainer.innerHTML = '<li>No matching results found.</li>';
@@ -93,21 +120,16 @@ function displayResults(seeds) {
         const seedDiv = document.createElement('li');
         seedDiv.classList.add('seed');
 
-        // Create stars display
-        const starsDisplay = '⭐'.repeat(seed.starLevel); // Use starLevel from seed data
+        const starsDisplay = '⭐'.repeat(seed.starLevel);
+        const raidStarLevel = seed.starLevel <= 2 ? 3 : seed.starLevel;
+        const endNumber = seed.starLevel <= 2 ? 3 : 6;
+        const raidCommand = `.ra ${seed.seed} ${raidStarLevel} ${endNumber}`;
 
-        // Always force 1-2 star raids to use raidStarLevel 3 and endNumber 3
-        const raidStarLevel = seed.starLevel <= 2 ? 3 : seed.starLevel; // Force starLevel 3 for 1-2 star raids
-        const endNumber = seed.starLevel <= 2 ? 3 : 6; // Force end number 3 for 1-2 star raids
-        const raidCommand = `.ra ${seed.seed} ${raidStarLevel} ${endNumber}`; // Construct the raid command
-
-        // Add item drops display as plain text (each item on a new line)
-        const itemDrops =
-            seed.rewards && seed.rewards.length > 0
-                ? `<strong>Item Drops:</strong><br>${seed.rewards
-                      .map((reward) => `${reward.count} x ${reward.name}`)
-                      .join('<br>')}`
-                : '<strong>Item Drops:</strong> No items <br>';
+        const itemDrops = seed.rewards && seed.rewards.length > 0
+            ? `<strong>Item Drops:</strong><br>${seed.rewards
+                  .map((reward) => `${reward.count} x ${reward.name}`)
+                  .join('<br>')}`
+            : '<strong>Item Drops:</strong> No items <br>';
 
         seedDiv.innerHTML = `
             <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
@@ -129,7 +151,6 @@ function displayResults(seeds) {
 
         resultsContainer.appendChild(seedDiv);
 
-        // Add event listeners for command functionality
         const showCommandButton = seedDiv.querySelector('.show-command');
         const commandBox = seedDiv.querySelector('.command-box');
         const copyButton = seedDiv.querySelector('.copy-command');
@@ -142,11 +163,8 @@ function displayResults(seeds) {
         copyButton.addEventListener('click', () => {
             commandInput.select();
             document.execCommand('copy');
-            const originalText = copyButton.textContent; // Save the original text
-            copyButton.textContent = 'Copied!'; // Change the text to "Copied!"
-            setTimeout(() => {
-                copyButton.textContent = originalText; // Revert to the original text after a delay
-            }, 2000); // Delay of 2 seconds
+            copyButton.textContent = 'Copied!';
+            setTimeout(() => (copyButton.textContent = 'Copy'), 2000);
         });
     });
 }
