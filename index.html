@@ -370,48 +370,93 @@
         const resultsContainer = document.getElementById('results');
         resultsContainer.innerHTML = ''; // Clear previous results
 
-        if (seeds.length === 0) {
-            resultsContainer.innerHTML = '<li>No matching results found.</li>';
-            return;
+        const resultsPerPage = 495; // Define how many results per page
+        const totalPages = Math.ceil(seeds.length / resultsPerPage); // Calculate total pages
+        let currentPage = 1; // Start on the first page
+
+        // Function to render a specific page
+        function renderPage(page) {
+            resultsContainer.innerHTML = ''; // Clear previous results
+            const startIndex = (page - 1) * resultsPerPage;
+            const endIndex = Math.min(startIndex + resultsPerPage, seeds.length);
+            const pageSeeds = seeds.slice(startIndex, endIndex);
+
+            if (pageSeeds.length === 0) {
+                resultsContainer.innerHTML = '<li>No matching results found.</li>';
+                return;
+            }
+
+            pageSeeds.forEach(seed => {
+                const seedDiv = document.createElement('li');
+                seedDiv.classList.add('seed');
+
+                const spriteURL = getPokemonSprite(seed.species);
+
+                const rewardsMap = new Map();
+                seed.rewards.forEach(reward => {
+                    const key = reward.name;
+                    if (rewardsMap.has(key)) {
+                        rewardsMap.set(key, rewardsMap.get(key) + reward.count);
+                    } else {
+                        rewardsMap.set(key, reward.count);
+                    }
+                });
+
+                const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
+                    name,
+                    count
+                }));
+
+                const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
+
+                seedDiv.innerHTML = `
+                    <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
+                    <strong>Species:</strong> ${seed.species} <br>
+                    <strong>Tera Type:</strong> ${seed.tera_type} <br>
+                    <strong>Shiny:</strong> ${seed.shiny} <br>
+                    <strong>Seed:</strong> ${seed.seed} <br>
+                    <strong>Item Drops:</strong><br>
+                    ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+                    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+                    <div class="command-box">
+                        <span class="command-message">Copied!</span>
+                        <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}">Copy Command</button>
+                    </div>
+                `;
+                resultsContainer.appendChild(seedDiv);
+            });
+
+            // Add pagination controls
+            const paginationControls = document.createElement('div');
+            paginationControls.classList.add('pagination-controls');
+            paginationControls.style.textAlign = 'center';
+            paginationControls.style.marginTop = '20px';
+
+            if (currentPage > 1) {
+                const prevButton = document.createElement('button');
+                prevButton.textContent = 'Previous';
+                prevButton.onclick = () => {
+                    currentPage--;
+                    renderPage(currentPage);
+                };
+                paginationControls.appendChild(prevButton);
+            }
+
+            if (currentPage < totalPages) {
+                const nextButton = document.createElement('button');
+                nextButton.textContent = 'Next';
+                nextButton.onclick = () => {
+                    currentPage++;
+                    renderPage(currentPage);
+                };
+                paginationControls.appendChild(nextButton);
+            }
+
+            resultsContainer.appendChild(paginationControls);
         }
 
-        seeds.forEach(seed => {
-    const seedDiv = document.createElement('li');
-    seedDiv.classList.add('seed');
-
-    const spriteURL = getPokemonSprite(seed.species);
-
-    const rewardsMap = new Map();
-    seed.rewards.forEach(reward => {
-        const key = reward.name;
-        if (rewardsMap.has(key)) {
-            rewardsMap.set(key, rewardsMap.get(key) + reward.count);
-        } else {
-            rewardsMap.set(key, reward.count);
-        }
-    });
-
-    const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
-        name,
-        count
-    }));
-
-    const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
-
-    seedDiv.innerHTML = `
-        <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
-        <strong>Species:</strong> ${seed.species} <br>
-        <strong>Tera Type:</strong> ${seed.tera_type} <br>
-        <strong>Shiny:</strong> ${seed.shiny} <br>
-        <strong>Seed:</strong> ${seed.seed} <br>
-        <strong>Item Drops:</strong><br>
-        ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-        <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
-        <div class="command-box">
-            <span class="command-message">Copied!</span>
-            <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}">Copy Command</button>
-        </div>
-    `;
+        renderPage(currentPage); // Render the first page initially
+    }
     resultsContainer.appendChild(seedDiv);
 });
 
