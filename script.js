@@ -79,7 +79,102 @@ document.getElementById('filterForm').addEventListener('submit', function (event
         .catch((error) => console.error('Error fetching seed data:', error));
 });
 
-// Function to display the filtered seeds in the UI
+
+// Variables for lazy loading
+let seedsToDisplay = [];
+let displayedCount = 0;
+const batchSize = 495;
+
+// Function to load a batch of seeds
+function loadNextBatch() {
+    const resultsContainer = document.getElementById('results');
+    const nextBatch = seedsToDisplay.slice(displayedCount, displayedCount + batchSize);
+
+    nextBatch.forEach((seed) => {
+        const seedDiv = document.createElement('li');
+        seedDiv.classList.add('seed');
+
+        // Create stars display
+        const starsDisplay = '⭐'.repeat(seed.starLevel);
+
+        // Always force 1-2 star raids to use raidStarLevel 3 and endNumber 3
+        const raidStarLevel = seed.starLevel <= 2 ? 3 : seed.starLevel;
+        const endNumber = seed.starLevel <= 2 ? 3 : 6;
+        const raidCommand = `.ra ${seed.seed} ${raidStarLevel} ${endNumber}`;
+
+        // Add item drops display
+        const itemDrops = seed.rewards && seed.rewards.length > 0
+            ? `<strong>Item Drops:</strong><br>${seed.rewards
+                  .map((reward) => `${reward.count} x ${reward.name}`)
+                  .join('<br>')}`
+            : '<strong>Item Drops:</strong> No items <br>';
+
+        seedDiv.innerHTML = `
+            <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
+                ${starsDisplay}
+            </div>
+            <strong>Species:</strong> ${seed.species} <br>
+            <strong>Tera Type:</strong> ${seed.tera_type} <br>
+            <strong>Shiny:</strong> ${seed.shiny} <br>
+            <strong>Seed:</strong> ${seed.seed} <br>
+            ${itemDrops}
+            <div class="command-container">
+                <button class="show-command">Show Command</button>
+                <div class="command-box hidden">
+                    <input type="text" value="${raidCommand}" readonly>
+                    <button class="copy-command">Copy</button>
+                </div>
+            </div>
+        `;
+
+        resultsContainer.appendChild(seedDiv);
+
+        // Add event listeners for command functionality
+        const showCommandButton = seedDiv.querySelector('.show-command');
+        const commandBox = seedDiv.querySelector('.command-box');
+        const copyButton = seedDiv.querySelector('.copy-command');
+        const commandInput = seedDiv.querySelector('input');
+
+        showCommandButton.addEventListener('click', () => {
+            commandBox.classList.toggle('hidden');
+        });
+
+        copyButton.addEventListener('click', () => {
+            commandInput.select();
+            document.execCommand('copy');
+            const originalText = copyButton.textContent;
+            copyButton.textContent = 'Copied!';
+            setTimeout(() => {
+                copyButton.textContent = originalText;
+            }, 2000);
+        });
+    });
+
+    displayedCount += nextBatch.length;
+}
+
+// Listen for scroll events to load more results
+window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        loadNextBatch();
+    }
+});
+
+// Update the displayResults function
+function displayResults(seeds) {
+    const resultsContainer = document.getElementById('results');
+    resultsContainer.innerHTML = ''; // Clear previous results
+
+    if (seeds.length === 0) {
+        resultsContainer.innerHTML = '<li>No matching results found.</li>';
+        return;
+    }
+
+    seedsToDisplay = seeds;
+    displayedCount = 0;
+    loadNextBatch(); // Load the first batch
+}
+
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = ''; // Clear previous results
