@@ -365,55 +365,102 @@
             return `https://img.pokemondb.net/sprites/home/shiny/${formattedSpecies}.png`; // Dynamic sprite URL based on species
         };
 
-        // Function to display the filtered seeds in the UI
-    function displayResults(seeds) {
-        const resultsContainer = document.getElementById('results');
-        resultsContainer.innerHTML = ''; // Clear previous results
+        let currentPage = 1; // Track the current page
+const resultsPerPage = 495; // Maximum results per page
 
-        if (seeds.length === 0) {
-            resultsContainer.innerHTML = '<li>No matching results found.</li>';
-            return;
-        }
+// Function to display the filtered seeds with pagination
+function displayResults(seeds) {
+    const resultsContainer = document.getElementById('results');
+    resultsContainer.innerHTML = ''; // Clear previous results
 
-        seeds.forEach(seed => {
-    const seedDiv = document.createElement('li');
-    seedDiv.classList.add('seed');
+    if (seeds.length === 0) {
+        resultsContainer.innerHTML = '<li>No matching results found.</li>';
+        return;
+    }
 
-    const spriteURL = getPokemonSprite(seed.species);
+    // Calculate total pages
+    const totalPages = Math.ceil(seeds.length / resultsPerPage);
 
-    const rewardsMap = new Map();
-    seed.rewards.forEach(reward => {
-        const key = reward.name;
-        if (rewardsMap.has(key)) {
-            rewardsMap.set(key, rewardsMap.get(key) + reward.count);
-        } else {
-            rewardsMap.set(key, reward.count);
-        }
+    // Ensure currentPage is within valid range
+    currentPage = Math.min(Math.max(currentPage, 1), totalPages);
+
+    // Slice results for the current page
+    const startIndex = (currentPage - 1) * resultsPerPage;
+    const endIndex = startIndex + resultsPerPage;
+    const pageSeeds = seeds.slice(startIndex, endIndex);
+
+    pageSeeds.forEach(seed => {
+        const seedDiv = document.createElement('li');
+        seedDiv.classList.add('seed');
+
+        const spriteURL = getPokemonSprite(seed.species);
+
+        const rewardsMap = new Map();
+        seed.rewards.forEach(reward => {
+            const key = reward.name;
+            if (rewardsMap.has(key)) {
+                rewardsMap.set(key, rewardsMap.get(key) + reward.count);
+            } else {
+                rewardsMap.set(key, reward.count);
+            }
+        });
+
+        const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
+            name,
+            count
+        }));
+
+        const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
+
+        seedDiv.innerHTML = `
+            <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
+            <strong>Species:</strong> ${seed.species} <br>
+            <strong>Tera Type:</strong> ${seed.tera_type} <br>
+            <strong>Shiny:</strong> ${seed.shiny} <br>
+            <strong>Seed:</strong> ${seed.seed} <br>
+            <strong>Item Drops:</strong><br>
+            ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+            <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+            <div class="command-box">
+                <span class="command-message">Copied!</span>
+                <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}">Copy Command</button>
+            </div>
+        `;
+        resultsContainer.appendChild(seedDiv);
     });
 
-    const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
-        name,
-        count
-    }));
+    // Add pagination controls
+    const paginationControls = document.createElement('div');
+    paginationControls.classList.add('pagination-controls');
+    paginationControls.style.textAlign = 'center';
+    paginationControls.style.marginTop = '20px';
 
-    const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
+    if (currentPage > 1) {
+        const prevButton = document.createElement('button');
+        prevButton.textContent = 'Previous';
+        prevButton.onclick = () => {
+            currentPage--;
+            displayResults(seeds);
+        };
+        paginationControls.appendChild(prevButton);
+    }
 
-    seedDiv.innerHTML = `
-        <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
-        <strong>Species:</strong> ${seed.species} <br>
-        <strong>Tera Type:</strong> ${seed.tera_type} <br>
-        <strong>Shiny:</strong> ${seed.shiny} <br>
-        <strong>Seed:</strong> ${seed.seed} <br>
-        <strong>Item Drops:</strong><br>
-        ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-        <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
-        <div class="command-box">
-            <span class="command-message">Copied!</span>
-            <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}">Copy Command</button>
-        </div>
-    `;
-    resultsContainer.appendChild(seedDiv);
-});
+    const pageInfo = document.createElement('span');
+    pageInfo.textContent = ` Page ${currentPage} of ${totalPages} `;
+    paginationControls.appendChild(pageInfo);
+
+    if (currentPage < totalPages) {
+        const nextButton = document.createElement('button');
+        nextButton.textContent = 'Next';
+        nextButton.onclick = () => {
+            currentPage++;
+            displayResults(seeds);
+        };
+        paginationControls.appendChild(nextButton);
+    }
+
+    resultsContainer.appendChild(paginationControls);
+}
 
 // Add copy command functionality
 const copyButtons = document.querySelectorAll('.copy-button');
