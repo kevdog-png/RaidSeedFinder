@@ -441,7 +441,12 @@ copyButtons.forEach(button => {
     });
 });
 
+    }
 
-</script>
+        // Automatically load and display all seeds when the page loads
+        window.addEventListener('load', () => {
+            document.getElementById('filterForm').dispatchEvent(new Event('submit'));
+        });
+    </script>
 </body>
 </html>
