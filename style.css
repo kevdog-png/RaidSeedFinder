@@ -92,17 +92,13 @@ input, select {
     padding: 10px;
     margin: 3px 0; /* Reduced margin between input/select fields */
     width: 100%; /* Make inputs and selects take up full width */
-    max-width: 300px; /* Increased width for better dropdown visibility */
+    max-width: 250px; /* Reduced width for more compact dropdown */
+    min-width: 200px; /* Adjusted minimum width for consistency */
     transition: background-color 0.3s ease, border 0.3s ease;
 }
 
 select {
-    min-width: 250px; /* Ensures dropdown box has enough width */
-}
-
-input:focus, select:focus {
-    outline: none;
-    border-color: #7f7f7f;
+    min-width: 200px; /* Ensures dropdown has a reasonable minimum width */
 }
 
 /* Improved dropdown alignment */
@@ -112,14 +108,7 @@ input:focus, select:focus {
     justify-content: flex-start;
     gap: 10px; /* Space between label and dropdown */
     width: 100%;
-    max-width: 400px; /* Optional: control maximum width of dropdown section */
-}
-
-/* Dropdown label styling */
-.dropdown-container label {
-    flex-shrink: 0; /* Prevent label from shrinking */
-    font-size: 1.2rem; /* Slightly larger for better visibility */
-    color: #ddd;
+    max-width: 350px; /* Optional: control maximum width of dropdown section */
 }
 
 /* Button styling */
