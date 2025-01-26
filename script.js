@@ -16,7 +16,8 @@ document.getElementById('filterForm').addEventListener('submit', function (event
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea3star.json', starLevel: 3 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea2star.json', starLevel: 2 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea1star.json', starLevel: 1 }
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea1star.json', starLevel: 1 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami1star.json', starLevel: 1 }
     ];
 
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
