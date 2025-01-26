@@ -69,7 +69,7 @@ form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column; /* Ensure form elements stack vertically */
-    gap: 10px; /* Reduced gap between form elements */
+    gap: 15px; /* Improved gap between form elements */
     justify-content: flex-start;
     align-items: center;
 }
@@ -77,11 +77,12 @@ form {
 label {
     font-size: 1.1rem;
     color: #ddd;
-    margin-bottom: 3px; /* Reduced gap between label and input */
+    margin-bottom: 5px; /* Reduced gap between label and input */
     width: 100%;
-    text-align: center;
+    text-align: left; /* Align labels to the left for better readability */
 }
 
+/* Adjusted input and select fields */
 input, select {
     background-color: #333;
     color: #f0f0f0;
@@ -91,8 +92,12 @@ input, select {
     padding: 10px;
     margin: 3px 0; /* Reduced margin between input/select fields */
     width: 100%; /* Make inputs and selects take up full width */
-    max-width: 250px; /* Increased width for better dropdown visibility */
+    max-width: 300px; /* Increased width for better dropdown visibility */
     transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+select {
+    min-width: 250px; /* Ensures dropdown box has enough width */
 }
 
 input:focus, select:focus {
@@ -100,6 +105,24 @@ input:focus, select:focus {
     border-color: #7f7f7f;
 }
 
+/* Improved dropdown alignment */
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Space between label and dropdown */
+    width: 100%;
+    max-width: 400px; /* Optional: control maximum width of dropdown section */
+}
+
+/* Dropdown label styling */
+.dropdown-container label {
+    flex-shrink: 0; /* Prevent label from shrinking */
+    font-size: 1.2rem; /* Slightly larger for better visibility */
+    color: #ddd;
+}
+
+/* Button styling */
 button {
     background-color: #4CAF50;
     color: #fff;
