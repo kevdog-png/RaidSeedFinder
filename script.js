@@ -51,17 +51,16 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 // Function to display the filtered seeds in the UI
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
-    const resultsWrapper = document.getElementById('results-container');
-
+    const resultsHeader = document.getElementById('results-header');
     resultsContainer.innerHTML = ''; // Clear previous results
 
     if (seeds.length === 0) {
-        resultsWrapper.style.display = 'block'; // Show the container even if no results
+        resultsHeader.style.display = 'block'; // Show the header even if no results are found
         resultsContainer.innerHTML = '<li>No matching results found.</li>';
         return;
     }
 
-    resultsWrapper.style.display = 'block'; // Show the container
+    resultsHeader.style.display = 'block'; // Show the header when results are found
 
     seeds.forEach(seed => {
         const seedDiv = document.createElement('li');
@@ -100,23 +99,22 @@ function displayResults(seeds) {
             <span class="command-message">Copied!</span>
             <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">Copy Command</button>
         </div>
-        `;
+    `;
 
         resultsContainer.appendChild(seedDiv);
     });
 
     // Add copy command functionality
-    const copyButtons = document.querySelectorAll('.copy-button');
-    copyButtons.forEach(button => {
+    document.querySelectorAll('.copy-button').forEach(button => {
         button.addEventListener('click', () => {
             const seed = button.getAttribute('data-seed');
             const star = parseInt(button.getAttribute('data-star'), 10);
             const endNumber = button.getAttribute('data-end');
-            const map = button.getAttribute('data-map'); // Get the map from the button's data attribute
+            const map = button.getAttribute('data-map');
 
-            const prefix = map === 'Kitakami' ? '-ra' : '.ra'; // Determine the prefix based on the map
-            const adjustedStar = star <= 2 ? 3 : star; // Override star level to 3 if it's 1 or 2
-            const command = `${prefix} ${seed} ${adjustedStar} ${endNumber}`; // Generate the command
+            const prefix = map === 'Kitakami' ? '-ra' : '.ra';
+            const adjustedStar = star <= 2 ? 3 : star;
+            const command = `${prefix} ${seed} ${adjustedStar} ${endNumber}`;
 
             navigator.clipboard.writeText(command);
 
