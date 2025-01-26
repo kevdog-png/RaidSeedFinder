@@ -2,6 +2,7 @@
 window.addEventListener('load', function () {
     const files = [
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv6star4herba.json', starLevel: 6 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv6star4herba.json', starLevel: 6 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv5star.json', starLevel: 5 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv4star.json', starLevel: 4 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
@@ -44,6 +45,7 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     // Fetch data from both JSON files again for filtered results
     const files = [
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv6star4herba.json', starLevel: 6 },
+        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv6star4herba.json', starLevel: 6 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv5star.json', starLevel: 5 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv4star.json', starLevel: 4 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
