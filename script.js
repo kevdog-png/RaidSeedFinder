@@ -1,38 +1,3 @@
-// Fetch data from both GitHub JSON files and display results on page load
-window.addEventListener('load', function () {
-    const files = [
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv6star4herba.json', starLevel: 6 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv6star4herba.json', starLevel: 6 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv5star.json', starLevel: 5 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv4star.json', starLevel: 4 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv4star.json', starLevel: 4 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea3star.json', starLevel: 3 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea2star.json', starLevel: 2 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea1star.json', starLevel: 1 }
-    ];
-
-    // Fetch all JSON files
-    Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
-        .then(dataArray => {
-            // Combine all seeds from both files
-            const allSeeds = dataArray.flatMap((data, index) => {
-                return data.seeds.map(seed => ({
-                    ...seed,
-                    starLevel: files[index].starLevel  // Add star level to each seed
-                }));
-            });
-
-            if (!Array.isArray(allSeeds)) {
-                console.error('Data is not in expected array format:', allSeeds);
-                return;
-            }
-
-            // Display all results when the page loads
-            displayResults(allSeeds);
-        })
-        .catch((error) => console.error('Error fetching seed data:', error));
-});
-
 // Function to handle form submission
 document.getElementById('filterForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form submission
@@ -70,13 +35,13 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 
             // Filter results based on form inputs, including star level
             const filteredSeeds = allSeeds.filter((seed) => {
-    return (
-        (species === '' || seed.species.toLowerCase().includes(species)) &&
-        (shiny === '' || seed.shiny === shiny) &&
-        (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
-        (starLevel === '' || seed.starLevel === parseInt(starLevel)) // Convert starLevel to number
-    );
-});
+                return (
+                    (species === '' || seed.species.toLowerCase().includes(species)) &&
+                    (shiny === '' || seed.shiny === shiny) &&
+                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
+                    (starLevel === '' || seed.starLevel === parseInt(starLevel)) // Convert starLevel to number
+                );
+            });
 
             displayResults(filteredSeeds);
         })
