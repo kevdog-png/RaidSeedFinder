@@ -51,71 +51,80 @@ document.getElementById('filterForm').addEventListener('submit', function (event
 // Function to display the filtered seeds in the UI
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
+    const resultsWrapper = document.getElementById('results-container');
+
     resultsContainer.innerHTML = ''; // Clear previous results
 
     if (seeds.length === 0) {
+        resultsWrapper.style.display = 'block'; // Show the container even if no results
         resultsContainer.innerHTML = '<li>No matching results found.</li>';
         return;
     }
 
-    seeds.forEach((seed) => {
+    resultsWrapper.style.display = 'block'; // Show the container
+
+    seeds.forEach(seed => {
         const seedDiv = document.createElement('li');
         seedDiv.classList.add('seed');
 
-        // Create stars display
-        const starsDisplay = '⭐'.repeat(seed.starLevel); // Use starLevel from seed data
+        const spriteURL = getPokemonSprite(seed.species);
 
-        // Always force 1-2 star raids to use raidStarLevel 3 and endNumber 3
-        const raidStarLevel = seed.starLevel <= 2 ? 3 : seed.starLevel; // Force starLevel 3 for 1-2 star raids
-        const endNumber = seed.starLevel <= 2 ? 3 : 6; // Force end number 3 for 1-2 star raids
-        const raidCommand = `.ra ${seed.seed} ${raidStarLevel} ${endNumber}`; // Construct the raid command
+        const rewardsMap = new Map();
+        seed.rewards.forEach(reward => {
+            const key = reward.name;
+            if (rewardsMap.has(key)) {
+                rewardsMap.set(key, rewardsMap.get(key) + reward.count);
+            } else {
+                rewardsMap.set(key, reward.count);
+            }
+        });
 
-        // Add item drops display as plain text (each item on a new line)
-        const itemDrops =
-            seed.rewards && seed.rewards.length > 0
-                ? `<strong>Item Drops:</strong><br>${seed.rewards
-                      .map((reward) => `${reward.count} x ${reward.name}`)
-                      .join('<br>')}`
-                : '<strong>Item Drops:</strong> No items <br>';
+        const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
+            name,
+            count
+        }));
+
+        const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
 
         seedDiv.innerHTML = `
-            <div class="stars-container" style="text-align: center; font-size: 1.5rem; margin-bottom: 10px;">
-                ${starsDisplay}
-            </div>
-            <strong>Species:</strong> ${seed.species} <br>
-            <strong>Tera Type:</strong> ${seed.tera_type} <br>
-            <strong>Shiny:</strong> ${seed.shiny} <br>
-            <strong>Seed:</strong> ${seed.seed} <br>
-            ${itemDrops}
-            <div class="command-container">
-                <button class="show-command">Show Command</button>
-                <div class="command-box hidden">
-                    <input type="text" value="${raidCommand}" readonly>
-                    <button class="copy-command">Copy</button>
-                </div>
-            </div>
+        <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
+        <strong>Species:</strong> ${seed.species} <br>
+        <strong>Tera Type:</strong> ${seed.tera_type} <br>
+        <strong>Shiny:</strong> ${seed.shiny} <br>
+        <strong>Map:</strong> ${seed.map} <br>
+        <strong>Seed:</strong> ${seed.seed} <br>
+        <strong>Item Drops:</strong><br>
+        ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+        <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+        <div class="command-box">
+            <span class="command-message">Copied!</span>
+            <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">Copy Command</button>
+        </div>
         `;
 
         resultsContainer.appendChild(seedDiv);
+    });
 
-        // Add event listeners for command functionality
-        const showCommandButton = seedDiv.querySelector('.show-command');
-        const commandBox = seedDiv.querySelector('.command-box');
-        const copyButton = seedDiv.querySelector('.copy-command');
-        const commandInput = seedDiv.querySelector('input');
+    // Add copy command functionality
+    const copyButtons = document.querySelectorAll('.copy-button');
+    copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const seed = button.getAttribute('data-seed');
+            const star = parseInt(button.getAttribute('data-star'), 10);
+            const endNumber = button.getAttribute('data-end');
+            const map = button.getAttribute('data-map'); // Get the map from the button's data attribute
 
-        showCommandButton.addEventListener('click', () => {
-            commandBox.classList.toggle('hidden');
-        });
+            const prefix = map === 'Kitakami' ? '-ra' : '.ra'; // Determine the prefix based on the map
+            const adjustedStar = star <= 2 ? 3 : star; // Override star level to 3 if it's 1 or 2
+            const command = `${prefix} ${seed} ${adjustedStar} ${endNumber}`; // Generate the command
 
-        copyButton.addEventListener('click', () => {
-            commandInput.select();
-            document.execCommand('copy');
-            const originalText = copyButton.textContent; // Save the original text
-            copyButton.textContent = 'Copied!'; // Change the text to "Copied!"
+            navigator.clipboard.writeText(command);
+
+            const message = button.previousElementSibling;
+            message.style.display = 'block';
             setTimeout(() => {
-                copyButton.textContent = originalText; // Revert to the original text after a delay
-            }, 2000); // Delay of 2 seconds
+                message.style.display = 'none';
+            }, 1000);
         });
     });
 }
