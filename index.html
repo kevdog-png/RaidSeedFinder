@@ -419,35 +419,28 @@
     resultsContainer.appendChild(seedDiv);
 });
 
-// Add copy command functionality
-const copyButtons = document.querySelectorAll('.copy-button');
-copyButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const seed = button.getAttribute('data-seed');
-        const star = parseInt(button.getAttribute('data-star'), 10);
-        const endNumber = button.getAttribute('data-end');
-        const map = button.getAttribute('data-map'); // Get the map from the button's data attribute
+            // Add copy command functionality
+            document.querySelectorAll('.copy-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const seed = button.getAttribute('data-seed');
+                    const star = parseInt(button.getAttribute('data-star'), 10);
+                    const endNumber = button.getAttribute('data-end');
+                    const map = button.getAttribute('data-map');
 
-        const prefix = map === 'Kitakami' ? '-ra' : '.ra'; // Determine the prefix based on the map
-        const adjustedStar = star <= 2 ? 3 : star; // Override star level to 3 if it's 1 or 2
-        const command = `${prefix} ${seed} ${adjustedStar} ${endNumber}`; // Generate the command
+                    const prefix = map === 'Kitakami' ? '-ra' : '.ra';
+                    const adjustedStar = star <= 2 ? 3 : star;
+                    const command = `${prefix} ${seed} ${adjustedStar} ${endNumber}`;
 
-        navigator.clipboard.writeText(command);
+                    navigator.clipboard.writeText(command);
 
-        const message = button.previousElementSibling;
-        message.style.display = 'block';
-        setTimeout(() => {
-            message.style.display = 'none';
-        }, 1000);
-    });
-});
-
-    }
-
-        // Automatically load and display all seeds when the page loads
-        window.addEventListener('load', () => {
-            document.getElementById('filterForm').dispatchEvent(new Event('submit'));
-        });
+                    const message = button.previousElementSibling;
+                    message.style.display = 'block';
+                    setTimeout(() => {
+                        message.style.display = 'none';
+                    }, 1000);
+                });
+            });
+        }
     </script>
 </body>
 </html>
