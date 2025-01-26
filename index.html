@@ -14,26 +14,23 @@
     <style>
         /* Discord bar styling */
         #discord-bar {
-            background-color: #5865F2;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 1.2rem;
-            font-weight: bold;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
+    display: block; /* Ensure the entire area is clickable */
+    background-color: #5865F2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-decoration: none; /* Remove underline for the link */
+}
 
-        #discord-bar a {
-            color: white;
-            text-decoration: none;
-        }
-
-        #discord-bar a:hover {
-            text-decoration: underline;
-        }
+#discord-bar:hover {
+    text-decoration: underline; /* Optional: underline the text on hover */
+}
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
