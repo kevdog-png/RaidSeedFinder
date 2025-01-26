@@ -148,7 +148,10 @@
             width: 220px;
             position: relative;
             text-align: left;
-            overflow: hidden; /* Added to contain content */
+            display: flex;
+            flex-direction: column; /* Allows stacking of elements inside */
+            justify-content: space-between; /* Ensures spacing between elements */
+            height: 280px; /* Set a fixed height for consistency */
         }
 
         .pokemon-image {
@@ -181,9 +184,9 @@
 
         /* Command Box Styling */
         .command-box {
-            text-align: center; /* Center the content */
-            position: relative; /* Allow absolute positioning of the message */
-            padding-bottom: 10px; /* Space at the bottom for button */
+            margin-top: auto; /* Pushes the command-box to the bottom */
+            text-align: center; /* Center-align the button */
+            padding-top: 10px; /* Adds some space above the button */
         }
 
         .command-message {
