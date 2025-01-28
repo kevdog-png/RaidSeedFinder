@@ -297,15 +297,20 @@
 </ul>
 
     <script>
-        // Enforce background styles when the page loads
-    window.addEventListener('DOMContentLoaded', (event) => {
+        // Function to enforce background styles dynamically
+    function enforceBackgroundProperties() {
         document.body.style.backgroundImage = "url('https://i.imgur.com/4C1fdrJ.png')";
         document.body.style.backgroundSize = 'contain'; // Ensures the image stays contained
         document.body.style.backgroundRepeat = 'repeat'; // Ensures it repeats
         document.body.style.backgroundPosition = 'top left'; // Ensures it stays in top-left position
+    }
+
+    // Call function once page is loaded
+    window.addEventListener('DOMContentLoaded', (event) => {
+        enforceBackgroundProperties();
     });
 
-    // Function to handle form submission
+    // Handle form submission and enforce background properties again
     document.getElementById('filterForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
 
@@ -314,60 +319,55 @@
         const teraType = document.getElementById('tera_type').value.toLowerCase();
         const starLevel = document.getElementById('star_level').value;
 
-        // Your existing code here...
-        
-        // Reset background size after form submission
-        document.body.style.backgroundSize = 'contain'; 
-        document.body.style.backgroundRepeat = 'repeat'; 
-        document.body.style.backgroundPosition = 'top left'; 
+        // Load data from both JSON files
+        const files = [
+            { file: 'paldea6iv6star4herba.json', starLevel: 6 },
+            { file: 'kitakami6iv6star4herba.json', starLevel: 6 },
+            { file: 'paldea6iv5star.json', starLevel: 5 },
+            { file: 'kitakami5star5herba.json', starLevel: 5 },
+            { file: 'paldea4star.json', starLevel: 4 },
+            { file: 'kitakami4star.json', starLevel: 4 },
+            { file: 'paldea3star.json', starLevel: 3 },
+            { file: 'kitakami3star.json', starLevel: 3 },
+            { file: 'kitakami2star.json', starLevel: 2 },
+            { file: 'paldea2star.json', starLevel: 2 },
+            { file: 'paldea1star.json', starLevel: 1 },
+            { file: 'kitakami1star.json', starLevel: 1 }
+        ];
 
-            // Load data from both JSON files
-            const files = [
-                { file: 'paldea6iv6star4herba.json', starLevel: 6 },
-                { file: 'kitakami6iv6star4herba.json', starLevel: 6 },
-                { file: 'paldea6iv5star.json', starLevel: 5 },
-                { file: 'kitakami5star5herba.json', starLevel: 5 },
-                { file: 'paldea4star.json', starLevel: 4 },
-                { file: 'kitakami4star.json', starLevel: 4 },
-                { file: 'paldea3star.json', starLevel: 3 },
-                { file: 'kitakami3star.json', starLevel: 3 },
-                { file: 'kitakami2star.json', starLevel: 2 },
-                { file: 'paldea2star.json', starLevel: 2 },
-                { file: 'paldea1star.json', starLevel: 1 },
-                { file: 'kitakami1star.json', starLevel: 1 }
-            ];
+        // Re-enforce background properties after the form is submitted
+        enforceBackgroundProperties();
 
-            Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
+        Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
+            .then(dataArray => {
+                const allSeeds = dataArray.flatMap((data, index) => 
+                    data.seeds.map(seed => ({
+                        ...seed, 
+                        starLevel: files[index].starLevel  // Add star level to the seed object
+                    }))
+                );
 
-                .then(dataArray => {
-                    const allSeeds = dataArray.flatMap((data, index) => 
-                        data.seeds.map(seed => ({
-                            ...seed, 
-                            starLevel: files[index].starLevel  // Add star level to the seed object
-                        }))
+                const filteredSeeds = allSeeds.filter(seed => {
+                    return (
+                        (species === '' || seed.species.toLowerCase().includes(species)) &&
+                        (map === '' || seed.map.toLowerCase() === map) &&
+                        (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
+                        (starLevel === '' || seed.starLevel == starLevel)
                     );
+                });
 
-                    const filteredSeeds = allSeeds.filter(seed => {
-                        return (
-                            (species === '' || seed.species.toLowerCase().includes(species)) &&
-                            (map === '' || seed.map.toLowerCase() === map) &&
-                            (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
-                            (starLevel === '' || seed.starLevel == starLevel)
-                        );
-                    });
+                displayResults(filteredSeeds);
+            })
+            .catch(error => console.error('Error fetching seed data:', error));
+    });
 
-                    displayResults(filteredSeeds);
-                })
-                .catch(error => console.error('Error fetching seed data:', error));
-        });
+    // Function to get the sprite URL for the Pokémon species
+    const getPokemonSprite = (species) => {
+        const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
+        return `https://img.pokemondb.net/sprites/home/shiny/${formattedSpecies}.png`; // Dynamic sprite URL based on species
+    };
 
-        // Function to get the sprite URL for the Pokémon species
-        const getPokemonSprite = (species) => {
-            const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
-            return `https://img.pokemondb.net/sprites/home/shiny/${formattedSpecies}.png`; // Dynamic sprite URL based on species
-        };
-
-        // Function to display the filtered seeds in the UI
+    // Function to display the filtered seeds in the UI
     function displayResults(seeds) {
         const resultsContainer = document.getElementById('results');
         resultsContainer.innerHTML = ''; // Clear previous results
@@ -378,68 +378,68 @@
         }
 
         seeds.forEach(seed => {
-    const seedDiv = document.createElement('li');
-    seedDiv.classList.add('seed');
+            const seedDiv = document.createElement('li');
+            seedDiv.classList.add('seed');
 
-    const spriteURL = getPokemonSprite(seed.species);
+            const spriteURL = getPokemonSprite(seed.species);
 
-    const rewardsMap = new Map();
-    seed.rewards.forEach(reward => {
-        const key = reward.name;
-        if (rewardsMap.has(key)) {
-            rewardsMap.set(key, rewardsMap.get(key) + reward.count);
-        } else {
-            rewardsMap.set(key, reward.count);
-        }
-    });
-
-    const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
-        name,
-        count
-    }));
-
-    const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
-
-    seedDiv.innerHTML = `
-    <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
-    <strong>Species:</strong> ${seed.species} <br>
-    <strong>Tera Type:</strong> ${seed.tera_type} <br>
-    <strong>Map:</strong> ${seed.map} <br>
-    <strong>Seed:</strong> ${seed.seed} <br>
-    <strong>Item Drops:</strong><br>
-    ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-    <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
-    <div class="command-box">
-        <span class="command-message">Copied!</span>
-        <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">Copy Command</button>
-    </div>
-`;
-
-    resultsContainer.appendChild(seedDiv);
-});
-
-            // Add copy command functionality
-            document.querySelectorAll('.copy-button').forEach(button => {
-                button.addEventListener('click', () => {
-                    const seed = button.getAttribute('data-seed');
-                    const star = parseInt(button.getAttribute('data-star'), 10);
-                    const endNumber = button.getAttribute('data-end');
-                    const map = button.getAttribute('data-map');
-
-                    const prefix = map === 'Kitakami' ? '-ra' : '.ra';
-                    const adjustedStar = star <= 2 ? 3 : star;
-                    const command = `${prefix} ${seed} ${adjustedStar} ${endNumber}`;
-
-                    navigator.clipboard.writeText(command);
-
-                    const message = button.previousElementSibling;
-                    message.style.display = 'block';
-                    setTimeout(() => {
-                        message.style.display = 'none';
-                    }, 1000);
-                });
+            const rewardsMap = new Map();
+            seed.rewards.forEach(reward => {
+                const key = reward.name;
+                if (rewardsMap.has(key)) {
+                    rewardsMap.set(key, rewardsMap.get(key) + reward.count);
+                } else {
+                    rewardsMap.set(key, reward.count);
+                }
             });
-        }
-    </script>
+
+            const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
+                name,
+                count
+            }));
+
+            const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
+
+            seedDiv.innerHTML = `
+            <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
+            <strong>Species:</strong> ${seed.species} <br>
+            <strong>Tera Type:</strong> ${seed.tera_type} <br>
+            <strong>Map:</strong> ${seed.map} <br>
+            <strong>Seed:</strong> ${seed.seed} <br>
+            <strong>Item Drops:</strong><br>
+            ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+            <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+            <div class="command-box">
+                <span class="command-message">Copied!</span>
+                <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">Copy Command</button>
+            </div>
+        `;
+
+            resultsContainer.appendChild(seedDiv);
+        });
+
+        // Add copy command functionality
+        document.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const seed = button.getAttribute('data-seed');
+                const star = parseInt(button.getAttribute('data-star'), 10);
+                const endNumber = button.getAttribute('data-end');
+                const map = button.getAttribute('data-map');
+
+                const prefix = map === 'Kitakami' ? '-ra' : '.ra';
+                const adjustedStar = star <= 2 ? 3 : star;
+                const command = `${prefix} ${seed} ${adjustedStar} ${endNumber}`;
+
+                navigator.clipboard.writeText(command);
+
+                const message = button.previousElementSibling;
+                message.style.display = 'block';
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 1000);
+            });
+        });
+    }
+</script>
 </body>
 </html>
