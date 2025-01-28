@@ -301,53 +301,58 @@
 
     <script>
         // Function to handle form submission
-        document.getElementById('filterForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
+document.getElementById('filterForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
-            const species = document.getElementById('species').value.toLowerCase();
-            const map = document.getElementById('map').value.toLowerCase();
-            const teraType = document.getElementById('tera_type').value.toLowerCase();
-            const starLevel = document.getElementById('star_level').value;
+    // Enforce the background styles when search is clicked
+    document.body.style.backgroundSize = 'contain'; // Ensures the image stays contained
+    document.body.style.backgroundRepeat = 'repeat'; // Ensures it repeats
+    document.body.style.backgroundPosition = 'top left'; // Ensures it stays in top-left position
 
-            // Load data from both JSON files
-            const files = [
-                { file: 'paldea6iv6star4herba.json', starLevel: 6 },
-                { file: 'kitakami6iv6star4herba.json', starLevel: 6 },
-                { file: 'paldea6iv5star.json', starLevel: 5 },
-                { file: 'kitakami5star5herba.json', starLevel: 5 },
-                { file: 'paldea4star.json', starLevel: 4 },
-                { file: 'kitakami4star.json', starLevel: 4 },
-                { file: 'paldea3star.json', starLevel: 3 },
-                { file: 'kitakami3star.json', starLevel: 3 },
-                { file: 'kitakami2star.json', starLevel: 2 },
-                { file: 'paldea2star.json', starLevel: 2 },
-                { file: 'paldea1star.json', starLevel: 1 },
-                { file: 'kitakami1star.json', starLevel: 1 }
-            ];
+    const species = document.getElementById('species').value.toLowerCase();
+    const map = document.getElementById('map').value.toLowerCase();
+    const teraType = document.getElementById('tera_type').value.toLowerCase();
+    const starLevel = document.getElementById('star_level').value;
 
-            Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
+    // Load data from both JSON files
+    const files = [
+        { file: 'paldea6iv6star4herba.json', starLevel: 6 },
+        { file: 'kitakami6iv6star4herba.json', starLevel: 6 },
+        { file: 'paldea6iv5star.json', starLevel: 5 },
+        { file: 'kitakami5star5herba.json', starLevel: 5 },
+        { file: 'paldea4star.json', starLevel: 4 },
+        { file: 'kitakami4star.json', starLevel: 4 },
+        { file: 'paldea3star.json', starLevel: 3 },
+        { file: 'kitakami3star.json', starLevel: 3 },
+        { file: 'kitakami2star.json', starLevel: 2 },
+        { file: 'paldea2star.json', starLevel: 2 },
+        { file: 'paldea1star.json', starLevel: 1 },
+        { file: 'kitakami1star.json', starLevel: 1 }
+    ];
 
-                .then(dataArray => {
-                    const allSeeds = dataArray.flatMap((data, index) => 
-                        data.seeds.map(seed => ({
-                            ...seed, 
-                            starLevel: files[index].starLevel  // Add star level to the seed object
-                        }))
-                    );
+    Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
 
-                    const filteredSeeds = allSeeds.filter(seed => {
-                        return (
-                            (species === '' || seed.species.toLowerCase().includes(species)) &&
-                            (map === '' || seed.map.toLowerCase() === map) &&
-                            (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
-                            (starLevel === '' || seed.starLevel == starLevel)
-                        );
-                    });
+        .then(dataArray => {
+            const allSeeds = dataArray.flatMap((data, index) => 
+                data.seeds.map(seed => ({
+                    ...seed, 
+                    starLevel: files[index].starLevel  // Add star level to the seed object
+                }))
+            );
 
-                    displayResults(filteredSeeds);
-                })
-                .catch(error => console.error('Error fetching seed data:', error));
-        });
+            const filteredSeeds = allSeeds.filter(seed => {
+                return (
+                    (species === '' || seed.species.toLowerCase().includes(species)) &&
+                    (map === '' || seed.map.toLowerCase() === map) &&
+                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
+                    (starLevel === '' || seed.starLevel == starLevel)
+                );
+            });
+
+            displayResults(filteredSeeds);
+        })
+        .catch(error => console.error('Error fetching seed data:', error));
+});
 
         // Function to get the sprite URL for the Pokémon species
         const getPokemonSprite = (species) => {
