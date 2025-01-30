@@ -3,52 +3,443 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raid Seed Filter</title>
+    <meta property="og:title" content="✨ Shiny Raid Seed Searcher">
+    <meta property="og:description" content="Filter and search for shiny raid seeds by species, tera type, region, and star level for Pokémon Scarlet. Copy and paste raid commands into the #private-raids channel in Oceanside Pokémon. Made by Kevdog.">
+    <meta property="og:image" content="https://kevdog-png.github.io/RaidSeedFinder/thumbnail.png">
+    <meta property="og:url" content="https://kevdog-png.github.io/RaidSeedFinder/">
+    <meta property="og:type" content="website">
+    <title>✨ Shiny Raid Seeds ✨</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Discord bar styling */
+        #discord-bar {
+    display: block; /* Ensure the entire area is clickable */
+    background-color: #5865F2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-decoration: none; /* Remove underline for the link */
+}
+
+#discord-bar:hover {
+    text-decoration: underline; /* Optional: underline the text on hover */
+}
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 50px 0 50px 0; /* Adjust for header and footer space */
+        }
+
+        h1 {
+            text-align: center;
+            color: #f9f9f9;
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+
+        /* Smaller text below the header */
+        .small-text {
+            text-align: center;
+            color: #ddd;
+            font-size: 1rem;
+            margin-top: 0px;
+        }
+
+        /* Adjusted filter form styling */
+        form {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px; /* Reduced gap between the elements */
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        input, select, button {
+            background-color: #333;
+            color: #f0f0f0;
+            border: 1px solid #444;
+            border-radius: 6px;
+            font-size: 1rem;
+            padding: 8px; /* Reduced padding for smaller elements */
+            margin: 5px 0;
+            width: calc(50% - 10px); /* Make inputs and selects take up half of the form width */
+            max-width: 150px; /* Increased width for selects */
+            transition: background-color 0.3s ease, border 0.3s ease;
+        }
+
+        input:focus, select:focus, button:focus {
+            outline: none;
+            border-color: #7f7f7f;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+        }
+
+        /* Adjusted results container styling */
+        #results {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        #results li {
+            background-color: #333;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1rem;
+            width: 220px;
+            position: relative;
+            text-align: left;
+            overflow: hidden; /* Added to contain content */
+        }
+
+        .pokemon-image {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 70px; /* Adjusted position of sprite to lower */
+            right: 10px;
+            z-index: 10;
+        }
+
+        h2 {
+            text-align: center; /* Center the Results header */
+            color: #f9f9f9;
+            margin-top: 50px;
+        }
+
+        /* Merged reward styling */
+        .rewards {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .rewards li {
+            font-size: 0.9rem;
+            color: #ddd;
+            margin-bottom: 5px;
+        }
+
+        /* Command Box Styling */
+        .command-box {
+            text-align: center; /* Center the content */
+            position: relative; /* Allow absolute positioning of the message */
+            padding-bottom: 10px; /* Space at the bottom for button */
+        }
+
+        .command-message {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            font-size: 1rem;
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+
+        .copy-button {
+            width: 100%; /* Ensures button is the full width of the container */
+            padding: 12px; /* Increased padding */
+            font-size: 1.1rem; /* Slightly larger text */
+        }
+
+        /* Center image above header */
+        #header-image {
+            display: block;
+            margin: 40px auto 10px auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .star-emoji {
+            font-size: 16px; /* Smaller star emoji */
+            margin-top: 5px; /* Adjust top margin */
+            display: block;
+            text-align: center;
+        }
+
+        /* Align species, shiny, tera type, and star level next to each other */
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .form-row label {
+            text-align: left; /* Align labels to the left */
+        }
+
+        /* Make dropdowns (shiny, tera type, star level) longer */
+        select {
+            width: calc(50% - 10px); /* Make the dropdowns longer */
+            max-width: 320px; /* Increased maximum width for dropdowns */
+        }
+    </style>
 </head>
 <body>
-    <h1>Raid Seed Filter</h1>
+    <div id="discord-bar">
+        <a href="https://discord.gg/plza" target="_blank">Join the Discord server!</a>
+    </div>
+
+    <!-- Added image above header -->
+    <img id="header-image" src="https://i.imgur.com/EZbXKmd.png" alt="Shiny Raid Seeds Banner">
+
+    <h1>✨ Shiny Raid Seeds ✨</h1>
+    <div class="small-text">Made by Kevdog for Oceanside Pokémon</div> <!-- Added small text -->
+
     <form id="filterForm">
-        <label for="species">Species:</label>
-        <input type="text" id="species" name="species" placeholder="e.g., Goodra"><br><br>
+        <div class="form-row">
+            <div>
+                <label for="species">Species:</label>
+                <input type="text" id="species" name="species" placeholder="Vulpix">
+            </div>
 
-        <label for="shiny">Shiny:</label>
-        <select id="shiny" name="shiny">
+            <div>
+                <label for="map">Region:</label>
+                <select id="map" name="map">
             <option value="">Any</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select><br><br>
+            <option value="Paldea">Paldea</option>
+            <option value="Kitakami">Kitakami</option>
+                </select>
+            </div>
+        </div>
 
-        <label for="tera_type">Tera Type:</label>
-        <select id="tera_type" name="tera_type">
-            <option value="">Any</option>
-            <option value="Normal">Normal</option>
-            <option value="Fire">Fire</option>
-            <option value="Water">Water</option>
-            <option value="Electric">Electric</option>
-            <option value="Grass">Grass</option>
-            <option value="Ice">Ice</option>
-            <option value="Fighting">Fighting</option>
-            <option value="Poison">Poison</option>
-            <option value="Ground">Ground</option>
-            <option value="Flying">Flying</option>
-            <option value="Psychic">Psychic</option>
-            <option value="Bug">Bug</option>
-            <option value="Rock">Rock</option>
-            <option value="Ghost">Ghost</option>
-            <option value="Dragon">Dragon</option>
-            <option value="Dark">Dark</option>
-            <option value="Steel">Steel</option>
-            <option value="Fairy">Fairy</option>
-            <option value="Stellar">Stellar</option> <!-- Added Stellar option -->
-        </select><br><br>
+        <div class="form-row">
+            <div>
+                <label for="tera_type">Tera Type:</label>
+                <select id="tera_type" name="tera_type">
+                    <option value="">Any</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Water">Water</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Grass">Grass</option>
+                    <option value="Ice">Ice</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Poison">Poison</option>
+                    <option value="Ground">Ground</option>
+                    <option value="Flying">Flying</option>
+                    <option value="Psychic">Psychic</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Ghost">Ghost</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Steel">Steel</option>
+                    <option value="Fairy">Fairy</option>
+                    <option value="Stellar">Stellar</option>
+                </select>
+            </div>
 
-        <button type="submit">Filter</button>
+            <div>
+                <label for="star_level">Star Level:</label>
+                <select id="star_level" name="star_level">
+                    <option value="">Any</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Star</option>
+                    <option value="3">3 Star</option>
+                    <option value="4">4 Star</option>
+                    <option value="5">5 Star</option>
+                    <option value="6">6 Star</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit">Search!</button>
     </form>
 
-    <h2>Results:</h2>
-    <ul id="results"></ul>
+    <ul id="results">
+    <h2 id="results-header" style="display: none;">Results:</h2>
+</ul>
 
-    <script src="script.js"></script>
+    <script>
+        // Function to enforce background styles dynamically
+    function enforceBackgroundProperties() {
+        document.body.style.backgroundImage = "url('https://i.imgur.com/TvJLpIr.png')";
+        document.body.style.backgroundSize = 'contain'; // Ensures the image stays contained
+        document.body.style.backgroundRepeat = 'repeat'; // Ensures it repeats
+        document.body.style.backgroundPosition = 'top left'; // Ensures it stays in top-left position
+    }
+
+    // Call function once page is loaded
+    window.addEventListener('DOMContentLoaded', (event) => {
+        enforceBackgroundProperties();
+    });
+
+    // Handle form submission and enforce background properties again
+    document.getElementById('filterForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const species = document.getElementById('species').value.toLowerCase();
+        const map = document.getElementById('map').value.toLowerCase();
+        const teraType = document.getElementById('tera_type').value.toLowerCase();
+        const starLevel = document.getElementById('star_level').value;
+
+        // Load data from both JSON files
+        const files = [
+            { file: 'paldea6iv6star4herba.json', starLevel: 6 },
+            { file: 'kitakami6iv6star4herba.json', starLevel: 6 },
+            { file: 'paldea6iv5star.json', starLevel: 5 },
+            { file: 'kitakami5star5herba.json', starLevel: 5 },
+            { file: 'paldea4star.json', starLevel: 4 },
+            { file: 'kitakami4star.json', starLevel: 4 },
+            { file: 'paldea3star.json', starLevel: 3 },
+            { file: 'kitakami3star.json', starLevel: 3 },
+            { file: 'kitakami2star.json', starLevel: 2 },
+            { file: 'paldea2star.json', starLevel: 2 },
+            { file: 'paldea1star.json', starLevel: 1 },
+            { file: 'kitakami1star.json', starLevel: 1 }
+        ];
+
+        // Re-enforce background properties after the form is submitted
+        enforceBackgroundProperties();
+
+        Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
+            .then(dataArray => {
+                const allSeeds = dataArray.flatMap((data, index) => 
+                    data.seeds.map(seed => ({
+                        ...seed, 
+                        starLevel: files[index].starLevel  // Add star level to the seed object
+                    }))
+                );
+
+                const filteredSeeds = allSeeds.filter(seed => {
+                    return (
+                        (species === '' || seed.species.toLowerCase().includes(species)) &&
+                        (map === '' || seed.map.toLowerCase() === map) &&
+                        (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
+                        (starLevel === '' || seed.starLevel == starLevel)
+                    );
+                });
+
+                displayResults(filteredSeeds);
+            })
+            .catch(error => console.error('Error fetching seed data:', error));
+    });
+
+    // Function to get the sprite URL for the Pokémon species
+    const getPokemonSprite = (species) => {
+        const formattedSpecies = species.toLowerCase().replace(/[^a-z0-9]/g, ''); // Remove spaces and special characters
+        return `https://img.pokemondb.net/sprites/home/shiny/${formattedSpecies}.png`; // Dynamic sprite URL based on species
+    };
+
+    // Function to display the filtered seeds in the UI
+    function displayResults(seeds) {
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML = ''; // Clear previous results
+
+        if (seeds.length === 0) {
+            resultsContainer.innerHTML = '<li>No matching results found.</li>';
+            return;
+        }
+
+        seeds.forEach(seed => {
+            const seedDiv = document.createElement('li');
+            seedDiv.classList.add('seed');
+
+            const spriteURL = getPokemonSprite(seed.species);
+
+            const rewardsMap = new Map();
+            seed.rewards.forEach(reward => {
+                const key = reward.name;
+                if (rewardsMap.has(key)) {
+                    rewardsMap.set(key, rewardsMap.get(key) + reward.count);
+                } else {
+                    rewardsMap.set(key, reward.count);
+                }
+            });
+
+            const mergedRewards = Array.from(rewardsMap, ([name, count]) => ({
+                name,
+                count
+            }));
+
+            const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
+
+            seedDiv.innerHTML = `
+            <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
+            <strong>Species:</strong> ${seed.species} <br>
+            <strong>Tera Type:</strong> ${seed.tera_type} <br>
+            <strong>Map:</strong> ${seed.map} <br>
+            <strong>Seed:</strong> ${seed.seed} <br>
+            <strong>Item Drops:</strong><br>
+            ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
+            <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+            <div class="command-box">
+                <span class="command-message">Copied!</span>
+                <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">Copy Command</button>
+            </div>
+        `;
+
+            resultsContainer.appendChild(seedDiv);
+        });
+
+        // Add copy command functionality
+        document.querySelectorAll('.copy-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const seed = button.getAttribute('data-seed');
+                const star = parseInt(button.getAttribute('data-star'), 10);
+                const endNumber = button.getAttribute('data-end');
+                const map = button.getAttribute('data-map');
+
+                const prefix = map === 'Kitakami' ? '-ra' : '.ra';
+                const adjustedStar = star <= 2 ? 3 : star;
+                const command = `${prefix} ${seed} ${adjustedStar} ${endNumber}`;
+
+                navigator.clipboard.writeText(command);
+
+                const message = button.previousElementSibling;
+                message.style.display = 'block';
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 1000);
+            });
+        });
+    }
+</script>
 </body>
 </html>
