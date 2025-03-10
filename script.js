@@ -87,7 +87,10 @@ function displayResults(seeds) {
             count
         }));
 
-        const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
+        // Updated endNumber logic
+        const endNumber = (seed.starLevel === 3)
+            ? (seed.map === 'Kitakami' ? 3 : 6)  // Kitakami 3-star gets 3, Paldea 3-star gets 6
+            : (seed.starLevel <= 2 ? 3 : 6);  // Everything else follows previous logic
 
         seedDiv.innerHTML = `
         <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
