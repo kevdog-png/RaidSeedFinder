@@ -370,12 +370,16 @@
     // Function to display the filtered seeds in the UI
     function displayResults(seeds) {
         const resultsContainer = document.getElementById('results');
+        const resultsHeader = document.getElementById('results-header');
         resultsContainer.innerHTML = ''; // Clear previous results
 
         if (seeds.length === 0) {
+            resultsHeader.style.display = 'block'; // Show the header even if no results are found
             resultsContainer.innerHTML = '<li>No matching results found.</li>';
             return;
         }
+
+        resultsHeader.style.display = 'block'; // Show the header when results are found
 
         seeds.forEach(seed => {
             const seedDiv = document.createElement('li');
@@ -398,7 +402,10 @@
                 count
             }));
 
-            const endNumber = seed.starLevel <= 2 ? 3 : 6; // Use 3 for 1-2 stars, 6 otherwise
+            // Updated endNumber logic
+            const endNumber = (seed.starLevel === 3)
+                ? (seed.map === 'Kitakami' ? 3 : 6)  // Kitakami 3-star gets 3, Paldea 3-star gets 6
+                : (seed.starLevel <= 2 ? 3 : 6);  // Everything else follows previous logic
 
             seedDiv.innerHTML = `
             <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
