@@ -101,17 +101,16 @@ function displayResults(seeds) {
         <strong>Seed:</strong> ${seed.seed} <br>
         <strong>Item Drops:</strong><br>
         ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-        <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+       <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.remove()">
         <div class="command-box">
             <span class="command-message">Copied!</span>
-            <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">Copy Command</button>
+            <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">COPY COMMAND!</button>
         </div>
     `;
 
         resultsContainer.appendChild(seedDiv);
     });
 
-    // Add copy command functionality
     document.querySelectorAll('.copy-button').forEach(button => {
         button.addEventListener('click', () => {
             const seed = button.getAttribute('data-seed');
