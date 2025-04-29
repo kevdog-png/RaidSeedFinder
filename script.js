@@ -1,13 +1,32 @@
+// Cache for storing loaded data
+let dataCache = null;
+
 // Function to handle form submission
 document.getElementById('filterForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form submission
-
+    event.preventDefault();
+    
+    const loadingElement = document.getElementById('loading');
+    loadingElement.style.display = 'block';
+    
     const species = document.getElementById('species').value.toLowerCase();
     const shiny = document.getElementById('shiny').value;
     const teraType = document.getElementById('tera_type').value.toLowerCase();
     const starLevel = document.getElementById('star_level').value;
+    const herbaMystica = document.getElementById('herba_mystica').value;
+    const map = document.getElementById('map').value;
 
-    // Fetch data from both JSON files again for filtered results
+    // Use cached data if available, otherwise fetch
+    if (dataCache) {
+        filterAndDisplayResults(dataCache, { species, shiny, teraType, starLevel, herbaMystica, map });
+    } else {
+        loadAndCacheData().then(data => {
+            filterAndDisplayResults(data, { species, shiny, teraType, starLevel, herbaMystica, map });
+        });
+    }
+});
+
+// Function to load and cache data
+async function loadAndCacheData() {
     const files = [
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv6star4herba.json', starLevel: 6 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv6star4herba.json', starLevel: 6 },
@@ -23,48 +42,59 @@ document.getElementById('filterForm').addEventListener('submit', function (event
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami1star.json', starLevel: 1 }
     ];
 
-    Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
-        .then(dataArray => {
-            const allSeeds = dataArray.flatMap((data, index) => {
-                return data.seeds.map(seed => ({
-                    ...seed,
-                    starLevel: files[index].starLevel  // Add star level to each seed
-                }));
-            });
+    try {
+        const dataArray = await Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())));
+        const allSeeds = dataArray.flatMap((data, index) => {
+            return data.seeds.map(seed => ({
+                ...seed,
+                starLevel: files[index].starLevel,
+                hasHerbaMystica: seed.rewards.some(reward => reward.name.includes('Herba Mystica'))
+            }));
+        });
+        dataCache = allSeeds;
+        return allSeeds;
+    } catch (error) {
+        console.error('Error loading data:', error);
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('results').innerHTML = '<li>Error loading data. Please try again later.</li>';
+        return [];
+    }
+}
 
-            if (!Array.isArray(allSeeds)) {
-                console.error('Data is not in expected array format:', allSeeds);
-                return;
-            }
+// Function to filter and display results
+function filterAndDisplayResults(allSeeds, filters) {
+    const { species, shiny, teraType, starLevel, herbaMystica, map } = filters;
+    
+    const filteredSeeds = allSeeds.filter(seed => {
+        return (
+            (species === '' || seed.species.toLowerCase().includes(species)) &&
+            (shiny === '' || seed.shiny === (shiny === 'Yes')) &&
+            (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
+            (starLevel === '' || seed.starLevel === parseInt(starLevel)) &&
+            (herbaMystica === '' || seed.hasHerbaMystica === (herbaMystica === 'Yes')) &&
+            (map === '' || seed.map === map)
+        );
+    });
 
-            // Filter results based on form inputs, including star level
-            const filteredSeeds = allSeeds.filter((seed) => {
-                return (
-                    (species === '' || seed.species.toLowerCase().includes(species)) &&
-                    (shiny === '' || seed.shiny === shiny) &&
-                    (teraType === '' || seed.tera_type.toLowerCase().includes(teraType)) &&
-                    (starLevel === '' || seed.starLevel === parseInt(starLevel)) // Convert starLevel to number
-                );
-            });
-
-            displayResults(filteredSeeds);
-        })
-        .catch((error) => console.error('Error fetching seed data:', error));
-});
+    displayResults(filteredSeeds);
+}
 
 // Function to display the filtered seeds in the UI
 function displayResults(seeds) {
     const resultsContainer = document.getElementById('results');
     const resultsHeader = document.getElementById('results-header');
-    resultsContainer.innerHTML = ''; // Clear previous results
+    const loadingElement = document.getElementById('loading');
+    
+    resultsContainer.innerHTML = '';
+    loadingElement.style.display = 'none';
 
     if (seeds.length === 0) {
-        resultsHeader.style.display = 'block'; // Show the header even if no results are found
+        resultsHeader.style.display = 'block';
         resultsContainer.innerHTML = '<li>No matching results found.</li>';
         return;
     }
 
-    resultsHeader.style.display = 'block'; // Show the header when results are found
+    resultsHeader.style.display = 'block';
 
     seeds.forEach(seed => {
         const seedDiv = document.createElement('li');
@@ -87,26 +117,25 @@ function displayResults(seeds) {
             count
         }));
 
-        // Updated endNumber logic
         const endNumber = (seed.starLevel === 3)
-            ? (seed.map === 'Kitakami' ? 3 : 6)  // Kitakami 3-star gets 3, Paldea 3-star gets 6
-            : (seed.starLevel <= 2 ? 3 : 6);  // Everything else follows previous logic
+            ? (seed.map === 'Kitakami' ? 3 : 6)
+            : (seed.starLevel <= 2 ? 3 : 6);
 
         seedDiv.innerHTML = `
-        <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
-        <strong>Species:</strong> ${seed.species} <br>
-        <strong>Tera Type:</strong> ${seed.tera_type} <br>
-        <strong>Shiny:</strong> ${seed.shiny} <br>
-        <strong>Map:</strong> ${seed.map} <br>
-        <strong>Seed:</strong> ${seed.seed} <br>
-        <strong>Item Drops:</strong><br>
-        ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')} <br>
-        <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
-        <div class="command-box">
-            <span class="command-message">Copied!</span>
-            <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">Copy Command</button>
-        </div>
-    `;
+            <span class="star-emoji">${'⭐'.repeat(seed.starLevel)}</span>
+            <strong>Species:</strong> ${seed.species}<br>
+            <strong>Tera Type:</strong> ${seed.tera_type}<br>
+            <strong>Shiny:</strong> ${seed.shiny ? 'Yes' : 'No'}<br>
+            <strong>Map:</strong> ${seed.map}<br>
+            <strong>Seed:</strong> ${seed.seed}<br>
+            <strong>Item Drops:</strong><br>
+            ${mergedRewards.map(reward => `- ${reward.count}x ${reward.name}`).join('<br>')}<br>
+            <img class="pokemon-image" src="${spriteURL}" alt="${seed.species} sprite" onerror="this.onerror=null; this.src='default-sprite.png'">
+            <div class="command-box">
+                <span class="command-message">Copied!</span>
+                <button class="copy-button" data-seed="${seed.seed}" data-star="${seed.starLevel}" data-end="${endNumber}" data-map="${seed.map}">Copy Command</button>
+            </div>
+        `;
 
         resultsContainer.appendChild(seedDiv);
     });
@@ -126,10 +155,21 @@ function displayResults(seeds) {
             navigator.clipboard.writeText(command);
 
             const message = button.previousElementSibling;
-            message.style.display = 'block';
+            message.classList.add('show');
             setTimeout(() => {
-                message.style.display = 'none';
+                message.classList.remove('show');
             }, 1000);
         });
     });
 }
+
+// Function to get Pokemon sprite URL
+function getPokemonSprite(species) {
+    const formattedSpecies = species.toLowerCase().replace(/\s+/g, '-');
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${formattedSpecies}.png`;
+}
+
+// Load data on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadAndCacheData();
+});
