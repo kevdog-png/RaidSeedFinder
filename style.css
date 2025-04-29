@@ -157,7 +157,9 @@ button:active {
     width: 220px;
     position: relative;
     text-align: left;
-    overflow: hidden; /* Added to contain content */
+    display: flex;
+    flex-direction: column;
+    min-height: 300px; /* Set minimum height to ensure consistent card sizes */
 }
 
 .pokemon-image {
@@ -190,8 +192,10 @@ h2 {
 
 /* Command Box Styling */
 .command-box {
-    text-align: center; /* Center the content */
-    position: relative; /* Allow absolute positioning of the message */
+    text-align: center;
+    margin-top: auto; /* Push the command box to the bottom */
+    width: 100%;
+    padding-top: 15px;
 }
 
 .command-message {
@@ -205,9 +209,8 @@ h2 {
 }
 
 .copy-button {
-    position: relative;
-    z-index: 1;
-    width: 100%; /* Ensures button is the full width of the container */
-    padding: 12px; /* Increased padding */
-    font-size: 1.1rem; /* Slightly larger text */
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
