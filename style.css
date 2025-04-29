@@ -1,24 +1,44 @@
+/* Modern color scheme and base styles */
+:root {
+    --primary-color: #5865F2;
+    --secondary-color: #4CAF50;
+    --background-color: #1a1a1a;
+    --card-background: #2a2a2a;
+    --text-color: #f0f0f0;
+    --border-color: #444;
+    --hover-color: #45a049;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 60px 0 50px 0;
+    line-height: 1.6;
+}
+
 /* Discord bar styling */
 #discord-bar {
-    background-color: #5865F2;
+    display: block;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
     font-size: 1.2rem;
     font-weight: bold;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-}
-
-#discord-bar a {
-    color: white;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-#discord-bar a:hover {
-    text-decoration: underline;
+#discord-bar:hover {
+    background-color: #4752c4;
+    text-decoration: none;
 }
 
 /* Footer styling */
@@ -34,180 +54,213 @@
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('https://i.imgur.com/TvJLpIr.png');  /* Set the background image */
-    background-size: cover;  /* Prevent zooming in */
-    background-repeat: no-repeat;  /* Prevent repeating the image */
-    background-position: center;  /* Center the background */
-    background-attachment: fixed;  /* Fix the background while scrolling */
-    color: #f0f0f0;
-    margin: 0;
-    padding: 50px 0 50px 0; /* Adjust for header and footer space */
-}
-
-
-/* Header Styling */
+/* Header styling */
 h1 {
     text-align: center;
-    color: #f9f9f9;
-    font-size: 1.5rem;
-    margin-top: 5px; /* Reduced gap between image and header */
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin: 20px 0 10px;
+    text-shadow: 0 2px 4px var(--shadow-color);
 }
 
-/* Smaller text styling */
 .small-text {
     text-align: center;
-    color: #ddd;
+    color: #aaa;
     font-size: 1rem;
-    margin-top: 0px; /* Reduced gap */
+    margin-bottom: 30px;
 }
 
-/* Adjusted filter form styling */
+/* Form styling */
 form {
-    background-color: #2a2a2a;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 12px;
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto 30px;
+    box-shadow: 0 4px 15px var(--shadow-color);
     display: flex;
-    flex-direction: column; /* Ensure form elements stack vertically */
-    gap: 15px; /* Improved gap between form elements */
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
     align-items: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
 label {
     font-size: 1.1rem;
-    color: #ddd;
-    margin-bottom: 5px; /* Reduced gap between label and input */
-    width: 100%;
-    text-align: left; /* Align labels to the left for better readability */
+    color: var(--text-color);
+    margin-bottom: 8px;
+    display: block;
 }
 
-/* Adjusted input and select fields */
 input, select {
     background-color: #333;
-    color: #f0f0f0;
-    border: 1px solid #444;
-    border-radius: 6px;
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
     font-size: 1rem;
-    padding: 10px;
-    margin: 3px 0; /* Reduced margin between input/select fields */
-    width: 100%; /* Make inputs and selects take up full width */
-    max-width: 250px; /* Reduced width for more compact dropdown */
-    min-width: 200px; /* Adjusted minimum width for consistency */
-    transition: background-color 0.3s ease, border 0.3s ease;
-}
-
-select {
-    min-width: 200px; /* Ensures dropdown has a reasonable minimum width */
-}
-
-/* Improved dropdown alignment */
-.dropdown-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px; /* Space between label and dropdown */
+    padding: 10px 15px;
     width: 100%;
-    max-width: 350px; /* Optional: control maximum width of dropdown section */
+    transition: all 0.3s ease;
 }
 
-/* Button styling */
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.2);
+}
+
 button {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: white;
     border: none;
-    cursor: pointer;
-    padding: 12px 20px; /* Slightly larger padding */
+    border-radius: 8px;
+    padding: 12px 25px;
     font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Make button take full width of form */
-    max-width: 200px; /* Limit button width */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
 }
 
-button:active {
-    background-color: #3e8e41;
-}
-
-/* Adjusted results container styling */
+/* Results styling */
 #results {
     list-style-type: none;
     padding: 0;
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
 }
 
 #results li {
-    background-color: #333;
-    border: 1px solid #444;
-    border-radius: 8px;
-    padding: 15px;
-    font-size: 1rem;
-    width: 220px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
     position: relative;
-    text-align: left;
-    overflow: hidden; /* Added to contain content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#results li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--shadow-color);
 }
 
 .pokemon-image {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 20px;
+    right: 20px;
     z-index: 10;
+    transition: transform 0.3s ease;
 }
 
-h2 {
-    text-align: center; /* Center the Results header */
-    color: #f9f9f9;
-    margin-top: 20px; /* Reduced gap from results to header */
+#results li:hover .pokemon-image {
+    transform: scale(1.1);
 }
 
-/* Merged reward styling */
-.rewards {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
+.star-emoji {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: block;
+    text-align: center;
 }
 
-.rewards li {
-    font-size: 0.9rem;
-    color: #ddd;
-    margin-bottom: 5px;
-}
-
-/* Command Box Styling */
+/* Command box styling */
 .command-box {
-    text-align: center; /* Center the content */
-    position: relative; /* Allow absolute positioning of the message */
+    margin-top: 20px;
+    position: relative;
+}
+
+.copy-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+}
+
+.copy-button:hover {
+    background-color: #4752c4;
 }
 
 .command-message {
     position: absolute;
-    top: 0;
-    width: 100%;
-    font-size: 1rem;
-    color: green;
-    font-weight: bold;
-    display: none;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.copy-button {
-    position: relative;
-    z-index: 1;
-    width: 100%; /* Ensures button is the full width of the container */
-    padding: 12px; /* Increased padding */
-    font-size: 1.1rem; /* Slightly larger text */
+.command-message.show {
+    opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    input, select {
+        width: 100%;
+    }
+    
+    #results {
+        grid-template-columns: 1fr;
+    }
+    
+    .pokemon-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Loading animation */
+.loading {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
