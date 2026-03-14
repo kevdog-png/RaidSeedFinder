@@ -10,17 +10,11 @@ document.getElementById('filterForm').addEventListener('submit', function (event
     // Fetch data from both JSON files again for filtered results
     const files = [
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv6star4herba.json', starLevel: 6 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami6iv6star4herba.json', starLevel: 6 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea6iv5star.json', starLevel: 5 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami5star5herba.json', starLevel: 5 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea4star.json', starLevel: 4 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami4star.json', starLevel: 4 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea3star.json', starLevel: 3 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami3star.json', starLevel: 3 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami2star.json', starLevel: 2 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea2star.json', starLevel: 2 },
         { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/paldea1star.json', starLevel: 1 },
-        { file: 'https://raw.githubusercontent.com/kevdog-png/RaidSeedFinder/main/kitakami1star.json', starLevel: 1 }
     ];
 
     Promise.all(files.map(({ file }) => fetch(file).then(response => response.json())))
